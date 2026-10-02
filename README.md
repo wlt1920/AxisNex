@@ -115,16 +115,18 @@ Ideas on the list (no promises on dates):
 
 ## Credits & licenses
 
-Input Zero is made by **WLT** and builds on great open-source work:
+Input Zero is made by **WLT** and builds on great open-source work. Thank you to all of these projects:
 
-| Component | What for | License |
-|---|---|---|
-| [HIDMaestro](https://github.com/hifihedgehog/HIDMaestro) | virtual controller driver | MIT |
-| [HidHide](https://github.com/nefarius/HidHide) by Nefarius | hides the physical controller | MIT |
-| [HidSharp](https://github.com/IntergatedCircuits/HidSharp) | reading the DualSense | Apache 2.0 |
-| [usbip-win2](https://github.com/vadimgrn/usbip-win2) (inside HIDMaestro) | USB transport | BSD 2-Clause |
-| [.NET](https://github.com/dotnet/runtime) / [WPF](https://github.com/dotnet/wpf) | runtime and UI | MIT |
-| [Inno Setup](https://jrsoftware.org/isinfo.php) | installer | Inno Setup License |
+| Component | What for | GitHub | License |
+|---|---|---|---|
+| HIDMaestro | virtual DualSense driver (UMDF2) | [hifihedgehog/HIDMaestro](https://github.com/hifihedgehog/HIDMaestro) | MIT |
+| HidHide by Nefarius | hides the physical controller from games | [nefarius/HidHide](https://github.com/nefarius/HidHide) | MIT |
+| HidSharp | reading the DualSense over HID | [IntergatedCircuits/HidSharp](https://github.com/IntergatedCircuits/HidSharp) | Apache 2.0 |
+| usbip-win2 (inside HIDMaestro) | USB transport for composite devices | [vadimgrn/usbip-win2](https://github.com/vadimgrn/usbip-win2) | BSD 2-Clause |
+| DsHidMini by Nefarius (approach & parts used by HIDMaestro) | user-mode controller driver foundation | [nefarius/DsHidMini](https://github.com/nefarius/DsHidMini) | BSD 3-Clause |
+| .NET Runtime | runtime | [dotnet/runtime](https://github.com/dotnet/runtime) | MIT |
+| WPF | user interface | [dotnet/wpf](https://github.com/dotnet/wpf) | MIT |
+| Inno Setup | installer | [jrsoftware/issrc](https://github.com/jrsoftware/issrc) | Inno Setup License |
 
 Full license texts: [`THIRD-PARTY-NOTICES.txt`](THIRD-PARTY-NOTICES.txt). Input Zero's own license (EN / RO / DE): [`legal/`](legal/).
 
