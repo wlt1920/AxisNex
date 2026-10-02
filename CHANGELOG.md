@@ -10,6 +10,8 @@ Download the latest version from [Releases](https://github.com/wlt1920/InputZero
 - **Input thread priority:** the controller reader now uses Windows' multimedia scheduling (MMCSS), so a busy CPU in game can't hold back a controller report.
 - **11 languages:** English, Română, Deutsch, Español, Français, Italiano, Português, Nederlands, Polski, Türkçe, Русский — in the app and in the installer.
 - **Steam Input tip removed:** Rocket League on Steam needs Steam Input to see the controller, so keep it on.
+- **2 new Rocket League profiles:** `Rocket League - Aerial` (gentler curve near center for air dribbles, ceiling shots and recoveries, full diagonals for fast rotations) and `Rocket League - Worn Controller` (bigger deadzones and an earlier outer edge for older sticks with drift).
+- **Check for updates button:** when automatic update checks are off, a **Check now** button appears next to the switch.
 - New description: Input Zero is about low latency **and** an automatically calibrated deadzone (you can still set it by hand).
 
 ## V1.2.1 — 2026-10-03

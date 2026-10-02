@@ -9,6 +9,7 @@ SUMMARY
 - HIDMaestro bundled components (usbip-win2 BSD-2-Clause, DsHidMini BSD-3-Clause) — see below — https://github.com/hifihedgehog/HIDMaestro/blob/master/sdk/HIDMaestro.Core/THIRD-PARTY-NOTICES.txt
 - HidHide (hides the physical controller from games) by Nefarius Software Solutions — MIT License — https://github.com/nefarius/HidHide
 - HidSharp (HID device access) by James F. Bellinger — Apache License 2.0 (NOTICE file included below, as required by section 4(d)) — https://github.com/IntergatedCircuits/HidSharp
+- hidusbf (1000 Hz USB polling driver, NoPatch x64 build) by SweetLow — Public Domain binaries — https://github.com/LordOfMice/hidusbf
 - .NET Runtime — MIT License — https://github.com/dotnet/runtime
 - Windows Presentation Foundation (WPF) — MIT License — https://github.com/dotnet/wpf
 - .NET Runtime third-party notices — various — https://github.com/dotnet/runtime/blob/main/THIRD-PARTY-NOTICES.TXT
@@ -2142,3 +2143,16 @@ LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY, OR TORT (INCLUDING NEGLIGENCE
 OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE OF THIS SOFTWARE, EVEN IF
 ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
 
+
+==============================================================================
+hidusbf (USB rate adjuster lower filter driver)
+https://github.com/LordOfMice/hidusbf
+==============================================================================
+
+"This software (hidusbf) written by SweetLow in 2004 and distributed as Public Domain
+binaries." (from the hidusbf Setup About box)
+
+Input Zero ships the unmodified NoPatch x64 driver (DRIVER/AMD64_AS/NoPatch/hidusbf.sys),
+Microsoft attestation-signed thanks to Battle Beaver Customs, SHA-256
+2F82CDEB36BDAA42EA1933A9B11F3B8E1BDB28E6D3E3DA7E65B4631B3375412D.
+Thank you, SweetLow.

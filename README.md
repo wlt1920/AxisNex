@@ -53,13 +53,13 @@ Input Zero sits between your **PS5 DualSense** and your games:
 - **Only one controller in game.** Your physical DualSense is hidden from games (via HidHide), and the game sees a single virtual DualSense with your tuning applied. No more double input or "a second player joined".
 - **As little delay as possible.** Zero smoothing, an event-driven input thread with Windows multimedia priority (MMCSS), allocation-free processing measured in microseconds, and nothing running in the background while you play.
 - **1000 Hz over USB.** The DualSense reports 250 times per second from the factory; Input Zero raises that to 1000 on USB (up to 3 ms less delay) with the Microsoft-signed [hidusbf](https://github.com/LordOfMice/hidusbf) driver by SweetLow. On by default, one switch to turn it off, removed on uninstall. Not possible over Bluetooth.
-- **Rocket League presets.** `Rocket League - Pro` (zero smoothing, linear response, 100% diagonals for faster aerial rotation) and `Rocket League - Freestyle` (a touch finer around center for air roll and flicks).
+- **4 Rocket League profiles.** `Rocket League - Pro` (zero smoothing, linear response, 100% diagonals for faster aerial rotation), `Rocket League - Freestyle` (a touch finer around center for air roll and flicks), `Rocket League - Aerial` (gentler curve near center for air dribbles and recoveries) and `Rocket League - Worn Controller` (bigger deadzones for older sticks with drift).
 - **Automatic deadzone calibration (3 seconds).** After START, hold the controller gently without touching the sticks, press *Calibrate*, and Input Zero measures your stick drift and sets the smallest safe deadzone. Prefer your own values? Set them by hand in *Advanced tuning*.
 - **Full manual tuning.** Deadzone shape, inner/outer deadzone, anti-deadzone, response curve, square output, sensitivity, triggers.
 - **11 languages:** English, Română, Deutsch, Español, Français, Italiano, Português, Nederlands, Polski, Türkçe, Русский. Switch live, no restart.
 - **6 color themes** (Zero, Ice, Inferno, Violet, Toxic, Mono).
 - **Advanced tuning is not fully tested yet** — if you try it, [feedback](https://github.com/wlt1920/InputZero/issues/new) is very welcome!
-- **Updates built in.** When a new version is released here, the app shows *"Vx available – Update"*, downloads the installer, verifies its SHA-256 and installs it. Your profiles stay.
+- **Updates built in.** When a new version is released here, the app shows *"Vx available – Update"*, downloads the installer, verifies its SHA-256 and installs it. Your profiles stay. Automatic checks can be turned off; then a **Check now** button checks on demand.
 
 ## Install
 
