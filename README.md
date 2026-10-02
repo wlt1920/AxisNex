@@ -42,6 +42,8 @@ Anything else — other websites, YouTube links, Discord files, "cracked" or "pr
 All major antivirus engines (Microsoft Defender, Kaspersky, BitDefender, ESET, CrowdStrike, Avast, AVG, Google and others) report the files as clean. One engine (Trapmine) shows a low-confidence machine-learning guess (`Suspicious.low.ml.score`) on the installer `InputZero-V1-Setup.exe`: that is a known false positive for new, unsigned apps that install drivers, not a detected threat.
 
 The installer is not code-signed yet, so Windows SmartScreen may show "Unknown publisher". That is normal for free indie software; the hashes and scans above let you verify the file.
+
+**Not sure? That's completely fine.** You don't have to trust us: scan the files yourself with any antivirus or online scanner you like (VirusTotal, your own antivirus, Jotti, MetaDefender…), compare the SHA-256 above, or simply skip Input Zero. Nobody is forced to install it.
 ## What it does
 
 > **Currently tested only with the PS5 DualSense, connected by USB cable (wired).** Bluetooth is **not tested yet**, so it is not guaranteed to work. Support for Bluetooth and more controllers is planned in future updates.
