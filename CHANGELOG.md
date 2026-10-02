@@ -3,6 +3,16 @@
 Everything that changed in each version of Input Zero. Newest first.
 Download the latest version from [Releases](https://github.com/wlt1920/InputZero/releases/latest).
 
+## V1.2.1 — 2026-10-03
+
+- **Themes:** 6 color themes — Zero, Ice, Inferno, Violet, Toxic, Mono. Pick one at the top of the window; Input Zero restarts in a second to apply it.
+- **Advanced tuning is not fully tested yet:** a notice on that page says so, with a **Send feedback** button. If you try it, your feedback is really appreciated!
+
+## V1.2.1 — 2026-10-03
+
+- **Themes:** 6 color themes — Zero, Ice, Inferno, Violet, Toxic, Mono. Pick one at the top of the window; Input Zero restarts in a second to apply it.
+- **Advanced tuning is not fully tested yet:** a notice on that page says so, with a **Send feedback** button. If you try it, your feedback is really appreciated!
+
 ## V1.2 — 2026-10-03
 
 - **Calibration:** do it **after pressing START, every time you open Input Zero** — hold the controller gently in your hands without touching the sticks or triggers. After START the app now reminds you and the Calibrate button pulses.

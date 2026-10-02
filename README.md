@@ -56,6 +56,8 @@ Input Zero sits between your **PS5 DualSense** and your games:
 - **3-second deadzone calibration.** Put the controller down, press *Calibrate*, and Input Zero measures your stick drift and sets the smallest safe deadzone.
 - **Full manual tuning.** Deadzone shape, inner/outer deadzone, anti-deadzone, response curve, square output, sensitivity, triggers.
 - **English, Română, Deutsch.** Switch live, no restart.
+- **6 color themes** (Zero, Ice, Inferno, Violet, Toxic, Mono).
+- **Advanced tuning is not fully tested yet** — if you try it, [feedback](https://github.com/wlt1920/InputZero/issues/new) is very welcome!
 - **Updates built in.** When a new version is released here, the app shows *"Vx available – Update"*, downloads the installer, verifies its SHA-256 and installs it. Your profiles stay.
 
 ## Install
