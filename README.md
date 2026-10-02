@@ -33,13 +33,13 @@ Anything else — other websites, YouTube links, Discord files, "cracked" or "pr
 
 ## VirusTotal scans
 
-| File | SHA-256 | Scan |
-|---|---|---|
-| `InputZero-V1-Setup.exe` (installer) | `c50bc59a5c6e1dc6cb7d188feec70fe1f933b5f1d5f13fd71ec350804bf9213f` | [VirusTotal](https://www.virustotal.com/gui/file/c50bc59a5c6e1dc6cb7d188feec70fe1f933b5f1d5f13fd71ec350804bf9213f) |
-| `InputZero.exe` (the app, inside the installer) | `d798e93e03c1d80c9ad69532882e84b4ef10a2bb9479fd3ba13ca10ff1ae858e` | [VirusTotal](https://www.virustotal.com/gui/file/d798e93e03c1d80c9ad69532882e84b4ef10a2bb9479fd3ba13ca10ff1ae858e) |
-| `HidHide_x64.exe` (official Nefarius installer, bundled) | `f4bbbcb82e6258641b887c74bc81c4c5f66e4aa811808dfc304347687b7605f6` | [VirusTotal](https://www.virustotal.com/gui/file/f4bbbcb82e6258641b887c74bc81c4c5f66e4aa811808dfc304347687b7605f6) |
+| File | SHA-256 | Result | Scan |
+|---|---|---|---|
+| `InputZero-V1-Setup.exe` (installer) | `c50bc59a5c6e1dc6cb7d188feec70fe1f933b5f1d5f13fd71ec350804bf9213f` | ✅ clean — 1 low-confidence ML guess (Trapmine) | [VirusTotal](https://www.virustotal.com/gui/file/c50bc59a5c6e1dc6cb7d188feec70fe1f933b5f1d5f13fd71ec350804bf9213f) |
+| `InputZero.exe` (the app, inside the installer) | `d798e93e03c1d80c9ad69532882e84b4ef10a2bb9479fd3ba13ca10ff1ae858e` | ✅ **0 / 65** — no detections | [VirusTotal](https://www.virustotal.com/gui/file/d798e93e03c1d80c9ad69532882e84b4ef10a2bb9479fd3ba13ca10ff1ae858e) |
+| `HidHide_x64.exe` (official Nefarius installer, bundled) | `f4bbbcb82e6258641b887c74bc81c4c5f66e4aa811808dfc304347687b7605f6` | official signed release | [VirusTotal](https://www.virustotal.com/gui/file/f4bbbcb82e6258641b887c74bc81c4c5f66e4aa811808dfc304347687b7605f6) |
 
-All major antivirus engines (Microsoft Defender, Kaspersky, BitDefender, ESET, CrowdStrike, Avast, AVG, Google and others) report the files as clean. One engine (Trapmine) shows a low-confidence machine-learning guess (`Suspicious.low.ml.score`) on the installer `InputZero-V1-Setup.exe`: that is a known false positive for new, unsigned apps that install drivers, not a detected threat.
+The app itself (`InputZero.exe`) scores **0 / 65** on VirusTotal. All major antivirus engines (Microsoft Defender, Kaspersky, BitDefender, ESET, CrowdStrike, Avast, AVG, Google and others) report the files as clean. One engine (Trapmine) shows a low-confidence machine-learning guess (`Suspicious.low.ml.score`) on the installer `InputZero-V1-Setup.exe`: that is a known false positive for new, unsigned apps that install drivers, not a detected threat.
 
 The installer is not code-signed yet, so Windows SmartScreen may show "Unknown publisher". That is normal for free indie software; the hashes and scans above let you verify the file.
 
