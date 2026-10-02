@@ -10,7 +10,7 @@
 </p>
 
 <p align="center">
-  <a href="https://github.com/wlt1920/InputZero/releases/latest"><b>⬇ Download the latest version</b></a>
+  <a href="https://github.com/wlt1920/InputZero/releases/latest"><b>⬇ Download the latest version</b></a> · <a href="CHANGELOG.md"><b>What's new in each update</b></a>
 </p>
 
 <p align="center">
@@ -60,7 +60,7 @@ Input Zero sits between your **PS5 DualSense** and your games:
 
 ## Install
 
-1. Download **`InputZero-V1-Setup.exe`** from [Releases](https://github.com/wlt1920/InputZero/releases/latest).
+1. Download the latest **`InputZero-…-Setup.exe`** from [Releases](https://github.com/wlt1920/InputZero/releases/latest).
 2. Run it, pick your language, accept the license.
    The installer also sets up [HidHide](https://github.com/nefarius/HidHide) (if missing) and the virtual-controller driver.
 3. Restart your PC once if HidHide was installed.
@@ -103,7 +103,7 @@ The goal was simple: **the best possible Rocket League feel on a DualSense, with
 - writing proper Rocket League presets and a one-click drift calibration;
 - a completely new interface, a guided tutorial, three languages, a real installer, a license, and built-in updates.
 
-That became **Input Zero V1** — the version you can download today.
+That became **Input Zero V1**. Since then it keeps getting updates — always download the latest release.
 
 ## What's next
 
