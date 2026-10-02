@@ -1,0 +1,51 @@
+﻿INPUT ZERO — ENDBENUTZER-LIZENZVERTRAG UND HAFTUNGSAUSSCHLUSS
+Version 1.0 — Oktober 2026
+Autor: WLT — https://wltziff.nl
+
+*** WICHTIG: DU INSTALLIERST UND NUTZT DIESE SOFTWARE AUSSCHLIESSLICH AUF EIGENES RISIKO. ***
+WLT ist nicht verantwortlich für Schäden an deinem Controller, Computer, deinen Daten oder Spielkonten. Lies die Abschnitte 3 und 4.
+
+Bitte lies diesen Vertrag sorgfältig. Mit der Installation oder Nutzung von Input Zero („die Software“) akzeptierst du diese Bedingungen. Wenn du sie nicht akzeptierst, installiere und nutze die Software nicht.
+
+1. LIZENZ
+1.1 Die Software wird kostenlos bereitgestellt. Du darfst sie auf beliebig vielen eigenen Geräten für private, nicht-kommerzielle Zwecke installieren und nutzen.
+1.2 Du darfst den originalen, unveränderten Installer kostenlos weitergeben. Du darfst die Software nicht verkaufen, keine Gebühr für den Zugang verlangen, sie nicht mit Malware oder Adware bündeln und sie nicht als dein eigenes Werk ausgeben.
+1.3 Alle nicht ausdrücklich eingeräumten Rechte verbleiben bei WLT (wltziff.nl), dem Autor von Input Zero.
+
+2. WAS DIE SOFTWARE AN DEINEM SYSTEM ÄNDERT
+Um zu funktionieren, nimmt die Software Änderungen an Windows vor. Mit der Installation stimmst du diesen Änderungen zu:
+a) Sie installiert den HIDMaestro-User-Mode-Treiber, der einen virtuellen DualSense-Controller erzeugt. HIDMaestro installiert ein selbstsigniertes Treiberzertifikat namens „HIDMaestroTestCert“ in die Speicher „Vertrauenswürdige Stammzertifizierungsstellen“ und „Vertrauenswürdige Herausgeber“ deines Computers, damit der Treiber geladen werden kann.
+b) Sie installiert HidHide (von Nefarius Software Solutions), einen Filtertreiber, der deinen echten Controller vor Spielen verbirgt, solange die Software läuft. HidHide wird erst nach einem Neustart aktiv.
+c) Sie trägt sich in die Liste erlaubter Anwendungen von HidHide ein, erhöht während der Ausführung ihre Prozesspriorität und die Windows-Timerauflösung und speichert Einstellungen und Profile in %APPDATA%\Input Zero und HKEY_CURRENT_USER\Software\Input Zero.
+Die Deinstallation von Input Zero entfernt die Anwendung. HidHide, der HIDMaestro-Treiber und sein Zertifikat bleiben installiert und können separat über die Windows-Einstellungen / den Geräte-Manager / die Zertifikatverwaltung (certlm.msc) entfernt werden.
+
+3. KEINE GEWÄHRLEISTUNG
+Die Software wird „WIE BESEHEN“ („AS IS“) und „WIE VERFÜGBAR“ bereitgestellt, ohne ausdrückliche oder stillschweigende Gewährleistung jeglicher Art, einschließlich, aber nicht beschränkt auf die Gewährleistung der Marktgängigkeit, der Eignung für einen bestimmten Zweck, der Richtigkeit und der Nichtverletzung von Rechten, soweit gesetzlich zulässig. Der Autor gewährleistet nicht, dass die Software fehlerfrei ist, mit jedem Controller, Spiel oder jeder Windows-Version funktioniert oder die Eingabelatenz um einen bestimmten Wert senkt.
+
+4. HAFTUNGSBESCHRÄNKUNG
+4.1 Soweit gesetzlich zulässig, haftet der Autor nicht für Schäden, die aus der Installation, Nutzung oder Nichtnutzbarkeit der Software entstehen, insbesondere nicht für:
+- Beschädigung, Fehlfunktion oder Verschleiß von Controllern, Computern oder sonstiger Hardware;
+- Verlust oder Beschädigung von Daten, Einstellungen oder Systemstabilität, einschließlich Treiberkonflikten;
+- Sperrungen, Banns, Strafen oder sonstige Maßnahmen gegen deine Spiel-, Plattform- oder Online-Konten (z. B. durch Anti-Cheat-Systeme oder Spielehersteller);
+- entgangenen Gewinn, verlorene Preise oder Ranglistenplätze sowie mittelbare oder Folgeschäden.
+4.2 Du nutzt die Software auf eigenes Risiko. Du bist dafür verantwortlich, die Nutzungsbedingungen und Regeln jedes Spiels, Turniers und jeder Plattform einzuhalten, mit denen du sie verwendest.
+4.3 Nichts in diesem Vertrag schließt eine Haftung aus oder beschränkt sie, soweit dies nach geltendem Recht nicht zulässig ist, insbesondere die Haftung für Vorsatz und grobe Fahrlässigkeit, für Schäden aus der Verletzung des Lebens, des Körpers oder der Gesundheit sowie nach zwingendem Produkthaftungsrecht. Deine zwingenden gesetzlichen Verbraucherrechte bleiben unberührt.
+
+5. DATENSCHUTZ (DSGVO)
+Die Software erhebt, speichert und übermittelt keine personenbezogenen Daten. Sie enthält keine Telemetrie, Analyse, Werbung und kein Kontosystem. Einstellungen und Profile bleiben auf deinem Computer. Die Software verbindet sich nur dann mit dem Internet, (a) um nach Updates zu suchen, indem sie eine kleine Versionsdatei von der offiziellen Input-Zero-Seite auf GitHub (github.com/wlt1920) lädt — dies kann in der App deaktiviert werden, und es werden keine Informationen über dich oder deinen Computer gesendet; wie bei jedem Website-Besuch sieht der Server deine IP-Adresse, die zu keinem anderen Zweck verwendet wird — und (b) wenn du in der App ein Update oder HidHide installierst. Der Autor verarbeitet über die Software keine personenbezogenen Daten von dir.
+
+6. SPIELE UND MARKEN
+Die Software verändert keine Spiele, injiziert keinen Code, liest keinen Spielspeicher und interagiert auch sonst nicht mit Spielen. Sie arbeitet ausschließlich auf Controller-(Geräte-)Ebene.
+Input Zero ist ein unabhängiges Projekt und steht in keiner Verbindung zu Sony Interactive Entertainment, Psyonix, Epic Games oder Nefarius Software Solutions und wird von diesen weder unterstützt noch gesponsert. „PlayStation“ und „DualSense“ sind Marken der Sony Interactive Entertainment Inc. „Rocket League“ ist eine Marke der Psyonix LLC. Alle Marken gehören ihren jeweiligen Inhabern und dienen nur der Identifikation.
+
+7. KOMPONENTEN DRITTER
+Die Software enthält Open-Source-Komponenten (HIDMaestro — MIT, HidSharp — Apache 2.0, HidHide — MIT, .NET / WPF — MIT, usbip-win2 — BSD 2-Clause und weitere). Diese unterliegen ihren eigenen Lizenzbedingungen, die in THIRD-PARTY-NOTICES.txt im Installationsordner wiedergegeben sind. Nichts in diesem Vertrag schränkt deine Rechte aus diesen Lizenzen ein.
+
+8. UPDATES UND SUPPORT
+Der Autor ist nicht verpflichtet, Updates, Support oder Wartung bereitzustellen. Etwaige Updates werden zu diesen Bedingungen oder zu den mit ihnen gelieferten Bedingungen angeboten.
+
+9. BEENDIGUNG
+Diese Lizenz endet automatisch, wenn du gegen sie verstößt. Du kannst sie jederzeit durch Deinstallation der Software beenden.
+
+10. ANWENDBARES RECHT
+Dieser Vertrag unterliegt rumänischem Recht. Als Verbraucher behältst du zusätzlich den Schutz der zwingenden Bestimmungen des Rechts des Landes, in dem du deinen gewöhnlichen Aufenthalt hast (Art. 6 Rom-I-Verordnung). Sollte eine Bestimmung unwirksam sein, bleiben die übrigen Bestimmungen wirksam.

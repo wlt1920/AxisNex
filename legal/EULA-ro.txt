@@ -1,0 +1,51 @@
+﻿INPUT ZERO — CONTRACT DE LICENȚĂ PENTRU UTILIZATORUL FINAL ȘI DECLINAREA RĂSPUNDERII
+Versiunea 1.0 — octombrie 2026
+Autor: WLT — https://wltziff.nl
+
+*** IMPORTANT: INSTALEZI ȘI FOLOSEȘTI ACEST SOFTWARE EXCLUSIV PE PROPRIUL RISC. ***
+WLT nu este responsabil pentru nicio deteriorare a controller-ului, calculatorului, datelor sau conturilor tale de joc. Citește secțiunile 3 și 4.
+
+Citește cu atenție acest contract. Prin instalarea sau folosirea Input Zero („Software-ul”) accepți acești termeni. Dacă nu îi accepți, nu instala și nu folosi Software-ul.
+
+1. LICENȚA
+1.1 Software-ul este oferit gratuit. Îl poți instala și folosi pe oricâte dispozitive proprii, în scop personal și necomercial.
+1.2 Poți distribui gratuit installer-ul original, nemodificat. Nu ai voie să vinzi Software-ul, să percepi bani pentru acces la el, să-l împachetezi cu malware sau adware ori să-l prezinți ca fiind creația ta.
+1.3 Toate drepturile care nu sunt acordate expres rămân ale WLT (wltziff.nl), autorul Input Zero.
+
+2. CE MODIFICĂ SOFTWARE-UL ÎN SISTEM
+Pentru a funcționa, Software-ul face modificări în Windows. Prin instalare ești de acord cu ele:
+a) Instalează driver-ul user-mode HIDMaestro, care creează un controller DualSense virtual. HIDMaestro instalează un certificat de driver auto-semnat numit „HIDMaestroTestCert” în depozitele „Trusted Root Certification Authorities” și „Trusted Publishers” ale calculatorului, ca driver-ul să se poată încărca.
+b) Instalează HidHide (de la Nefarius Software Solutions), un driver-filtru care ascunde controller-ul fizic de jocuri cât timp Software-ul rulează. HidHide devine activ doar după o repornire.
+c) Se înregistrează în lista de aplicații permise a HidHide, își ridică prioritatea procesului și rezoluția timer-ului Windows cât rulează și salvează setări și profiluri în %APPDATA%\Input Zero și HKEY_CURRENT_USER\Software\Input Zero.
+Dezinstalarea Input Zero elimină aplicația. HidHide, driver-ul HIDMaestro și certificatul lui rămân instalate și pot fi eliminate separat din Setări Windows / Device Manager / Certificate Manager (certlm.msc).
+
+3. FĂRĂ GARANȚIE
+Software-ul este oferit „CA ATARE” („AS IS”) și „ÎN MĂSURA DISPONIBILITĂȚII”, fără nicio garanție, expresă sau implicită, inclusiv, fără a se limita la, garanții de vandabilitate, adecvare pentru un anumit scop, exactitate și neîncălcare a drepturilor, în măsura maximă permisă de lege. Autorul nu garantează că Software-ul este fără erori, că funcționează cu orice controller, joc sau versiune de Windows ori că reduce latența cu o anumită valoare.
+
+4. LIMITAREA RĂSPUNDERII
+4.1 În măsura maximă permisă de lege, autorul nu răspunde pentru niciun prejudiciu rezultat din instalarea, folosirea sau imposibilitatea folosirii Software-ului, în special pentru:
+- deteriorarea, defectarea sau uzura controllerelor, calculatoarelor ori a altui hardware;
+- pierderea sau coruperea datelor, setărilor ori a stabilității sistemului, inclusiv conflicte de drivere;
+- suspendări, ban-uri, penalizări sau orice altă măsură luată împotriva conturilor tale de joc, platformă ori online (de exemplu de sisteme anti-cheat sau de producătorii jocurilor);
+- profit nerealizat, premii, clasamente pierdute sau orice prejudiciu indirect ori subsecvent.
+4.2 Folosești Software-ul pe propriul risc. Ești responsabil să respecți termenii și regulile fiecărui joc, turneu și platformă cu care îl folosești.
+4.3 Nimic din acest contract nu exclude și nu limitează răspunderea care nu poate fi exclusă sau limitată conform legii aplicabile, în special răspunderea pentru intenție sau culpă gravă, pentru vătămarea vieții, integrității corporale sau sănătății ori răspunderea obligatorie pentru produse. Drepturile tale legale obligatorii de consumator rămân neafectate.
+
+5. CONFIDENȚIALITATE (GDPR)
+Software-ul nu colectează, nu stochează și nu transmite date cu caracter personal. Nu conține telemetrie, analiză, reclame sau sistem de conturi. Setările și profilurile rămân pe calculatorul tău. Software-ul se conectează la internet doar (a) pentru a verifica update-uri, descărcând un mic fișier de versiune de pe pagina oficială Input Zero de pe GitHub (github.com/wlt1920) — opțiunea poate fi dezactivată din aplicație și nu se trimite nicio informație despre tine sau calculatorul tău; ca la orice vizită pe un site, serverul vede adresa IP, care nu este folosită în alt scop — și (b) dacă alegi să instalezi un update sau HidHide din aplicație. Autorul nu prelucrează niciun fel de date personale ale tale prin Software.
+
+6. JOCURI ȘI MĂRCI ÎNREGISTRATE
+Software-ul nu modifică, nu injectează cod, nu citește memoria și nu interacționează în alt mod cu niciun joc. Lucrează exclusiv la nivelul controller-ului (dispozitivului).
+Input Zero este un proiect independent și nu este afiliat, aprobat sau sponsorizat de Sony Interactive Entertainment, Psyonix, Epic Games sau Nefarius Software Solutions. „PlayStation” și „DualSense” sunt mărci ale Sony Interactive Entertainment Inc. „Rocket League” este marcă a Psyonix LLC. Toate mărcile aparțin proprietarilor lor și sunt folosite doar pentru identificare.
+
+7. COMPONENTE TERȚE
+Software-ul include componente open-source (HIDMaestro — MIT, HidSharp — Apache 2.0, HidHide — MIT, .NET / WPF — MIT, usbip-win2 — BSD 2-Clause și altele). Acestea sunt licențiate conform propriilor termeni, reproduși în THIRD-PARTY-NOTICES.txt din folderul de instalare. Nimic din acest contract nu îți restrânge drepturile conferite de acele licențe.
+
+8. ACTUALIZĂRI ȘI SUPORT
+Autorul nu are obligația de a oferi actualizări, suport sau mentenanță. Eventualele actualizări sunt oferite în acești termeni sau în termenii furnizați odată cu ele.
+
+9. ÎNCETARE
+Licența încetează automat dacă o încalci. O poți încheia oricând dezinstalând Software-ul.
+
+10. LEGEA APLICABILĂ
+Acest contract este guvernat de legea română. Dacă ești consumator, beneficiezi în continuare de protecția dispozițiilor obligatorii ale legii țării în care îți ai reședința obișnuită (art. 6 din Regulamentul Roma I). Dacă o prevedere este declarată nulă, celelalte prevederi rămân valabile.

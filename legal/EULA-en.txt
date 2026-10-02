@@ -1,0 +1,51 @@
+﻿INPUT ZERO — END-USER LICENSE AGREEMENT AND DISCLAIMER
+Version 1.0 — October 2026
+Author: WLT — https://wltziff.nl
+
+*** IMPORTANT: YOU INSTALL AND USE THIS SOFTWARE ENTIRELY AT YOUR OWN RISK. ***
+WLT is not responsible for any damage to your controller, computer, data or game accounts. Read sections 3 and 4.
+
+Please read this agreement carefully. By installing or using Input Zero ("the Software") you accept these terms. If you do not accept them, do not install or use the Software.
+
+1. LICENSE
+1.1 The Software is provided free of charge. You may install and use it on any number of your own devices for personal, non-commercial purposes.
+1.2 You may share the original, unmodified installer free of charge. You may not sell the Software, charge for access to it, bundle it with malware or adware, or present it as your own work.
+1.3 All rights not expressly granted remain with WLT (wltziff.nl), the author of Input Zero.
+
+2. WHAT THE SOFTWARE DOES TO YOUR SYSTEM
+To work, the Software makes changes to your Windows system. By installing it you agree to these changes:
+a) It installs the HIDMaestro user-mode driver, which creates a virtual DualSense controller. HIDMaestro installs a self-signed driver certificate named "HIDMaestroTestCert" into the "Trusted Root Certification Authorities" and "Trusted Publishers" stores of your computer so that its driver can load.
+b) It installs HidHide (by Nefarius Software Solutions), a filter driver that hides your physical controller from games while the Software is running. HidHide only becomes active after a restart.
+c) It registers itself in HidHide's list of allowed applications, raises its own process priority and Windows timer resolution while running, and stores settings and profiles in %APPDATA%\Input Zero and HKEY_CURRENT_USER\Software\Input Zero.
+Uninstalling Input Zero removes the application. HidHide, the HIDMaestro driver and its certificate stay installed and can be removed separately from Windows Settings / Device Manager / Certificate Manager (certlm.msc).
+
+3. NO WARRANTY
+The Software is provided "AS IS" and "AS AVAILABLE", without warranty of any kind, express or implied, including but not limited to warranties of merchantability, fitness for a particular purpose, accuracy, and non-infringement, to the maximum extent permitted by applicable law. The author does not warrant that the Software is error-free, works with every controller, game or Windows version, or reduces input latency by any specific amount.
+
+4. LIMITATION OF LIABILITY
+4.1 To the maximum extent permitted by applicable law, the author shall not be liable for any damage arising from the installation, use or inability to use the Software, including in particular:
+- damage to, malfunction of, or wear of controllers, computers or other hardware;
+- loss or corruption of data, settings or system stability, including driver conflicts;
+- suspensions, bans, penalties or any other action taken against your game, platform or online accounts (for example by anti-cheat systems or game publishers);
+- lost profits, lost winnings, lost rankings or any indirect or consequential damage.
+4.2 You use the Software at your own risk. You are responsible for complying with the terms of service and rules of every game, tournament and platform you use it with.
+4.3 Nothing in this agreement excludes or limits liability that cannot be excluded or limited under applicable law, in particular liability for intent or gross negligence, for injury to life, body or health, or under mandatory product liability law. Your mandatory statutory rights as a consumer remain unaffected.
+
+5. PRIVACY (GDPR)
+The Software does not collect, store or transmit personal data. It contains no telemetry, analytics, advertising or account system. Settings and profiles stay on your computer. The Software connects to the internet only (a) to check for updates, by downloading a small version file from the official Input Zero page on GitHub (github.com/wlt1920) — this can be turned off in the app, and no information about you or your computer is sent; like any website visit, the server sees your IP address, which is not stored for any other purpose — and (b) if you choose to install an update or HidHide from within the app. The author does not process any of your personal data through the Software.
+
+6. GAMES AND TRADEMARKS
+The Software does not modify, inject into, read the memory of, or otherwise interact with any game. It works only at the controller (device) level.
+Input Zero is an independent project and is not affiliated with, endorsed or sponsored by Sony Interactive Entertainment, Psyonix, Epic Games or Nefarius Software Solutions. "PlayStation" and "DualSense" are trademarks of Sony Interactive Entertainment Inc. "Rocket League" is a trademark of Psyonix LLC. All trademarks belong to their respective owners and are used for identification only.
+
+7. THIRD-PARTY COMPONENTS
+The Software includes open-source components (HIDMaestro — MIT, HidSharp — Apache 2.0, HidHide — MIT, .NET / WPF — MIT, usbip-win2 — BSD 2-Clause, and others). They are licensed under their own terms, which are reproduced in THIRD-PARTY-NOTICES.txt in the installation folder. Nothing in this agreement restricts your rights under those licenses.
+
+8. UPDATES AND SUPPORT
+The author is not obliged to provide updates, support or maintenance. Updates, if any, are offered under these terms or under terms supplied with them.
+
+9. TERMINATION
+This license ends automatically if you breach it. You may end it at any time by uninstalling the Software.
+
+10. GOVERNING LAW
+This agreement is governed by the laws of Romania. If you are a consumer, you also keep the protection of the mandatory provisions of the law of the country where you have your habitual residence (Art. 6 Rome I Regulation). If any provision is found invalid, the remaining provisions remain in effect.
