@@ -5,7 +5,7 @@
 <h1 align="center">Input Zero</h1>
 
 <p align="center">
-  <b>Minimum-latency DualSense tuning for PC, built for Rocket League.</b><br>
+  <b>Low-latency DualSense tuning for PC with an auto-calibrated deadzone (or set it by hand), built for Rocket League.</b><br>
   Made by <b>WLT</b> · <a href="https://wltziff.nl">wltziff.nl</a>
 </p>
 
@@ -46,16 +46,17 @@ The installer is not code-signed yet, so Windows SmartScreen may show "Unknown p
 **Not sure? That's completely fine.** You don't have to trust us: scan the files yourself with any antivirus or online scanner you like (VirusTotal, your own antivirus, Jotti, MetaDefender…), compare the SHA-256 above, or simply skip Input Zero. Nobody is forced to install it.
 ## What it does
 
-> **Currently tested only with the PS5 DualSense, connected by USB cable (wired).** Bluetooth is **not tested yet**, so it is not guaranteed to work. Support for Bluetooth and more controllers is planned in future updates.
+> **Tested with the PS5 DualSense over USB cable and Bluetooth.** USB is recommended: only USB can run at **1000 Hz**. Support for more controllers is planned in future updates.
 
 Input Zero sits between your **PS5 DualSense** and your games:
 
 - **Only one controller in game.** Your physical DualSense is hidden from games (via HidHide), and the game sees a single virtual DualSense with your tuning applied. No more double input or "a second player joined".
-- **As little delay as possible.** Zero smoothing, an event-driven input thread (no polling loop), allocation-free processing measured in microseconds, and nothing running in the background while you play.
+- **As little delay as possible.** Zero smoothing, an event-driven input thread with Windows multimedia priority (MMCSS), allocation-free processing measured in microseconds, and nothing running in the background while you play.
+- **1000 Hz over USB.** The DualSense reports 250 times per second from the factory; Input Zero raises that to 1000 on USB (up to 3 ms less delay) with the Microsoft-signed [hidusbf](https://github.com/LordOfMice/hidusbf) driver by SweetLow. On by default, one switch to turn it off, removed on uninstall. Not possible over Bluetooth.
 - **Rocket League presets.** `Rocket League - Pro` (zero smoothing, linear response, 100% diagonals for faster aerial rotation) and `Rocket League - Freestyle` (a touch finer around center for air roll and flicks).
-- **3-second deadzone calibration.** Put the controller down, press *Calibrate*, and Input Zero measures your stick drift and sets the smallest safe deadzone.
+- **Automatic deadzone calibration (3 seconds).** After START, hold the controller gently without touching the sticks, press *Calibrate*, and Input Zero measures your stick drift and sets the smallest safe deadzone. Prefer your own values? Set them by hand in *Advanced tuning*.
 - **Full manual tuning.** Deadzone shape, inner/outer deadzone, anti-deadzone, response curve, square output, sensitivity, triggers.
-- **English, Română, Deutsch.** Switch live, no restart.
+- **11 languages:** English, Română, Deutsch, Español, Français, Italiano, Português, Nederlands, Polski, Türkçe, Русский. Switch live, no restart.
 - **6 color themes** (Zero, Ice, Inferno, Violet, Toxic, Mono).
 - **Advanced tuning is not fully tested yet** — if you try it, [feedback](https://github.com/wlt1920/InputZero/issues/new) is very welcome!
 - **Updates built in.** When a new version is released here, the app shows *"Vx available – Update"*, downloads the installer, verifies its SHA-256 and installs it. Your profiles stay.
@@ -66,7 +67,7 @@ Input Zero sits between your **PS5 DualSense** and your games:
 2. Run it, pick your language, accept the license.
    The installer also sets up [HidHide](https://github.com/nefarius/HidHide) (if missing) and the virtual-controller driver.
 3. Restart your PC once if HidHide was installed.
-4. Open Input Zero → plug in the DualSense **with a USB cable** (Bluetooth is not tested yet) → press **START** → then launch your game.
+4. Open Input Zero → connect the DualSense **with a USB cable** (recommended, 1000 Hz) or over Bluetooth → press **START** → calibrate → then launch your game. Keep Steam Input **on** for Rocket League on Steam.
 
 A short animated tutorial runs the first time you open the app (and any time via the **?** button).
 
@@ -79,10 +80,10 @@ A short animated tutorial runs the first time you open the app (and any time via
 ## How it works
 
 ```text
-Physical DualSense (USB cable — Bluetooth not tested yet)
-      │  raw HID reports (250 Hz USB, full 0x31 reports on Bluetooth)
+Physical DualSense (USB cable or Bluetooth)
+      │  raw HID reports (1000 Hz USB via hidusbf, full 0x31 reports on Bluetooth)
       ▼
-DualSenseReader      dedicated high-priority thread, blocks on the HID read
+DualSenseReader      dedicated MMCSS "Games" thread, blocks on the HID read
       ▼
 TuningEngine         deadzones, curve, square output, triggers  (~µs, no allocations)
       ▼
@@ -112,8 +113,6 @@ That became **Input Zero V1**. Since then it keeps getting updates — always do
 Ideas on the list (no promises on dates):
 
 - more presets and per-game profiles;
-- optional 1000 Hz USB polling guidance;
-- **tested Bluetooth support** — today only the wired (USB) DualSense is tested;
 - **support for more controllers** (DualShock 4, DualSense Edge, Xbox and others) — today only the PS5 DualSense is tested;
 - whatever the community asks for.
 
@@ -128,6 +127,7 @@ Input Zero is made by **WLT** and builds on great open-source work. Thank you to
 | HIDMaestro | virtual DualSense driver (UMDF2) | [hifihedgehog/HIDMaestro](https://github.com/hifihedgehog/HIDMaestro) | MIT |
 | HidHide by Nefarius | hides the physical controller from games | [nefarius/HidHide](https://github.com/nefarius/HidHide) | MIT |
 | HidSharp | reading the DualSense over HID | [IntergatedCircuits/HidSharp](https://github.com/IntergatedCircuits/HidSharp) | Apache 2.0 |
+| hidusbf by SweetLow | 1000 Hz USB polling (NoPatch driver, Microsoft-signed) | [LordOfMice/hidusbf](https://github.com/LordOfMice/hidusbf) | Public Domain |
 | usbip-win2 (inside HIDMaestro) | USB transport for composite devices | [vadimgrn/usbip-win2](https://github.com/vadimgrn/usbip-win2) | BSD 2-Clause |
 | DsHidMini by Nefarius (approach & parts used by HIDMaestro) | user-mode controller driver foundation | [nefarius/DsHidMini](https://github.com/nefarius/DsHidMini) | BSD 3-Clause |
 | .NET Runtime | runtime | [dotnet/runtime](https://github.com/dotnet/runtime) | MIT |
