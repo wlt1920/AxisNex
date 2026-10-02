@@ -20,7 +20,7 @@ c) It registers itself in HidHide's list of allowed applications, raises its own
 Uninstalling Input Zero removes the application. HidHide, the HIDMaestro driver and its certificate stay installed and can be removed separately from Windows Settings / Device Manager / Certificate Manager (certlm.msc).
 
 3. NO WARRANTY
-The Software is provided "AS IS" and "AS AVAILABLE", without warranty of any kind, express or implied, including but not limited to warranties of merchantability, fitness for a particular purpose, accuracy, and non-infringement, to the maximum extent permitted by applicable law. The author does not warrant that the Software is error-free, works with every controller, game or Windows version, or reduces input latency by any specific amount.
+The Software is provided "AS IS" and "AS AVAILABLE", without warranty of any kind, express or implied, including but not limited to warranties of merchantability, fitness for a particular purpose, accuracy, and non-infringement, to the maximum extent permitted by applicable law. The author does not warrant that the Software is error-free, works with every controller, game or Windows version, or reduces input latency by any specific amount. The Software has so far only been tested with a PS5 DualSense connected by USB cable; Bluetooth and other controllers are untested and may not work.
 
 4. LIMITATION OF LIABILITY
 4.1 To the maximum extent permitted by applicable law, the author shall not be liable for any damage arising from the installation, use or inability to use the Software, including in particular:

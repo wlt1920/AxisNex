@@ -21,7 +21,7 @@
 
 ## What it does
 
-> **Currently tested only with the PS5 DualSense controller.** Support for more controllers is planned in future updates.
+> **Currently tested only with the PS5 DualSense, connected by USB cable (wired).** Bluetooth is **not tested yet**, so it is not guaranteed to work. Support for Bluetooth and more controllers is planned in future updates.
 
 Input Zero sits between your **PS5 DualSense** and your games:
 
@@ -39,7 +39,7 @@ Input Zero sits between your **PS5 DualSense** and your games:
 2. Run it, pick your language, accept the license.
    The installer also sets up [HidHide](https://github.com/nefarius/HidHide) (if missing) and the virtual-controller driver.
 3. Restart your PC once if HidHide was installed.
-4. Open Input Zero → plug in the DualSense (USB recommended) → press **START** → then launch your game.
+4. Open Input Zero → plug in the DualSense **with a USB cable** (Bluetooth is not tested yet) → press **START** → then launch your game.
 
 A short animated tutorial runs the first time you open the app (and any time via the **?** button).
 
@@ -52,7 +52,7 @@ A short animated tutorial runs the first time you open the app (and any time via
 ## How it works
 
 ```text
-Physical DualSense (USB / Bluetooth)
+Physical DualSense (USB cable — Bluetooth not tested yet)
       │  raw HID reports (250 Hz USB, full 0x31 reports on Bluetooth)
       ▼
 DualSenseReader      dedicated high-priority thread, blocks on the HID read
@@ -86,6 +86,7 @@ Ideas on the list (no promises on dates):
 
 - more presets and per-game profiles;
 - optional 1000 Hz USB polling guidance;
+- **tested Bluetooth support** — today only the wired (USB) DualSense is tested;
 - **support for more controllers** (DualShock 4, DualSense Edge, Xbox and others) — today only the PS5 DualSense is tested;
 - whatever the community asks for.
 
@@ -107,3 +108,7 @@ Input Zero is made by **WLT** and builds on great open-source work:
 Full license texts: [`THIRD-PARTY-NOTICES.txt`](THIRD-PARTY-NOTICES.txt). Input Zero's own license (EN / RO / DE): [`legal/`](legal/).
 
 Input Zero is an independent project, not affiliated with Sony Interactive Entertainment, Psyonix, Epic Games or Nefarius Software Solutions. "PlayStation" and "DualSense" are trademarks of Sony Interactive Entertainment Inc.; "Rocket League" is a trademark of Psyonix LLC.
+
+---
+
+**Input Zero** © 2026 **WLT** ([wltziff.nl](https://wltziff.nl)). All rights reserved. Free to download and use under the [license](legal/EULA-en.txt) shown during installation. The installer may be shared unmodified and free of charge; selling it or re-publishing modified versions is not allowed.

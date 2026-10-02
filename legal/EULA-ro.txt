@@ -20,7 +20,7 @@ c) Se înregistrează în lista de aplicații permise a HidHide, își ridică p
 Dezinstalarea Input Zero elimină aplicația. HidHide, driver-ul HIDMaestro și certificatul lui rămân instalate și pot fi eliminate separat din Setări Windows / Device Manager / Certificate Manager (certlm.msc).
 
 3. FĂRĂ GARANȚIE
-Software-ul este oferit „CA ATARE” („AS IS”) și „ÎN MĂSURA DISPONIBILITĂȚII”, fără nicio garanție, expresă sau implicită, inclusiv, fără a se limita la, garanții de vandabilitate, adecvare pentru un anumit scop, exactitate și neîncălcare a drepturilor, în măsura maximă permisă de lege. Autorul nu garantează că Software-ul este fără erori, că funcționează cu orice controller, joc sau versiune de Windows ori că reduce latența cu o anumită valoare.
+Software-ul este oferit „CA ATARE” („AS IS”) și „ÎN MĂSURA DISPONIBILITĂȚII”, fără nicio garanție, expresă sau implicită, inclusiv, fără a se limita la, garanții de vandabilitate, adecvare pentru un anumit scop, exactitate și neîncălcare a drepturilor, în măsura maximă permisă de lege. Autorul nu garantează că Software-ul este fără erori, că funcționează cu orice controller, joc sau versiune de Windows ori că reduce latența cu o anumită valoare. Software-ul a fost testat până acum doar cu un DualSense de PS5 conectat prin cablu USB; Bluetooth și alte controllere nu sunt testate și s-ar putea să nu funcționeze.
 
 4. LIMITAREA RĂSPUNDERII
 4.1 În măsura maximă permisă de lege, autorul nu răspunde pentru niciun prejudiciu rezultat din instalarea, folosirea sau imposibilitatea folosirii Software-ului, în special pentru:

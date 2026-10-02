@@ -1,25 +1,25 @@
 ﻿INPUT ZERO — THIRD-PARTY NOTICES
 ==================================
 
-Input Zero is built on the following open-source software. Each component is
-redistributed under its own license, reproduced in full below.
+Input Zero (c) 2026 WLT - https://wltziff.nl - is built on the following open-source software.
+Each component is redistributed under its own license, reproduced in full below.
 
 SUMMARY
 - HIDMaestro (virtual controller driver + SDK) — MIT License — https://github.com/hifihedgehog/HIDMaestro
 - HIDMaestro bundled components (usbip-win2 BSD-2-Clause, DsHidMini BSD-3-Clause) — see below — https://github.com/hifihedgehog/HIDMaestro/blob/master/sdk/HIDMaestro.Core/THIRD-PARTY-NOTICES.txt
 - HidHide (hides the physical controller from games) by Nefarius Software Solutions — MIT License — https://github.com/nefarius/HidHide
-- HidSharp (HID device access) by James F. Bellinger — Apache License 2.0 — https://github.com/IntergatedCircuits/HidSharp
+- HidSharp (HID device access) by James F. Bellinger — Apache License 2.0 (NOTICE file included below, as required by section 4(d)) — https://github.com/IntergatedCircuits/HidSharp
 - .NET Runtime — MIT License — https://github.com/dotnet/runtime
 - Windows Presentation Foundation (WPF) — MIT License — https://github.com/dotnet/wpf
 - .NET Runtime third-party notices — various — https://github.com/dotnet/runtime/blob/main/THIRD-PARTY-NOTICES.TXT
-- Installer built with Inno Setup — https://jrsoftware.org/isinfo.php (Copyright (C) 1997-2026 Jordan Russell, Martijn Laan)
-
+- Installer built with Inno Setup — https://jrsoftware.org/isinfo.php — Copyright (C) 1997-2026 Jordan Russell, Martijn Laan
 
 ==============================================================================
 HIDMaestro (virtual controller driver + SDK)
 https://github.com/hifihedgehog/HIDMaestro
 ==============================================================================
 
+--- HIDMaestro-LICENSE.txt ---
 MIT License
 
 "And we talk of Christ, we rejoice in Christ, we preach of Christ, we prophesy of Christ,
@@ -54,6 +54,7 @@ HIDMaestro bundled components (usbip-win2 BSD-2-Clause, DsHidMini BSD-3-Clause)
 https://github.com/hifihedgehog/HIDMaestro/blob/master/sdk/HIDMaestro.Core/THIRD-PARTY-NOTICES.txt
 ==============================================================================
 
+--- HIDMaestro-THIRD-PARTY-NOTICES.txt ---
 HIDMaestro third-party notices
 ==============================
 
@@ -157,6 +158,7 @@ HidHide (hides the physical controller from games) by Nefarius Software Solution
 https://github.com/nefarius/HidHide
 ==============================================================================
 
+--- HidHide-LICENSE.txt ---
 MIT License
 
 Copyright (c) 2020 Eric Korff de Gidts
@@ -174,6 +176,12 @@ HidSharp (HID device access) by James F. Bellinger
 https://github.com/IntergatedCircuits/HidSharp
 ==============================================================================
 
+--- HidSharp-NOTICE.txt ---
+HIDSharp
+Copyright 2010-2025 James F. Bellinger <http://software.seekye.com/hidsharp>
+
+
+--- HidSharp-LICENSE.txt ---
 HIDSharp
 Copyright 2010-2025 James F. Bellinger <http://software.seekye.com/hidsharp>
 
@@ -372,6 +380,7 @@ limitations under the License.
 https://github.com/dotnet/runtime
 ==============================================================================
 
+--- DotNet-LICENSE.txt ---
 The MIT License (MIT)
 
 Copyright (c) .NET Foundation and Contributors
@@ -402,6 +411,7 @@ Windows Presentation Foundation (WPF)
 https://github.com/dotnet/wpf
 ==============================================================================
 
+--- WPF-LICENSE.txt ---
 The MIT License (MIT)
 
 Copyright (c) .NET Foundation and Contributors
@@ -431,6 +441,7 @@ SOFTWARE.
 https://github.com/dotnet/runtime/blob/main/THIRD-PARTY-NOTICES.TXT
 ==============================================================================
 
+--- DotNet-THIRD-PARTY-NOTICES.txt ---
 .NET Runtime uses third-party libraries or other resources that may be
 distributed under licenses different than the .NET Runtime software.
 
