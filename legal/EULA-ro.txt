@@ -9,7 +9,7 @@ Citește cu atenție acest contract. Prin instalarea sau folosirea Input Zero (�
 
 1. LICENȚA
 1.1 Software-ul este oferit gratuit. Îl poți instala și folosi pe oricâte dispozitive proprii, în scop personal și necomercial.
-1.2 Poți distribui gratuit installer-ul original, nemodificat. Nu ai voie să vinzi Software-ul, să percepi bani pentru acces la el, să-l împachetezi cu malware sau adware ori să-l prezinți ca fiind creația ta.
+1.2 Poți distribui gratuit installer-ul original, nemodificat. Nu ai voie să vinzi Software-ul, să percepi bani pentru acces la el, să-l împachetezi cu malware sau adware ori să-l prezinți ca fiind creația ta. Singurele surse oficiale ale Software-ului sunt https://wltziff.nl și https://github.com/wlt1920/InputZero. Copiile obținute din alte locuri nu provin de la WLT și pot fi modificate sau dăunătoare.
 1.3 Toate drepturile care nu sunt acordate expres rămân ale WLT (wltziff.nl), autorul Input Zero.
 
 2. CE MODIFICĂ SOFTWARE-UL ÎN SISTEM

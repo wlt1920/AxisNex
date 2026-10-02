@@ -9,7 +9,7 @@ Bitte lies diesen Vertrag sorgfältig. Mit der Installation oder Nutzung von Inp
 
 1. LIZENZ
 1.1 Die Software wird kostenlos bereitgestellt. Du darfst sie auf beliebig vielen eigenen Geräten für private, nicht-kommerzielle Zwecke installieren und nutzen.
-1.2 Du darfst den originalen, unveränderten Installer kostenlos weitergeben. Du darfst die Software nicht verkaufen, keine Gebühr für den Zugang verlangen, sie nicht mit Malware oder Adware bündeln und sie nicht als dein eigenes Werk ausgeben.
+1.2 Du darfst den originalen, unveränderten Installer kostenlos weitergeben. Du darfst die Software nicht verkaufen, keine Gebühr für den Zugang verlangen, sie nicht mit Malware oder Adware bündeln und sie nicht als dein eigenes Werk ausgeben. Die einzigen offiziellen Quellen der Software sind https://wltziff.nl und https://github.com/wlt1920/InputZero. Kopien aus anderen Quellen stammen nicht von WLT und können verändert oder schädlich sein.
 1.3 Alle nicht ausdrücklich eingeräumten Rechte verbleiben bei WLT (wltziff.nl), dem Autor von Input Zero.
 
 2. WAS DIE SOFTWARE AN DEINEM SYSTEM ÄNDERT

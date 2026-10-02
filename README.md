@@ -19,6 +19,27 @@
 
 ---
 
+## ⚠ Official downloads only
+
+Input Zero is distributed **only** from these two places:
+
+- **https://github.com/wlt1920/InputZero/releases** (this repository)
+- **https://wltziff.nl**
+
+Anything else — other websites, YouTube links, Discord files, "cracked" or "premium" versions — is **not from WLT** and may contain malware. Beware of scams:
+
+- Input Zero is **free**. WLT never asks for money, a login, your passwords or your game account.
+- Check the installer's **SHA-256** against the value in the release notes, and the **VirusTotal** scan links below.
+
+## VirusTotal scans
+
+| File | SHA-256 | Scan |
+|---|---|---|
+| `InputZero-V1-Setup.exe` (installer) | `c50bc59a5c6e1dc6cb7d188feec70fe1f933b5f1d5f13fd71ec350804bf9213f` | [VirusTotal](https://www.virustotal.com/gui/file/c50bc59a5c6e1dc6cb7d188feec70fe1f933b5f1d5f13fd71ec350804bf9213f) |
+| `InputZero.exe` (the app, inside the installer) | `d798e93e03c1d80c9ad69532882e84b4ef10a2bb9479fd3ba13ca10ff1ae858e` | [VirusTotal](https://www.virustotal.com/gui/file/d798e93e03c1d80c9ad69532882e84b4ef10a2bb9479fd3ba13ca10ff1ae858e) |
+| `HidHide_x64.exe` (official Nefarius installer, bundled) | `f4bbbcb82e6258641b887c74bc81c4c5f66e4aa811808dfc304347687b7605f6` | [VirusTotal](https://www.virustotal.com/gui/file/f4bbbcb82e6258641b887c74bc81c4c5f66e4aa811808dfc304347687b7605f6) |
+
+The installer is not code-signed yet, so Windows SmartScreen may show "Unknown publisher". That is normal for free indie software; the hashes and scans above let you verify the file.
 ## What it does
 
 > **Currently tested only with the PS5 DualSense, connected by USB cable (wired).** Bluetooth is **not tested yet**, so it is not guaranteed to work. Support for Bluetooth and more controllers is planned in future updates.
