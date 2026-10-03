@@ -33,13 +33,18 @@ Anything else — other websites, YouTube links, Discord files, "cracked" or "pr
 
 ## VirusTotal scans
 
+Scans of **V1.2.2**, done by WLT:
+
 | File | SHA-256 | Result | Scan |
 |---|---|---|---|
-| `InputZero-V1-Setup.exe` (installer) | `c50bc59a5c6e1dc6cb7d188feec70fe1f933b5f1d5f13fd71ec350804bf9213f` | ✅ clean — 1 low-confidence ML guess (Trapmine) | [VirusTotal](https://www.virustotal.com/gui/file/c50bc59a5c6e1dc6cb7d188feec70fe1f933b5f1d5f13fd71ec350804bf9213f) |
-| `InputZero.exe` (the app, inside the installer) | `d798e93e03c1d80c9ad69532882e84b4ef10a2bb9479fd3ba13ca10ff1ae858e` | ✅ **0 / 65** — no detections | [VirusTotal](https://www.virustotal.com/gui/file/d798e93e03c1d80c9ad69532882e84b4ef10a2bb9479fd3ba13ca10ff1ae858e) |
+| `Input Zero.rar` (the V1.2.2 setup, packed for scanning) | `7a7e03cd926d615fd3d06743a286e3599e8ca32b337935bff1a6b8f7023ab8ce` | ✅ **0 / 57** — no detections | [VirusTotal](https://www.virustotal.com/gui/file/7a7e03cd926d615fd3d06743a286e3599e8ca32b337935bff1a6b8f7023ab8ce) |
+| `InputZero.dll` (the app's code) | `6fecffa9f7d7d7488182dfcd49670d85f0f65fd26383e83e36d80ae40ae384bc` | ✅ **0 / 66** — no detections | [VirusTotal](https://www.virustotal.com/gui/file/6fecffa9f7d7d7488182dfcd49670d85f0f65fd26383e83e36d80ae40ae384bc) |
+| `hidusbf.sys` (1000 Hz USB driver by SweetLow, bundled) | `2f82cdeb36bdaa42ea1933a9b11f3b8e1bdb28e6d3e3da7e65b4631b3375412d` | ✅ **0 / 72** — no detections, Microsoft-signed | [VirusTotal](https://www.virustotal.com/gui/file/2f82cdeb36bdaa42ea1933a9b11f3b8e1bdb28e6d3e3da7e65b4631b3375412d) |
 | `HidHide_x64.exe` (official Nefarius installer, bundled) | `f4bbbcb82e6258641b887c74bc81c4c5f66e4aa811808dfc304347687b7605f6` | official signed release | [VirusTotal](https://www.virustotal.com/gui/file/f4bbbcb82e6258641b887c74bc81c4c5f66e4aa811808dfc304347687b7605f6) |
 
-The app itself (`InputZero.exe`) scores **0 / 65** on VirusTotal. All major antivirus engines (Microsoft Defender, Kaspersky, BitDefender, ESET, CrowdStrike, Avast, AVG, Google and others) report the files as clean. One engine (Trapmine) shows a low-confidence machine-learning guess (`Suspicious.low.ml.score`) on the installer `InputZero-V1-Setup.exe`: that is a known false positive for new, unsigned apps that install drivers, not a detected threat.
+No antivirus engine flags any of these files — Microsoft Defender, Kaspersky, BitDefender, ESET, CrowdStrike, Avast, AVG, Google and the rest all report them as clean. A few engines show "unable to process file type" or "timeout" for the `.rar` archive: that means they didn't scan it, not that they found something.
+
+The official installer on the [Releases](https://github.com/wlt1920/InputZero/releases/latest) page is `InputZero-V1.2.2-Setup.exe`, SHA-256 `dcd85db8deb04a5e51b0da055e46c40430118ce156d4f6e85494379368f51abb` (also in the release notes). Input Zero checks this hash itself before installing an update.
 
 The installer is not code-signed yet, so Windows SmartScreen may show "Unknown publisher". That is normal for free indie software; the hashes and scans above let you verify the file.
 
@@ -60,6 +65,20 @@ Input Zero sits between your **PS5 DualSense** and your games:
 - **6 color themes** (Zero, Ice, Inferno, Violet, Toxic, Mono).
 - **Advanced tuning is not fully tested yet** — if you try it, [feedback](https://github.com/wlt1920/InputZero/issues/new) is very welcome!
 - **Updates built in.** When a new version is released here, the app shows *"Vx available – Update"*, downloads the installer, verifies its SHA-256 and installs it. Your profiles stay. Automatic checks can be turned off; then a **Check now** button checks on demand.
+
+## Rocket League profiles
+
+Pick one in the top-right menu. All of them have **zero smoothing**, and your calibrated deadzone is saved into whichever profile is active. Everything can be fine-tuned in *Advanced tuning*.
+
+| Profile | Best for | What it does |
+|---|---|---|
+| `Rocket League - Pro` (default) | Ranked, general play, fast reactions | Linear response (what RL muscle memory is built on), small deadzone, **100% diagonals** so diagonal aerials reach full pitch + yaw, full throttle/boost before the trigger bottoms out. |
+| `Rocket League - Freestyle` | Air roll, flicks, freestyle clips | Same base with a touch more precision around center for small air-roll and flick inputs. |
+| `Rocket League - Aerial` | Air dribbles, ceiling shots, recoveries | Gentler curve near center for tiny pitch/yaw corrections in the air, still full speed at the edge and 100% diagonals for fast rotations. |
+| `Rocket League - Worn Controller` | Older DualSense with drift or loose sticks | Bigger deadzones so the car doesn't steer on its own, and an earlier outer edge because worn sticks often stop short of the rim. |
+
+Not sure? Start with **Pro**, press *Calibrate* after START, and only switch if you want something specific.
+
 
 ## Install
 
