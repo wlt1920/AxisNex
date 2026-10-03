@@ -1,5 +1,5 @@
 <p align="center">
-  <img src="docs/logo.png" width="120" alt="wLt AxisNex logo">
+  <img src="docs/banner.jpg" alt="wLt AxisNex: DualSense tuning for Rocket League, low latency, game profiles and advanced tuning">
 </p>
 
 <h1 align="center">wLt AxisNex</h1>
