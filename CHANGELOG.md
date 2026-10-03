@@ -1,7 +1,20 @@
 # Changelog
 
-Everything that changed in each version of Input Zero. Newest first.
-Download the latest version from [Releases](https://github.com/wlt1920/InputZero/releases/latest).
+Everything that changed in each version of wLt AxisNex (called Input Zero before V1.2.4). Newest first.
+Download the latest version from [Releases](https://github.com/wlt1920/AxisNex/releases/latest).
+
+## V1.2.4 — 2026-10-03
+
+- **New name: wLt AxisNex.** Input Zero is now **wLt AxisNex** by wLt, with a new logo, app icon and installer. Updating from Input Zero keeps your profiles, calibration and settings, and replaces the old shortcuts.
+- **Completely new layout:** a side menu (Home, Advanced tuning, Rocket League settings, RL rules, Settings) and a Home page that guides you step by step — **1 Connect → 2 Pick a profile → 3 START → 4 Calibrate** — with the next step highlighted. Toggles, theme, language and updates moved to the new **Settings** page.
+- **Pro calibration:** a 15-second guided check — rest, roll both sticks around the edge, let go. It measures drift, the resting center of each stick, how far each stick reaches in every direction and both triggers. The center is now corrected, so the deadzone can be smaller and still safe; worn sticks and triggers reach 100% again. You see the result (drift, center, deadzone, range, roundness, condition) before anything is saved.
+- **Switching profiles** now shows a notification and an animation telling you to calibrate again (every profile has its own deadzones).
+- **9 clearly different themes** — each with its own background and surfaces: AxisNex (new, default), Midnight Ocean, Synthwave, Inferno, Sakura (new), Royal Gold (new), Matrix, Zero, Graphite.
+- **Lots of animation:** a START burst (shockwaves, particles, flash), animated switches with an ON/OFF chip, a sliding menu highlight, moving background lights, staggered pages. All of it pauses while the window is in the background, so nothing runs while you play.
+- **Controller rumble:** the DualSense gives a short rumble when START kicks in and a tick on the calibration steps (never while the sticks are being measured at rest). Can be turned off in Settings.
+- **Big notifications** for update checks, rules checks, calibration and saves; they appear instantly ("Checking…") and turn into the result.
+- **Release notes:** when an update is available you see what it brings before installing it, and after updating AxisNex shows what's new once.
+- **Tutorial** button instead of "?", profile step before START, and a new USB-C animation.
 
 ## V1.2.3 — 2026-10-03
 
