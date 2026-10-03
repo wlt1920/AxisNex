@@ -3,6 +3,10 @@
 Everything that changed in each version of Input Zero. Newest first.
 Download the latest version from [Releases](https://github.com/wlt1920/InputZero/releases/latest).
 
+## V1.2.3 — 2026-10-03
+
+- **New RL rules page:** watches Epic's fair-play rules and shows exactly what changed, highlights official Rocket League news about the anti-cheat, and lists what players report on the Steam forum. Checks at startup and every 6 hours (can be turned off) and shows where Input Zero stands against the rules. In all 11 languages.
+
 ## V1.2.2 — 2026-10-03
 
 - **1000 Hz over USB:** the wired DualSense is now read 4× more often (stock 250 Hz → 1000 Hz, up to 3 ms less delay). It uses the Microsoft-signed hidusbf driver by SweetLow, installed together with Input Zero. On by default — switch **1000 Hz on USB** on the Home page. If your PC doesn't accept it, Input Zero puts the controller back to 250 Hz by itself, and uninstalling removes it.
