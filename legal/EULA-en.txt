@@ -1,26 +1,28 @@
-﻿INPUT ZERO — END-USER LICENSE AGREEMENT AND DISCLAIMER
-Version 1.0 — October 2026
-Author: WLT — https://wltziff.nl
+﻿AXISNEX — END-USER LICENSE AGREEMENT AND DISCLAIMER
+Version 1.1 — October 2026
+Author: wLt — https://wltziff.nl
 
 *** IMPORTANT: YOU INSTALL AND USE THIS SOFTWARE ENTIRELY AT YOUR OWN RISK. ***
-WLT is not responsible for any damage to your controller, computer, data or game accounts. Read sections 3 and 4.
+wLt is not responsible for any damage to your controller, computer, data or game accounts. Read sections 3 and 4.
 
-Please read this agreement carefully. By installing or using Input Zero ("the Software") you accept these terms. If you do not accept them, do not install or use the Software.
+Please read this agreement carefully. By installing or using AxisNex ("the Software") you accept these terms. If you do not accept them, do not install or use the Software.
 
 1. LICENSE
 1.1 The Software is provided free of charge. You may install and use it on any number of your own devices for personal, non-commercial purposes.
-1.2 You may share the original, unmodified installer free of charge. You may not sell the Software, charge for access to it, bundle it with malware or adware, or present it as your own work. The only official sources of the Software are https://wltziff.nl and https://github.com/wlt1920/InputZero. Copies obtained anywhere else are not provided by WLT and may be modified or harmful.
-1.3 All rights not expressly granted remain with WLT (wltziff.nl), the author of Input Zero.
+1.2 You may share the original, unmodified installer free of charge. You may not sell the Software, charge for access to it, bundle it with malware or adware, or present it as your own work. The only official sources of the Software are https://wltziff.nl and https://github.com/wlt1920/AxisNex. Copies obtained anywhere else are not provided by wLt and may be modified or harmful.
+1.3 All rights not expressly granted remain with wLt (wltziff.nl), the author of AxisNex.
 
 2. WHAT THE SOFTWARE DOES TO YOUR SYSTEM
 To work, the Software makes changes to your Windows system. By installing it you agree to these changes:
-a) It installs the HIDMaestro user-mode driver, which creates a virtual DualSense controller. HIDMaestro installs a self-signed driver certificate named "HIDMaestroTestCert" into the "Trusted Root Certification Authorities" and "Trusted Publishers" stores of your computer so that its driver can load.
-b) It installs HidHide (by Nefarius Software Solutions), a filter driver that hides your physical controller from games while the Software is running. HidHide only becomes active after a restart.
-c) It registers itself in HidHide's list of allowed applications, raises its own process priority and Windows timer resolution while running, and stores settings and profiles in %APPDATA%\Input Zero and HKEY_CURRENT_USER\Software\Input Zero.
-Uninstalling Input Zero removes the application. HidHide, the HIDMaestro driver and its certificate stay installed and can be removed separately from Windows Settings / Device Manager / Certificate Manager (certlm.msc).
+a) It installs the HIDMaestro user-mode driver, which creates a virtual controller. HIDMaestro installs a self-signed driver certificate named "HIDMaestroTestCert" into the "Trusted Root Certification Authorities" and "Trusted Publishers" stores of your computer so that its driver can load.
+b) It installs HidHide (by Nefarius Software Solutions), a filter driver that hides your physical controller from games while the Software is running.
+c) It installs the hidusbf driver by SweetLow (Microsoft-signed), which sets the USB polling interval of a wired controller to 1 ms (1000 Hz). This can be switched off in the app and is removed from the controller on uninstall.
+d) It registers itself in HidHide's list of allowed applications, raises its own process priority while running, and stores its settings and profiles in your Windows user profile (AppData) and in the registry (current user and, for installation state, the local machine).
+After the first installation, Windows must be restarted before the Software is used, so that the drivers can load.
+Uninstalling AxisNex removes the application. HidHide, the HIDMaestro driver and its certificate stay installed and can be removed separately from Windows Settings / Device Manager / Certificate Manager (certlm.msc).
 
 3. NO WARRANTY
-The Software is provided "AS IS" and "AS AVAILABLE", without warranty of any kind, express or implied, including but not limited to warranties of merchantability, fitness for a particular purpose, accuracy, and non-infringement, to the maximum extent permitted by applicable law. The author does not warrant that the Software is error-free, works with every controller, game or Windows version, or reduces input latency by any specific amount. The Software has so far only been tested with a PS5 DualSense connected by USB cable; Bluetooth and other controllers are untested and may not work.
+The Software is provided "AS IS" and "AS AVAILABLE", without warranty of any kind, express or implied, including but not limited to warranties of merchantability, fitness for a particular purpose, accuracy, and non-infringement, to the maximum extent permitted by applicable law. The author does not warrant that the Software is error-free, works with every controller, game or Windows version, or reduces input latency by any specific amount. The Software has so far only been tested with the DualSense Wireless Controller, connected by USB cable or Bluetooth; other controllers are not supported.
 
 4. LIMITATION OF LIABILITY
 4.1 To the maximum extent permitted by applicable law, the author shall not be liable for any damage arising from the installation, use or inability to use the Software, including in particular:
@@ -32,14 +34,18 @@ The Software is provided "AS IS" and "AS AVAILABLE", without warranty of any kin
 4.3 Nothing in this agreement excludes or limits liability that cannot be excluded or limited under applicable law, in particular liability for intent or gross negligence, for injury to life, body or health, or under mandatory product liability law. Your mandatory statutory rights as a consumer remain unaffected.
 
 5. PRIVACY (GDPR)
-The Software does not collect, store or transmit personal data. It contains no telemetry, analytics, advertising or account system. Settings and profiles stay on your computer. The Software connects to the internet only (a) to check for updates, by downloading a small version file from the official Input Zero page on GitHub (github.com/wlt1920) — this can be turned off in the app, and no information about you or your computer is sent; like any website visit, the server sees your IP address, which is not stored for any other purpose — and (b) if you choose to install an update or HidHide from within the app. The author does not process any of your personal data through the Software.
+The Software does not collect, store or transmit personal data. It contains no telemetry, analytics, advertising or account system. Settings and profiles stay on your computer. The Software connects to the internet only:
+(a) to check for updates, by downloading a small version file from the official AxisNex page on GitHub (github.com/wlt1920) — this can be turned off in the app;
+(b) for the "Game rules" page, which reads public pages (the Epic Games terms of service, the game's news feed on Steam and the game's Steam community forum) at startup and every 6 hours while the app is open — this can be turned off on that page;
+(c) if you choose to install an update, or open a link, which opens in your web browser.
+No information about you, your computer or your controller is sent. Like any website visit, the servers contacted (GitHub, Epic Games, Valve/Steam) see your IP address and a technical identification of the app and its version; the author receives none of this. The author does not process any of your personal data through the Software.
 
 6. GAMES AND TRADEMARKS
 The Software does not modify, inject into, read the memory of, or otherwise interact with any game. It works only at the controller (device) level.
-Input Zero is an independent project and is not affiliated with, endorsed or sponsored by Sony Interactive Entertainment, Psyonix, Epic Games or Nefarius Software Solutions. "PlayStation" and "DualSense" are trademarks of Sony Interactive Entertainment Inc. "Rocket League" is a trademark of Psyonix LLC. All trademarks belong to their respective owners and are used for identification only.
+AxisNex is an independent project and is not affiliated with, endorsed by, or sponsored by Sony Interactive Entertainment, Epic Games, Psyonix, or any controller or game manufacturer. All trademarks belong to their respective owners. Names of products and games are used only to identify compatible hardware and the sources the Software refers to.
 
 7. THIRD-PARTY COMPONENTS
-The Software includes open-source components (HIDMaestro — MIT, HidSharp — Apache 2.0, HidHide — MIT, .NET / WPF — MIT, usbip-win2 — BSD 2-Clause, and others). They are licensed under their own terms, which are reproduced in THIRD-PARTY-NOTICES.txt in the installation folder. Nothing in this agreement restricts your rights under those licenses.
+The Software includes open-source components (HIDMaestro — MIT, HidSharp — Apache 2.0, HidHide — MIT, hidusbf — public domain, .NET / WPF — MIT, usbip-win2 — BSD 2-Clause, and others). They are licensed under their own terms, which are reproduced in THIRD-PARTY-NOTICES.txt in the installation folder. Nothing in this agreement restricts your rights under those licenses.
 
 8. UPDATES AND SUPPORT
 The author is not obliged to provide updates, support or maintenance. Updates, if any, are offered under these terms or under terms supplied with them.

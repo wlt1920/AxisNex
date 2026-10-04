@@ -1,165 +1,173 @@
-<p align="center">
-  <img src="docs/banner.jpg" alt="wLt AxisNex: DualSense tuning for Rocket League, low latency, game profiles and advanced tuning">
-</p>
-
-<h1 align="center">wLt AxisNex</h1>
+Language: English | [Română](docs/README_RO.md)
 
 <p align="center">
-  <b>Low-latency DualSense tuning for PC with an auto-calibrated deadzone (or set it by hand), built for Rocket League.</b><br>
-  Made by <b>wLt</b> · <a href="https://wltziff.nl">wltziff.nl</a>
-  <br><sub>Built with my basic knowledge of C#, together with Claude and Codex.</sub>
+  <img src="docs/logo.png" width="120" alt="AxisNex logo">
 </p>
+
+<h1 align="center">AxisNex</h1>
+
+<p align="center">
+  <b>Controller tuning and calibration for Windows.</b><br>
+  Fine-tune deadzones, response and controller profiles.<br>
+  by <b>wLt</b> · <a href="https://wltziff.nl">wltziff.nl</a>
+</p>
+
+> **AxisNex is an independent project and is not affiliated with, endorsed by, or sponsored by Sony Interactive Entertainment, Epic Games, Psyonix, or any controller or game manufacturer. All trademarks belong to their respective owners.**
 
 <p align="center">
   <a href="https://github.com/wlt1920/AxisNex/releases/latest"><b>⬇ Download the latest version</b></a> · <a href="CHANGELOG.md"><b>What's new in each update</b></a>
 </p>
 
-<p align="center">
-  <img src="docs/screenshot.png" width="860" alt="wLt AxisNex screenshot">
-</p>
-
 ---
 
-## ⚠ Official downloads only
+AxisNex reads your physical controller, applies your deadzone, response and trigger settings, and gives games a single virtual controller with those settings applied. The physical controller is hidden from games while AxisNex is running, so the game doesn't see two controllers.
 
-AxisNex is distributed **only** from these two places:
+AxisNex is free. It does not modify games and does not run inside them.
 
-- **https://github.com/wlt1920/AxisNex/releases** (this repository)
-- **https://wltziff.nl**
+## Features
 
-Anything else — other websites, YouTube links, Discord files, "cracked" or "premium" versions — is **not from wLt** and may contain malware. Beware of scams:
+- **One controller in game.** The physical controller is hidden from games with [HidHide](https://github.com/nefarius/HidHide), and a virtual controller ([HIDMaestro](https://github.com/hifihedgehog/HIDMaestro)) receives your tuned input. Stopping AxisNex makes the physical controller visible again.
+- **Guided calibration (about 15 seconds).** Rest, roll both sticks around the edge, let go. AxisNex measures resting drift, the center of each stick, how far each stick reaches and both triggers, then proposes the smallest deadzone that covers the measured drift. You see the result before anything is saved.
+- **Manual tuning.** Deadzone shape (radial, axial, hybrid, square), inner and outer deadzone, anti-deadzone, response curve, sensitivity, smoothing, diagonal stability, square output, and trigger ranges and curves.
+- **4 built-in profiles:** Pro, Freestyle, Aerial and Worn Controller. Calibration and changes are saved into the active profile; any built-in profile can be reset to its original values.
+- **1000 Hz USB polling.** Over a USB cable, AxisNex can set the controller's polling interval from 4 ms (250 Hz, the default) to 1 ms (1000 Hz) with the Microsoft-signed [hidusbf](https://github.com/LordOfMice/hidusbf) driver by SweetLow. It can be switched off, and it is removed from the controller when you uninstall. This changes how often Windows reads the controller; it is not possible over Bluetooth. The live input rate is shown on the Home page.
+- **Game settings page** with recommended in-game values, so the game's deadzone doesn't stack on top of AxisNex's.
+- **Game rules page** (optional) that watches the game publisher's fair-play terms for changes and lists official news and player threads about the anti-cheat.
+- **11 languages** (English, Română, Deutsch, Español, Français, Italiano, Português, Nederlands, Polski, Türkçe, Русский) and 9 color themes.
+- **Built-in updates.** AxisNex can check GitHub for a new version, show its release notes, download the installer, verify its SHA-256 and install it. Automatic checks can be turned off.
 
-- AxisNex is **free**. wLt never asks for money, a login, your passwords or your game account.
-- Check the installer's **SHA-256** against the value in the release notes, and the **VirusTotal** scan links below.
+**Advanced tuning is not fully tested yet.** If you try it, [feedback](https://github.com/wlt1920/AxisNex/issues/new) is welcome.
 
-## VirusTotal scans
+## Requirements
 
-Scans of **V1.2.2** (still named Input Zero then), done by wLt:
+- Windows 10 or Windows 11, 64-bit.
+- Administrator rights (for the installation and the drivers, see [Security](#security)).
+- A supported controller: currently the **DualSense Wireless Controller**, connected by USB cable or Bluetooth. Other controllers are not supported yet.
+- For 1000 Hz polling: a USB **data** cable (charge-only cables don't work).
+- An internet connection only for the optional update check and Game rules page.
 
-| File | SHA-256 | Result | Scan |
-|---|---|---|---|
-| `Input Zero.rar` (the V1.2.2 setup, packed for scanning) | `7a7e03cd926d615fd3d06743a286e3599e8ca32b337935bff1a6b8f7023ab8ce` | ✅ **0 / 57** — no detections | [VirusTotal](https://www.virustotal.com/gui/file/7a7e03cd926d615fd3d06743a286e3599e8ca32b337935bff1a6b8f7023ab8ce) |
-| `InputZero.dll` (the app's code) | `6fecffa9f7d7d7488182dfcd49670d85f0f65fd26383e83e36d80ae40ae384bc` | ✅ **0 / 66** — no detections | [VirusTotal](https://www.virustotal.com/gui/file/6fecffa9f7d7d7488182dfcd49670d85f0f65fd26383e83e36d80ae40ae384bc) |
-| `hidusbf.sys` (1000 Hz USB driver by SweetLow, bundled) | `2f82cdeb36bdaa42ea1933a9b11f3b8e1bdb28e6d3e3da7e65b4631b3375412d` | ✅ **0 / 72** — no detections, Microsoft-signed | [VirusTotal](https://www.virustotal.com/gui/file/2f82cdeb36bdaa42ea1933a9b11f3b8e1bdb28e6d3e3da7e65b4631b3375412d) |
-| `HidHide_x64.exe` (official Nefarius installer, bundled) | `f4bbbcb82e6258641b887c74bc81c4c5f66e4aa811808dfc304347687b7605f6` | official signed release | [VirusTotal](https://www.virustotal.com/gui/file/f4bbbcb82e6258641b887c74bc81c4c5f66e4aa811808dfc304347687b7605f6) |
+## Installation
 
-No antivirus engine flags any of these files — Microsoft Defender, Kaspersky, BitDefender, ESET, CrowdStrike, Avast, AVG, Google and the rest all report them as clean. A few engines show "unable to process file type" or "timeout" for the `.rar` archive: that means they didn't scan it, not that they found something.
+> [!IMPORTANT]
+> **Restart Windows after installing AxisNex for the first time.**
+> The drivers for the virtual controller and for hiding the physical controller only load after a restart.
 
-The official installer on the [Releases](https://github.com/wlt1920/AxisNex/releases/latest) page is `InputZero-V1.2.2-Setup.exe`, SHA-256 `dcd85db8deb04a5e51b0da055e46c40430118ce156d4f6e85494379368f51abb` (also in the release notes). Input Zero checks this hash itself before installing an update.
+1. Download the latest **`AxisNex-…-Setup.exe`** from [Releases](https://github.com/wlt1920/AxisNex/releases/latest). Official downloads are **only** on this GitHub page and on [wltziff.nl](https://wltziff.nl).
+2. Optional: compare the installer's SHA-256 with the value in the release notes (PowerShell: `Get-FileHash .\AxisNex-…-Setup.exe`).
+3. Run the installer and confirm the Windows administrator prompt. The installer is not code-signed, so Windows SmartScreen may show "Unknown publisher".
+4. Pick your language and accept the license.
+5. The installer sets up AxisNex, [HidHide](https://github.com/nefarius/HidHide) (if it isn't installed yet), the virtual-controller driver and the 1000 Hz USB driver.
+6. On the last page, **Restart required** appears. Choose **Restart now** and click *Finish*, or choose **Restart later** and restart before using AxisNex.
+   If you open AxisNex before restarting, it shows **Restart recommended** once per Windows session until you restart.
 
-The installer is not code-signed yet, so Windows SmartScreen may show "Unknown publisher". That is normal for free indie software; the hashes and scans above let you verify the file.
+Updates installed from inside the app keep your profiles, calibration and settings.
 
-**Not sure? That's completely fine.** You don't have to trust us: scan the files yourself with any antivirus or online scanner you like (VirusTotal, your own antivirus, Jotti, MetaDefender…), compare the SHA-256 above, or simply skip AxisNex. Nobody is forced to install it.
-## What it does
+## Getting Started
 
-> **Tested with the PS5 DualSense over USB cable and Bluetooth.** USB is recommended: only USB can run at **1000 Hz**. Support for more controllers is planned in future updates.
+1. Connect your controller with a USB cable (recommended for 1000 Hz) or over Bluetooth.
+2. Open AxisNex. The first time, a short tutorial explains the screen (you can replay it with the **Tutorial** button).
+3. On **Home**, pick a profile (step 2). **Pro** is selected by default.
+4. Press **START**. AxisNex hides the physical controller and starts the virtual controller; all three status dots turn green.
+5. Press **Calibrate** and follow the three short steps. Do this after START, each time you open AxisNex, and again after switching profiles.
+6. Launch the game **after** pressing START. If the game was already open, restart it.
+7. Optional: open **Game settings** to see which in-game settings to use so deadzones don't stack. If the game runs through Steam, keep Steam Input on.
 
-AxisNex sits between your **PS5 DualSense** and your games:
+Press START again (or close AxisNex) to stop; the physical controller becomes visible to games again.
 
-- **Only one controller in game.** Your physical DualSense is hidden from games (via HidHide), and the game sees a single virtual DualSense with your tuning applied. No more double input or "a second player joined".
-- **As little delay as possible.** Zero smoothing, an event-driven input thread with Windows multimedia priority (MMCSS), allocation-free processing measured in microseconds, and nothing running in the background while you play.
-- **1000 Hz over USB.** The DualSense reports 250 times per second from the factory; AxisNex raises that to 1000 on USB (up to 3 ms less delay) with the Microsoft-signed [hidusbf](https://github.com/LordOfMice/hidusbf) driver by SweetLow. On by default, one switch to turn it off, removed on uninstall. Not possible over Bluetooth.
-- **4 Rocket League profiles.** `Rocket League - Pro` (zero smoothing, linear response, 100% diagonals for faster aerial rotation), `Rocket League - Freestyle` (a touch finer around center for air roll and flicks), `Rocket League - Aerial` (gentler curve near center for air dribbles and recoveries) and `Rocket League - Worn Controller` (bigger deadzones for older sticks with drift).
-- **Pro calibration (15 seconds, guided).** After START, press *Calibrate* and follow 3 short steps: rest, roll both sticks around the edge, let go. AxisNex measures drift, the resting center of each stick, how far each stick reaches and your triggers, corrects the center and sets the smallest safe deadzone â worn sticks and triggers reach 100% again. You see the result before it is saved. Prefer your own values? Set them by hand in *Advanced tuning*.
-- **Full manual tuning.** Deadzone shape, inner/outer deadzone, anti-deadzone, response curve, square output, sensitivity, triggers.
-- **11 languages:** English, Română, Deutsch, Español, Français, Italiano, Português, Nederlands, Polski, Türkçe, Русский. Switch live, no restart.
-- **6 color themes** (Zero, Ice, Inferno, Violet, Toxic, Mono).
-- **Advanced tuning is not fully tested yet** — if you try it, [feedback](https://github.com/wlt1920/AxisNex/issues/new) is very welcome!
-- **Updates built in.** When a new version is released here, the app shows *"Vx available – Update"*, downloads the installer, verifies its SHA-256 and installs it. Your profiles stay. Automatic checks can be turned off; then a **Check now** button checks on demand.
+## Controller Detection
 
-## Rocket League profiles
+- AxisNex looks for the **DualSense Wireless Controller** by its USB vendor and product ID (`054C:0CE6`), over USB and Bluetooth. The status bar shows the device name and connection type that Windows reports.
+- Virtual or software-created devices are ignored, so AxisNex never picks up its own virtual controller.
+- AxisNex checks for the controller about every 1.5 seconds, so plugging it in or reconnecting it is detected automatically.
+- While AxisNex is running, the physical controller is hidden from other programs with HidHide; only AxisNex can read it. If AxisNex closes unexpectedly, the controller is made visible again the next time AxisNex starts.
+- 1000 Hz polling applies to USB only. Over Bluetooth the controller uses its own report rate.
 
-Pick one in step 2 on Home (before START). All of them have **zero smoothing**, and your calibration is saved into whichever profile is active â switch profiles and AxisNex asks you to calibrate again. Everything can be fine-tuned in *Advanced tuning*.
+## Troubleshooting
 
-| Profile | Best for | What it does |
+### Controller is not detected
+
+1. Restart Windows (required after the first installation).
+2. Reconnect the controller: unplug and plug the USB cable back in, or reconnect it over Bluetooth.
+3. Prefer a wired USB connection, with a cable that carries data (not a charge-only cable).
+4. Launch AxisNex again.
+
+### "Found the controller but can't open it"
+
+Another controller tool is using the controller. Close it and press START again.
+
+### The game sees two controllers
+
+- Make sure **Hide the physical controller (HidHide)** is on in Settings.
+- Start the game **after** pressing START, or restart it.
+- If AxisNex says HidHide is missing, reinstall AxisNex (the installer includes HidHide), then restart Windows.
+
+### 1000 Hz doesn't turn on
+
+It only works with a USB cable. If Windows doesn't accept the driver, AxisNex puts the controller back to 250 Hz by itself and shows a message. Reinstalling AxisNex adds the driver again.
+
+### "Anti-cheat violation detected" or a kick from a match
+
+Press STOP in AxisNex and play without it for a while. See the **Game rules** page and the [Disclaimer](#disclaimer).
+
+## Privacy
+
+This is based on the source code of AxisNex:
+
+- AxisNex has **no telemetry, analytics, ads or accounts**. It does not send information about you, your PC or your controller anywhere.
+- Settings, profiles and calibration are stored locally on your PC (your user AppData folder and the Windows registry).
+- AxisNex connects to the internet only for:
+  - **Update check** (on by default, can be turned off in Settings): downloads `version.json` from this repository's latest GitHub release; when you choose to update, it downloads the installer from GitHub.
+  - **Game rules page** (on by default, can be turned off on that page): at startup and every 6 hours while AxisNex is open, it reads public pages: the Epic Games terms of service, the game's news feed on Steam and a search on the game's Steam community forum.
+  - **Links you click**, which open in your web browser.
+- Like any website visit, those servers (GitHub, Epic Games, Valve/Steam) see your IP address and a User-Agent with the AxisNex version. wLt receives none of this.
+
+## Security
+
+- **Administrator rights.** The installer needs them to install into Program Files and to set up three drivers: HidHide (hides the physical controller), the HIDMaestro virtual-controller driver, and hidusbf (1000 Hz USB). AxisNex itself also runs as administrator, because hiding the controller, creating the virtual controller and changing the USB polling rate are administrator-only operations in Windows.
+- **Driver certificate.** HIDMaestro installs its own self-signed driver certificate (`HIDMaestroTestCert`) into the computer's trusted certificate stores so its user-mode driver can load. It stays installed after uninstalling AxisNex and can be removed with `certlm.msc`.
+- **Updates** are only accepted from this repository's GitHub releases over HTTPS. The installer is downloaded into the AxisNex program folder (writable only by administrators), checked against the SHA-256 in the release manifest, and only then started.
+- **Bundled components** (HidHide installer, hidusbf driver, HIDMaestro library) are official releases whose SHA-256 hashes are checked when AxisNex is built.
+- AxisNex is **not code-signed**. Verify downloads with the SHA-256 in the release notes.
+- AxisNex never asks you to disable Windows Defender, your antivirus, Secure Boot, driver signature enforcement or any other Windows security feature.
+- AxisNex does not inject into games, read game memory or change game files.
+
+Scans of the bundled third-party files:
+
+| File | SHA-256 | Scan |
 |---|---|---|
-| `Rocket League - Pro` (default) | Ranked, general play, fast reactions | Linear response (what RL muscle memory is built on), small deadzone, **100% diagonals** so diagonal aerials reach full pitch + yaw, full throttle/boost before the trigger bottoms out. |
-| `Rocket League - Freestyle` | Air roll, flicks, freestyle clips | Same base with a touch more precision around center for small air-roll and flick inputs. |
-| `Rocket League - Aerial` | Air dribbles, ceiling shots, recoveries | Gentler curve near center for tiny pitch/yaw corrections in the air, still full speed at the edge and 100% diagonals for fast rotations. |
-| `Rocket League - Worn Controller` | Older DualSense with drift or loose sticks | Bigger deadzones so the car doesn't steer on its own, and an earlier outer edge because worn sticks often stop short of the rim. |
+| `hidusbf.sys` (1000 Hz USB driver by SweetLow, Microsoft-signed) | `2f82cdeb36bdaa42ea1933a9b11f3b8e1bdb28e6d3e3da7e65b4631b3375412d` | [VirusTotal](https://www.virustotal.com/gui/file/2f82cdeb36bdaa42ea1933a9b11f3b8e1bdb28e6d3e3da7e65b4631b3375412d) |
+| `HidHide_x64.exe` (official Nefarius installer v1.5.230) | `f4bbbcb82e6258641b887c74bc81c4c5f66e4aa811808dfc304347687b7605f6` | [VirusTotal](https://www.virustotal.com/gui/file/f4bbbcb82e6258641b887c74bc81c4c5f66e4aa811808dfc304347687b7605f6) |
 
-Not sure? Start with **Pro**, press *Calibrate* after START, and only switch if you want something specific.
+Not sure? You don't have to trust us: scan the installer yourself with any antivirus or online scanner, compare the SHA-256, or don't install it.
 
+**Beware of scams:** AxisNex is free. wLt never asks for money, a login, your passwords or your game account. Copies from other websites, videos or Discord files are not from wLt.
 
-## Install
+## Disclaimer
 
-1. Download the latest **`InputZero-…-Setup.exe`** from [Releases](https://github.com/wlt1920/AxisNex/releases/latest).
-2. Run it, pick your language, accept the license.
-   The installer also sets up [HidHide](https://github.com/nefarius/HidHide) (if missing) and the virtual-controller driver.
-3. Restart your PC once if HidHide was installed.
-4. Open AxisNex → connect the DualSense **with a USB cable** (recommended, 1000 Hz) or over Bluetooth → press **START** → calibrate → then launch your game. Keep Steam Input **on** for Rocket League on Steam.
+**AxisNex is an independent project and is not affiliated with, endorsed by, or sponsored by Sony Interactive Entertainment, Epic Games, Psyonix, or any controller or game manufacturer. All trademarks belong to their respective owners.**
 
-A short animated tutorial runs the first time you open the app (and any time via the **?** button).
+Product and game names are used only to describe compatible hardware and the sources AxisNex refers to. You install and use AxisNex at your own risk and are responsible for following the rules of every game and platform you use it with. Nobody can guarantee how an anti-cheat system treats third-party controller software. See the [license](legal/EULA-en.txt).
 
-## Is it safe? Can I get banned?
+## License
 
-- AxisNex **never touches the game**: no injection, no memory reading, no file changes. It only works at the controller level, the same way DS4Windows and Steam Input do.
-- It does **not collect anything** from your PC. No telemetry, no accounts, no ads. The only internet access is the optional update check (it reads `version.json` from this GitHub page) and downloads you choose to start.
-- Nobody can promise what every anti-cheat will do, so **you install and use it at your own risk** — see the license shown during setup.
+AxisNex is **free proprietary software**, not open source. © 2026 wLt. All rights reserved. You may download and use it free of charge under the [license agreement](legal/EULA-en.txt) shown during installation ([Română](legal/EULA-ro.txt), [Deutsch](legal/EULA-de.txt)). The original, unmodified installer may be shared free of charge; selling it or publishing modified versions is not allowed.
 
-## How it works
+The third-party components keep their own licenses: [`THIRD-PARTY-NOTICES.txt`](THIRD-PARTY-NOTICES.txt).
 
-```text
-Physical DualSense (USB cable or Bluetooth)
-      │  raw HID reports (1000 Hz USB via hidusbf, full 0x31 reports on Bluetooth)
-      ▼
-DualSenseReader      dedicated MMCSS "Games" thread, blocks on the HID read
-      ▼
-TuningEngine         deadzones, curve, square output, triggers  (~µs, no allocations)
-      ▼
-HIDMaestro           user-mode (UMDF2) driver → virtual DualSense
-      ▼
-Game                 sees only the virtual pad (physical one hidden by HidHide)
-```
+## Credits
 
-Built by wLt with C# / .NET 10 and WPF. The UI only draws while the window is in front; when you are in game it pauses all animations and previews, so the app costs almost nothing while you play.
+Created by **wLt** ([wltziff.nl](https://wltziff.nl)), with my basic knowledge of C#, together with the AI tools Claude and Codex.
 
-## How it started — and where it is now
-
-AxisNex started as a small personal experiment called **wLt Controller Tuner v0.1 — "DualSense Lab"**: a window full of sliders that read a DualSense, ran it through some deadzone math and pushed it out as a virtual controller. It worked, but it was a lab tool. You had to build it yourself, connect things in the right order, set up HidHide by hand, and games often saw two controllers at once.
-
-The goal was simple: **the best possible Rocket League feel on a DualSense, with the lowest delay a PC can give, and only one controller in the game.** Getting there meant rebuilding almost everything:
-
-- fixing how the app tells your real controller apart from the virtual one;
-- automating HidHide so the physical pad is hidden and restored on its own;
-- cutting latency out of every step between the controller and the game;
-- writing proper Rocket League presets and a one-click drift calibration;
-- a completely new interface, a guided tutorial, 11 languages, a real installer, a license, and built-in updates.
-
-That became **AxisNex V1**. Since then it keeps getting updates — always download the latest release.
-
-To build AxisNex I used my basic knowledge of C#, together with the AI tools **Claude** and **Codex**.
-
-## What's next
-
-Ideas on the list (no promises on dates):
-
-- more presets and per-game profiles;
-- **support for more controllers** (DualShock 4, DualSense Edge, Xbox and others) — today only the PS5 DualSense is tested;
-- whatever the community asks for.
-
-**I'll keep AxisNex alive for as long as I can and as much as my time allows.** If it helps you, a follow on [wltziff.nl](https://wltziff.nl) is always appreciated.
-
-## Credits & licenses
-
-AxisNex is made by **wLt** and builds on great open-source work. Thank you to all of these projects:
+AxisNex builds on these open-source projects — thank you:
 
 | Component | What for | GitHub | License |
 |---|---|---|---|
-| HIDMaestro | virtual DualSense driver (UMDF2) | [hifihedgehog/HIDMaestro](https://github.com/hifihedgehog/HIDMaestro) | MIT |
+| HIDMaestro | virtual controller driver (UMDF2) | [hifihedgehog/HIDMaestro](https://github.com/hifihedgehog/HIDMaestro) | MIT |
 | HidHide by Nefarius | hides the physical controller from games | [nefarius/HidHide](https://github.com/nefarius/HidHide) | MIT |
-| HidSharp | reading the DualSense over HID | [IntergatedCircuits/HidSharp](https://github.com/IntergatedCircuits/HidSharp) | Apache 2.0 |
+| HidSharp | reading the controller over HID | [IntergatedCircuits/HidSharp](https://github.com/IntergatedCircuits/HidSharp) | Apache 2.0 |
 | hidusbf by SweetLow | 1000 Hz USB polling (NoPatch driver, Microsoft-signed) | [LordOfMice/hidusbf](https://github.com/LordOfMice/hidusbf) | Public Domain |
 | usbip-win2 (inside HIDMaestro) | USB transport for composite devices | [vadimgrn/usbip-win2](https://github.com/vadimgrn/usbip-win2) | BSD 2-Clause |
 | DsHidMini by Nefarius (approach & parts used by HIDMaestro) | user-mode controller driver foundation | [nefarius/DsHidMini](https://github.com/nefarius/DsHidMini) | BSD 3-Clause |
 | .NET Runtime | runtime | [dotnet/runtime](https://github.com/dotnet/runtime) | MIT |
 | WPF | user interface | [dotnet/wpf](https://github.com/dotnet/wpf) | MIT |
 | Inno Setup | installer | [jrsoftware/issrc](https://github.com/jrsoftware/issrc) | Inno Setup License |
-
-Full license texts: [`THIRD-PARTY-NOTICES.txt`](THIRD-PARTY-NOTICES.txt). AxisNex's own license (EN / RO / DE): [`legal/`](legal/).
-
-AxisNex is an independent project, not affiliated with Sony Interactive Entertainment, Psyonix, Epic Games or Nefarius Software Solutions. "PlayStation" and "DualSense" are trademarks of Sony Interactive Entertainment Inc.; "Rocket League" is a trademark of Psyonix LLC.
-
----
-
-**AxisNex** © 2026 **wLt** ([wltziff.nl](https://wltziff.nl)). All rights reserved. Free to download and use under the [license](legal/EULA-en.txt) shown during installation. The installer may be shared unmodified and free of charge; selling it or re-publishing modified versions is not allowed.

@@ -1,26 +1,28 @@
-﻿INPUT ZERO — CONTRACT DE LICENȚĂ PENTRU UTILIZATORUL FINAL ȘI DECLINAREA RĂSPUNDERII
-Versiunea 1.0 — octombrie 2026
-Autor: WLT — https://wltziff.nl
+﻿AXISNEX — CONTRACT DE LICENȚĂ PENTRU UTILIZATORUL FINAL ȘI DECLINAREA RĂSPUNDERII
+Versiunea 1.1 — octombrie 2026
+Autor: wLt — https://wltziff.nl
 
 *** IMPORTANT: INSTALEZI ȘI FOLOSEȘTI ACEST SOFTWARE EXCLUSIV PE PROPRIUL RISC. ***
-WLT nu este responsabil pentru nicio deteriorare a controller-ului, calculatorului, datelor sau conturilor tale de joc. Citește secțiunile 3 și 4.
+wLt nu este responsabil pentru nicio deteriorare a controller-ului, calculatorului, datelor sau conturilor tale de joc. Citește secțiunile 3 și 4.
 
-Citește cu atenție acest contract. Prin instalarea sau folosirea Input Zero („Software-ul”) accepți acești termeni. Dacă nu îi accepți, nu instala și nu folosi Software-ul.
+Citește cu atenție acest contract. Prin instalarea sau folosirea AxisNex („Software-ul”) accepți acești termeni. Dacă nu îi accepți, nu instala și nu folosi Software-ul.
 
 1. LICENȚA
 1.1 Software-ul este oferit gratuit. Îl poți instala și folosi pe oricâte dispozitive proprii, în scop personal și necomercial.
-1.2 Poți distribui gratuit installer-ul original, nemodificat. Nu ai voie să vinzi Software-ul, să percepi bani pentru acces la el, să-l împachetezi cu malware sau adware ori să-l prezinți ca fiind creația ta. Singurele surse oficiale ale Software-ului sunt https://wltziff.nl și https://github.com/wlt1920/InputZero. Copiile obținute din alte locuri nu provin de la WLT și pot fi modificate sau dăunătoare.
-1.3 Toate drepturile care nu sunt acordate expres rămân ale WLT (wltziff.nl), autorul Input Zero.
+1.2 Poți distribui gratuit installer-ul original, nemodificat. Nu ai voie să vinzi Software-ul, să percepi bani pentru acces la el, să-l împachetezi cu malware sau adware ori să-l prezinți ca fiind creația ta. Singurele surse oficiale ale Software-ului sunt https://wltziff.nl și https://github.com/wlt1920/AxisNex. Copiile obținute din alte locuri nu provin de la wLt și pot fi modificate sau dăunătoare.
+1.3 Toate drepturile care nu sunt acordate expres rămân ale wLt (wltziff.nl), autorul AxisNex.
 
 2. CE MODIFICĂ SOFTWARE-UL ÎN SISTEM
 Pentru a funcționa, Software-ul face modificări în Windows. Prin instalare ești de acord cu ele:
-a) Instalează driver-ul user-mode HIDMaestro, care creează un controller DualSense virtual. HIDMaestro instalează un certificat de driver auto-semnat numit „HIDMaestroTestCert” în depozitele „Trusted Root Certification Authorities” și „Trusted Publishers” ale calculatorului, ca driver-ul să se poată încărca.
-b) Instalează HidHide (de la Nefarius Software Solutions), un driver-filtru care ascunde controller-ul fizic de jocuri cât timp Software-ul rulează. HidHide devine activ doar după o repornire.
-c) Se înregistrează în lista de aplicații permise a HidHide, își ridică prioritatea procesului și rezoluția timer-ului Windows cât rulează și salvează setări și profiluri în %APPDATA%\Input Zero și HKEY_CURRENT_USER\Software\Input Zero.
-Dezinstalarea Input Zero elimină aplicația. HidHide, driver-ul HIDMaestro și certificatul lui rămân instalate și pot fi eliminate separat din Setări Windows / Device Manager / Certificate Manager (certlm.msc).
+a) Instalează driver-ul user-mode HIDMaestro, care creează un controller virtual. HIDMaestro instalează un certificat de driver auto-semnat numit „HIDMaestroTestCert” în depozitele „Trusted Root Certification Authorities” și „Trusted Publishers” ale calculatorului, ca driver-ul să se poată încărca.
+b) Instalează HidHide (de la Nefarius Software Solutions), un driver-filtru care ascunde controller-ul fizic de jocuri cât timp Software-ul rulează.
+c) Instalează driver-ul hidusbf de la SweetLow (semnat de Microsoft), care setează intervalul de interogare USB al unui controller pe fir la 1 ms (1000 Hz). Poate fi oprit din aplicație și este scos de pe controller la dezinstalare.
+d) Se înregistrează în lista de aplicații permise a HidHide, își ridică prioritatea procesului cât rulează și salvează setările și profilurile în profilul tău de utilizator Windows (AppData) și în registry (utilizatorul curent și, pentru starea instalării, calculatorul local).
+După prima instalare, Windows trebuie repornit înainte de folosirea Software-ului, ca driverele să se poată încărca.
+Dezinstalarea AxisNex elimină aplicația. HidHide, driver-ul HIDMaestro și certificatul lui rămân instalate și pot fi eliminate separat din Setări Windows / Device Manager / Certificate Manager (certlm.msc).
 
 3. FĂRĂ GARANȚIE
-Software-ul este oferit „CA ATARE” („AS IS”) și „ÎN MĂSURA DISPONIBILITĂȚII”, fără nicio garanție, expresă sau implicită, inclusiv, fără a se limita la, garanții de vandabilitate, adecvare pentru un anumit scop, exactitate și neîncălcare a drepturilor, în măsura maximă permisă de lege. Autorul nu garantează că Software-ul este fără erori, că funcționează cu orice controller, joc sau versiune de Windows ori că reduce latența cu o anumită valoare. Software-ul a fost testat până acum doar cu un DualSense de PS5 conectat prin cablu USB; Bluetooth și alte controllere nu sunt testate și s-ar putea să nu funcționeze.
+Software-ul este oferit „CA ATARE” („AS IS”) și „ÎN MĂSURA DISPONIBILITĂȚII”, fără nicio garanție, expresă sau implicită, inclusiv, fără a se limita la, garanții de vandabilitate, adecvare pentru un anumit scop, exactitate și neîncălcare a drepturilor, în măsura maximă permisă de lege. Autorul nu garantează că Software-ul este fără erori, că funcționează cu orice controller, joc sau versiune de Windows ori că reduce latența cu o anumită valoare. Software-ul a fost testat până acum doar cu DualSense Wireless Controller, conectat prin cablu USB sau Bluetooth; alte controllere nu sunt suportate.
 
 4. LIMITAREA RĂSPUNDERII
 4.1 În măsura maximă permisă de lege, autorul nu răspunde pentru niciun prejudiciu rezultat din instalarea, folosirea sau imposibilitatea folosirii Software-ului, în special pentru:
@@ -32,14 +34,18 @@ Software-ul este oferit „CA ATARE” („AS IS”) și „ÎN MĂSURA DISPONIB
 4.3 Nimic din acest contract nu exclude și nu limitează răspunderea care nu poate fi exclusă sau limitată conform legii aplicabile, în special răspunderea pentru intenție sau culpă gravă, pentru vătămarea vieții, integrității corporale sau sănătății ori răspunderea obligatorie pentru produse. Drepturile tale legale obligatorii de consumator rămân neafectate.
 
 5. CONFIDENȚIALITATE (GDPR)
-Software-ul nu colectează, nu stochează și nu transmite date cu caracter personal. Nu conține telemetrie, analiză, reclame sau sistem de conturi. Setările și profilurile rămân pe calculatorul tău. Software-ul se conectează la internet doar (a) pentru a verifica update-uri, descărcând un mic fișier de versiune de pe pagina oficială Input Zero de pe GitHub (github.com/wlt1920) — opțiunea poate fi dezactivată din aplicație și nu se trimite nicio informație despre tine sau calculatorul tău; ca la orice vizită pe un site, serverul vede adresa IP, care nu este folosită în alt scop — și (b) dacă alegi să instalezi un update sau HidHide din aplicație. Autorul nu prelucrează niciun fel de date personale ale tale prin Software.
+Software-ul nu colectează, nu stochează și nu transmite date cu caracter personal. Nu conține telemetrie, analiză, reclame sau sistem de conturi. Setările și profilurile rămân pe calculatorul tău. Software-ul se conectează la internet doar:
+(a) pentru a verifica update-uri, descărcând un mic fișier de versiune de pe pagina oficială AxisNex de pe GitHub (github.com/wlt1920) — opțiunea poate fi dezactivată din aplicație;
+(b) pentru pagina „Reguli joc”, care citește pagini publice (termenii și condițiile Epic Games, știrile jocului pe Steam și forumul comunității Steam al jocului) la pornire și la fiecare 6 ore cât aplicația e deschisă — opțiunea poate fi dezactivată din acea pagină;
+(c) dacă alegi să instalezi un update sau să deschizi un link, care se deschide în browserul tău.
+Nu se trimite nicio informație despre tine, calculatorul sau controllerul tău. Ca la orice vizită pe un site, serverele contactate (GitHub, Epic Games, Valve/Steam) văd adresa ta IP și o identificare tehnică a aplicației și a versiunii ei; autorul nu primește nimic din toate acestea. Autorul nu prelucrează niciun fel de date personale ale tale prin Software.
 
 6. JOCURI ȘI MĂRCI ÎNREGISTRATE
 Software-ul nu modifică, nu injectează cod, nu citește memoria și nu interacționează în alt mod cu niciun joc. Lucrează exclusiv la nivelul controller-ului (dispozitivului).
-Input Zero este un proiect independent și nu este afiliat, aprobat sau sponsorizat de Sony Interactive Entertainment, Psyonix, Epic Games sau Nefarius Software Solutions. „PlayStation” și „DualSense” sunt mărci ale Sony Interactive Entertainment Inc. „Rocket League” este marcă a Psyonix LLC. Toate mărcile aparțin proprietarilor lor și sunt folosite doar pentru identificare.
+AxisNex este un proiect independent și nu este afiliat, susținut sau sponsorizat de Sony Interactive Entertainment, Epic Games, Psyonix sau de vreun producător de controllere ori de jocuri. Toate mărcile comerciale aparțin proprietarilor lor. Numele de produse și jocuri sunt folosite doar pentru a identifica hardware-ul compatibil și sursele la care se referă Software-ul.
 
 7. COMPONENTE TERȚE
-Software-ul include componente open-source (HIDMaestro — MIT, HidSharp — Apache 2.0, HidHide — MIT, .NET / WPF — MIT, usbip-win2 — BSD 2-Clause și altele). Acestea sunt licențiate conform propriilor termeni, reproduși în THIRD-PARTY-NOTICES.txt din folderul de instalare. Nimic din acest contract nu îți restrânge drepturile conferite de acele licențe.
+Software-ul include componente open-source (HIDMaestro — MIT, HidSharp — Apache 2.0, HidHide — MIT, hidusbf — domeniu public, .NET / WPF — MIT, usbip-win2 — BSD 2-Clause și altele). Acestea sunt licențiate conform propriilor termeni, reproduși în THIRD-PARTY-NOTICES.txt din folderul de instalare. Nimic din acest contract nu îți restrânge drepturile conferite de acele licențe.
 
 8. ACTUALIZĂRI ȘI SUPORT
 Autorul nu are obligația de a oferi actualizări, suport sau mentenanță. Eventualele actualizări sunt oferite în acești termeni sau în termenii furnizați odată cu ele.

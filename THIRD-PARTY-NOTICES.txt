@@ -1,7 +1,7 @@
-﻿INPUT ZERO — THIRD-PARTY NOTICES
+﻿AXISNEX — THIRD-PARTY NOTICES
 ==================================
 
-Input Zero (c) 2026 WLT - https://wltziff.nl - is built on the following open-source software.
+AxisNex (c) 2026 wLt - https://wltziff.nl - is built on the following open-source software.
 Each component is redistributed under its own license, reproduced in full below.
 
 SUMMARY
@@ -2152,7 +2152,7 @@ https://github.com/LordOfMice/hidusbf
 "This software (hidusbf) written by SweetLow in 2004 and distributed as Public Domain
 binaries." (from the hidusbf Setup About box)
 
-Input Zero ships the unmodified NoPatch x64 driver (DRIVER/AMD64_AS/NoPatch/hidusbf.sys),
+AxisNex ships the unmodified NoPatch x64 driver (DRIVER/AMD64_AS/NoPatch/hidusbf.sys),
 Microsoft attestation-signed thanks to Battle Beaver Customs, SHA-256
 2F82CDEB36BDAA42EA1933A9B11F3B8E1BDB28E6D3E3DA7E65B4631B3375412D.
 Thank you, SweetLow.
