@@ -18,6 +18,12 @@ Limbă: [English](../README.md) | Română
   <a href="https://github.com/wlt1920/AxisNex/releases/latest"><b>⬇ Descarcă ultima versiune</b></a> · <a href="../CHANGELOG.md"><b>Ce e nou în fiecare update</b></a> (în engleză)
 </p>
 
+
+<p align="center">
+  <a href="AxisNex-promo.mp4"><img src="promo-poster.jpg" width="240" alt="AxisNex în 50 de secunde: vezi video-ul"></a><br>
+  <b>▶ <a href="AxisNex-promo.mp4">AxisNex în 50 de secunde</a></b> (video, cu sunet)
+</p>
+
 ---
 
 AxisNex citește controllerul tău fizic, aplică setările tale de deadzone, răspuns și triggere și le dă jocurilor un singur controller virtual cu aceste setări. Cât timp AxisNex rulează, controllerul fizic e ascuns de jocuri, așa că jocul nu vede două controllere.
