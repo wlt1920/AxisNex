@@ -1,0 +1,77 @@
+name: Bug report
+description: Something in AxisNex doesn't work as expected.
+labels: ["bug"]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Thanks for reporting. Please check the [Troubleshooting](https://github.com/wlt1920/AxisNex#troubleshooting) section first.
+
+        **Don't post** passwords, game account names, license keys, email addresses or other personal information. Blur them in screenshots.
+        Security problems: follow [SECURITY.md](https://github.com/wlt1920/AxisNex/blob/main/SECURITY.md) instead of opening a public issue.
+  - type: input
+    id: version
+    attributes:
+      label: AxisNex version
+      description: Shown in Settings → About, e.g. V1.2.5.
+      placeholder: V1.2.5
+    validations:
+      required: true
+  - type: input
+    id: windows
+    attributes:
+      label: Windows version
+      description: Press Win+R, type `winver`.
+      placeholder: Windows 11 24H2
+    validations:
+      required: true
+  - type: input
+    id: controller
+    attributes:
+      label: Controller model
+      placeholder: DualSense Wireless Controller
+    validations:
+      required: true
+  - type: dropdown
+    id: connection
+    attributes:
+      label: Connection type
+      options:
+        - USB cable
+        - Bluetooth
+        - Both / not sure
+    validations:
+      required: true
+  - type: input
+    id: profile
+    attributes:
+      label: Profile and game (if relevant)
+      placeholder: Pro, Rocket League
+  - type: textarea
+    id: steps
+    attributes:
+      label: Steps to reproduce
+      placeholder: |
+        1. Open AxisNex
+        2. Press START
+        3. ...
+    validations:
+      required: true
+  - type: textarea
+    id: expected
+    attributes:
+      label: Expected behavior
+    validations:
+      required: true
+  - type: textarea
+    id: actual
+    attributes:
+      label: Actual behavior
+      description: Include the exact message or the status bar text at the bottom of AxisNex, if any.
+    validations:
+      required: true
+  - type: textarea
+    id: extra
+    attributes:
+      label: Screenshots and other details
+      description: Screenshots of AxisNex, other controller tools you have installed (Steam Input, DS4Windows, etc.), anything else that might matter.

@@ -1,7 +1,7 @@
 Limbă: [English](../README.md) | Română
 
 <p align="center">
-  <img src="logo.png" width="120" alt="Logo AxisNex">
+  <img src="banner.jpg" alt="AxisNex — reglare și calibrare controller pentru Windows">
 </p>
 
 <h1 align="center">AxisNex</h1>
@@ -30,7 +30,18 @@ AxisNex citește controllerul tău fizic, aplică setările tale de deadzone, r�
 
 AxisNex este gratuit. Nu modifică jocurile și nu rulează în interiorul lor.
 
+**La ce te ajută**
+
+- **Drift și stick-uri care nu stau fix în centru.** Calibrarea măsoară cât se mișcă singur fiecare stick și unde se oprește, corectează centrul și setează cel mai mic deadzone care acoperă drift-ul — în loc să ghicești unul mare.
+- **Stick-uri sau triggere uzate care nu mai ajung la 100%.** Calibrarea măsoară cât de departe ajunge fiecare direcție și fiecare trigger, ca să obții tot output-ul.
+- **Input inconsecvent și deadzone-uri adunate.** Deadzone, curbă de răspuns și triggere într-un singur loc, plus valori recomandate în joc, ca deadzone-ul jocului să nu se adune peste cel din AxisNex.
+- **Rocket League pe PC cu un DualSense.** Profilurile incluse și pagina Setări joc sunt făcute cu Rocket League în minte; reglajul de deadzone și calibrarea în sine nu depind de joc.
+
 ## Funcții
+
+<p align="center">
+  <img src="screenshot.png" width="860" alt="Pagina Home din AxisNex V1.2.5">
+</p>
 
 - **Un singur controller în joc.** Controllerul fizic e ascuns de jocuri cu [HidHide](https://github.com/nefarius/HidHide), iar un controller virtual ([HIDMaestro](https://github.com/hifihedgehog/HIDMaestro)) primește inputul reglat de tine. Când oprești AxisNex, controllerul fizic devine din nou vizibil.
 - **Calibrare ghidată (cam 15 secunde).** Stai nemișcat, rotește ambele stick-uri pe margine, dă drumul. AxisNex măsoară drift-ul în repaus, centrul fiecărui stick, cât de departe ajunge fiecare stick și ambele triggere, apoi propune cel mai mic deadzone care acoperă drift-ul măsurat. Vezi rezultatul înainte să se salveze ceva.
@@ -87,6 +98,19 @@ Apasă din nou START (sau închide AxisNex) ca să oprești; controllerul fizic 
 - AxisNex caută controllerul cam la fiecare 1,5 secunde, așa că îl detectează automat când îl conectezi sau îl reconectezi.
 - Cât timp AxisNex rulează, controllerul fizic e ascuns de alte programe cu HidHide; doar AxisNex îl poate citi. Dacă AxisNex se închide neașteptat, controllerul devine din nou vizibil la următoarea pornire a AxisNex.
 - Interogarea la 1000 Hz se aplică doar pe USB. Pe Bluetooth, controllerul folosește propria rată de raportare.
+
+## Calibrare și profiluri
+
+Calibrarea are trei pași — **Repaus** (nu atinge nimic), **Cursă** (rotește ambele stick-uri pe margine și apasă o dată complet ambele triggere) și **Revenire** (dă drumul) — urmați de un ecran cu rezultatul. Nimic nu se salvează până nu apeși **Aplică și salvează**. Fiecare profil (**Pro**, **Freestyle**, **Aerial**, **Worn Controller**) are propriile deadzone-uri, așa că recalibrează după ce schimbi profilul.
+
+Ghid detaliat (în engleză): [calibration.md](calibration.md).
+
+## Limitări cunoscute
+
+- E suportat doar **DualSense Wireless Controller**, câte unul o dată.
+- Cele patru profiluri incluse pot fi modificate și resetate, dar încă nu poți crea profiluri noi.
+- Pagina **Reglaj avansat** nu e încă testată complet.
+- Installerul și aplicația nu sunt semnate digital.
 
 ## Depanare
 
@@ -147,6 +171,8 @@ Scanări ale fișierelor terțe incluse:
 Nu ești sigur? Nu trebuie să ne crezi pe cuvânt: scanează singur installerul cu orice antivirus sau scanner online, compară SHA-256 sau pur și simplu nu-l instala.
 
 **Atenție la țepe:** AxisNex este gratuit. wLt nu îți cere niciodată bani, date de logare, parole sau contul de joc. Copiile de pe alte site-uri, din videoclipuri sau fișiere de pe Discord nu sunt de la wLt.
+
+Ai găsit o problemă de securitate? Vezi [SECURITY.md](../SECURITY.md) (în engleză). Pentru bug-uri și idei folosește [șabloanele de issue](https://github.com/wlt1920/AxisNex/issues/new/choose).
 
 ## Declinarea răspunderii
 

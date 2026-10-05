@@ -1,0 +1,28 @@
+name: Feature request
+description: Suggest an improvement or a new feature for AxisNex.
+labels: ["enhancement"]
+body:
+  - type: textarea
+    id: problem
+    attributes:
+      label: Problem or use case
+      description: What are you trying to do, and what gets in the way today?
+    validations:
+      required: true
+  - type: textarea
+    id: proposal
+    attributes:
+      label: Proposed improvement
+      description: How would you like AxisNex to handle it?
+    validations:
+      required: true
+  - type: textarea
+    id: why
+    attributes:
+      label: Why it would be useful
+      description: Who else would benefit, and how often would you use it?
+  - type: input
+    id: setup
+    attributes:
+      label: Your setup (optional)
+      placeholder: DualSense over USB, Rocket League

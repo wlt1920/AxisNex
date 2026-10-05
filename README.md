@@ -1,7 +1,7 @@
 Language: English | [Română](docs/README_RO.md)
 
 <p align="center">
-  <img src="docs/logo.png" width="120" alt="AxisNex logo">
+  <img src="docs/banner.jpg" alt="AxisNex — controller tuning and calibration for Windows">
 </p>
 
 <h1 align="center">AxisNex</h1>
@@ -10,6 +10,12 @@ Language: English | [Română](docs/README_RO.md)
   <b>Controller tuning and calibration for Windows.</b><br>
   Fine-tune deadzones, response and controller profiles.<br>
   by <b>wLt</b> · <a href="https://wltziff.nl">wltziff.nl</a>
+</p>
+
+<p align="center">
+  <a href="https://github.com/wlt1920/AxisNex/releases/latest"><img src="https://img.shields.io/github/v/release/wlt1920/AxisNex?label=latest&color=ff6a3d" alt="Latest release"></a>
+  <img src="https://img.shields.io/badge/Windows-10%20%7C%2011%20(64--bit)-0078D4" alt="Windows 10 | 11 (64-bit)">
+  <img src="https://img.shields.io/badge/price-free-2ea043" alt="Free">
 </p>
 
 > **AxisNex is an independent project and is not affiliated with, endorsed by, or sponsored by Sony Interactive Entertainment, Epic Games, Psyonix, or any controller or game manufacturer. All trademarks belong to their respective owners.**
@@ -30,7 +36,20 @@ AxisNex reads your physical controller, applies your deadzone, response and trig
 
 AxisNex is free. It does not modify games and does not run inside them.
 
+**What it helps with**
+
+- **Stick drift and an off-center resting position.** A short calibration measures how much each stick moves on its own and where it rests, corrects the center and sets the smallest deadzone that covers it — instead of guessing a large one.
+- **Worn sticks or triggers that no longer reach 100%.** Calibration measures how far each direction and trigger actually goes, so full output is still reached.
+- **Inconsistent stick input and stacked deadzones.** One place for deadzone, response curve and trigger settings, plus recommended in-game values so the game's own deadzone doesn't add on top.
+- **Rocket League on PC with a DualSense.** The built-in profiles and the Game settings page are made with Rocket League in mind; the deadzone and calibration tuning itself is not game-specific.
+
+[Features](#features) · [Requirements](#requirements) · [Installation](#installation) · [Getting started](#getting-started) · [Calibration & profiles](#calibration-and-profiles) · [Troubleshooting](#troubleshooting) · [FAQ](#faq) · [Privacy](#privacy) · [Security](#security)
+
 ## Features
+
+<p align="center">
+  <img src="docs/screenshot.png" width="860" alt="AxisNex V1.2.5 Home page: connect, pick a profile, START and calibrate, with live stick view">
+</p>
 
 - **One controller in game.** The physical controller is hidden from games with [HidHide](https://github.com/nefarius/HidHide), and a virtual controller ([HIDMaestro](https://github.com/hifihedgehog/HIDMaestro)) receives your tuned input. Stopping AxisNex makes the physical controller visible again.
 - **Guided calibration (about 15 seconds).** Rest, roll both sticks around the edge, let go. AxisNex measures resting drift, the center of each stick, how far each stick reaches and both triggers, then proposes the smallest deadzone that covers the measured drift. You see the result before anything is saved.
@@ -68,6 +87,8 @@ AxisNex is free. It does not modify games and does not run inside them.
 
 Updates installed from inside the app keep your profiles, calibration and settings.
 
+**Uninstalling:** use *Settings → Apps* (or Programs & Features). The uninstaller takes the 1000 Hz driver off the controller and removes AxisNex from HidHide's allowed apps. HidHide itself, the HIDMaestro driver certificate (see [Security](#security)) and your profiles in `%APPDATA%\Input Zero` are left in place; remove them yourself if you no longer need them.
+
 ## Getting Started
 
 1. Connect your controller with a USB cable (recommended for 1000 Hz) or over Bluetooth.
@@ -79,6 +100,19 @@ Updates installed from inside the app keep your profiles, calibration and settin
 7. Optional: open **Game settings** to see which in-game settings to use so deadzones don't stack. If the game runs through Steam, keep Steam Input on.
 
 Press START again (or close AxisNex) to stop; the physical controller becomes visible to games again.
+
+## Calibration and profiles
+
+Calibration has three steps — **Rest** (don't touch anything), **Range** (roll both sticks around the edge, press both triggers fully once) and **Return** (let go) — followed by a result screen. Nothing is saved until you press **Apply & save**. The result is stored in the active profile, and every profile has its own deadzones, so calibrate again after switching.
+
+| Profile | Meant for |
+|---|---|
+| **Pro** (default) | Linear response, zero smoothing, full diagonals. A neutral starting point. |
+| **Freestyle** | Same base, slightly finer control around the center. |
+| **Aerial** | Gentler curve near the center for small corrections, full diagonals for fast rotations. |
+| **Worn Controller** | Larger deadzones and an earlier outer edge for older sticks with drift. |
+
+Step-by-step guide, what each result means and which profile to pick: **[docs/calibration.md](docs/calibration.md)**.
 
 ## Controller Detection
 
@@ -115,6 +149,44 @@ It only works with a USB cable. If Windows doesn't accept the driver, AxisNex pu
 
 Press STOP in AxisNex and play without it for a while. See the **Game rules** page and the [Disclaimer](#disclaimer).
 
+### Calibration keeps stopping ("Calibration stopped")
+
+A stick moved during the Rest or Return step, or never came back to center. Put the controller down on a table, wait a second and press **Redo**. If a stick never settles, try the **Worn Controller** profile.
+
+### Something else
+
+Open a [bug report](https://github.com/wlt1920/AxisNex/issues/new/choose). The status bar text at the bottom of AxisNex and a screenshot help a lot.
+
+## Known limitations
+
+- Only the **DualSense Wireless Controller** is supported. DualSense Edge, DualShock 4, Xbox and other controllers are not detected.
+- One controller at a time.
+- The four built-in profiles can be edited and reset, but you can't create additional profiles yet.
+- **Advanced tuning** is not fully tested yet.
+- Calibration is per profile and should be repeated each session (see [Getting Started](#getting-started)).
+- The installer and app are not code-signed, so SmartScreen and some antivirus tools may warn.
+- Windows only (10/11, 64-bit).
+
+## FAQ
+
+**Does AxisNex work with games other than Rocket League?**
+The deadzone, response and calibration apply to any game that reads the virtual controller. The built-in profiles and the Game settings page are written for Rocket League, so other games may need different values.
+
+**Is it safe with anti-cheat?**
+AxisNex does not inject into games, read game memory or change game files; it only processes controller input. Still, nobody can guarantee how an anti-cheat system treats third-party controller software. Read the [Disclaimer](#disclaimer).
+
+**Do I need Steam Input on or off?**
+If the game runs through Steam, keep Steam Input on; some games only see the controller through it.
+
+**Can AxisNex fix stick drift permanently?**
+No. It can't repair hardware. It measures the drift and sets a deadzone and center correction so the drift doesn't reach the game.
+
+**Why does it need administrator rights?**
+Hiding the physical controller, creating the virtual controller and changing the USB polling rate are administrator-only operations in Windows. See [Security](#security).
+
+**Is AxisNex open source?**
+No. It's free to use, but the source code is not public. See [License](#license).
+
 ## Privacy
 
 This is based on the source code of AxisNex:
@@ -147,6 +219,12 @@ Scans of the bundled third-party files:
 Not sure? You don't have to trust us: scan the installer yourself with any antivirus or online scanner, compare the SHA-256, or don't install it.
 
 **Beware of scams:** AxisNex is free. wLt never asks for money, a login, your passwords or your game account. Copies from other websites, videos or Discord files are not from wLt.
+
+Found a security problem? See [SECURITY.md](SECURITY.md).
+
+## Feedback and contributing
+
+Bug reports, feature ideas and feedback on Advanced tuning are welcome — see [CONTRIBUTING.md](CONTRIBUTING.md). Use the [issue templates](https://github.com/wlt1920/AxisNex/issues/new/choose) so the details needed to reproduce a problem are included.
 
 ## Disclaimer
 

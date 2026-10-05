@@ -1,0 +1,8 @@
+blank_issues_enabled: true
+contact_links:
+  - name: Questions and general feedback
+    url: https://github.com/wlt1920/AxisNex/discussions
+    about: Ask a question or share how AxisNex works for you.
+  - name: Report a security problem
+    url: https://github.com/wlt1920/AxisNex/blob/main/SECURITY.md
+    about: Please don't report security problems in public issues.
