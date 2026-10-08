@@ -25,6 +25,19 @@ Limbă: [English](../README.md) | Română
   <sub><b><!--downloads-->22<!--/downloads--></b> descărcări &nbsp;·&nbsp; Windows 10 / 11 (64-bit) &nbsp;·&nbsp; Gratuit</sub>
 </p>
 
+## Ce e nou în V1.3.1
+
+<table>
+  <tr>
+    <td width="50%" valign="top"><img src="v1.3.1/calibration-done.png" alt="Finalul calibrării cu confetti"><br><b>Lumini și sunet.</b> Luminile controllerului se aprind odată cu aplicația (la pornire, la fiecare vibrație, la finalul calibrării) și urmăresc stick-urile live în Vezi diferența. Sunete discrete făcute în aplicație, cu tic-tac 3-2-1 la calibrare.</td>
+    <td width="50%" valign="top"><img src="v1.3.1/notifications.png" alt="Notificări verzi, albastre și portocalii"><br><b>Notificări care se văd.</b> Culoare și sunet proprii pentru gata, info, avertizare și eroare, pe orice temă.</td>
+  </tr>
+  <tr>
+    <td width="50%" valign="top"><img src="v1.3.1/home-update.png" alt="Banner de update pe Home"><br><b>Update-uri pe Home.</b> O versiune nouă apare sus pe Home, cu Actualizează acum.</td>
+    <td width="50%" valign="top"><img src="v1.3.1/settings-feedback.png" alt="Setări vibrație, lumini și sunet"><br><b>Setări mai ordonate.</b> Vibrația, luminile și sunetul au fiecare comutatorul lor.</td>
+  </tr>
+</table>
+
 ## Ce e nou în V1.3
 
 <table>

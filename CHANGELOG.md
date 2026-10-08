@@ -3,6 +3,60 @@
 Everything that changed in each version of AxisNex. Newest first.
 Download the latest version from [Releases](https://github.com/wlt1920/AxisNex/releases/latest).
 
+## V1.3.1 — 2026-10-08
+
+A quick update with new things to see, hear and feel: your controller now lights up, AxisNex has sound, notifications are much easier to spot, and updates show up right on the Home screen.
+
+### Your controller lights up
+
+- When AxisNex opens, the controller's **lightbar and player LEDs** play a light show **in time with the welcome sound**: they fade in through the colors, glow brightest at the peak, then fade back down.
+- Every **rumble** (START, calibration steps, switches) now also **flashes the lights**, with a new color each time. Strong hits flash almost white.
+- **See the difference** on Home: the controller's lights now **follow your sticks live**. The color shows the direction you push, the brightness how far, and the lit LED moves left and right with the stick (the right stick also lights the middle LED, so you can tell them apart). Inside the deadzone the lights stay calm, just like what the game gets.
+- Don't want it? Settings → **Light up the controller** → off. Vibration and lights now have **separate switches**.
+
+### Sound
+
+- A soft **welcome sound** that fades in and out, a sound for **START** and **Stop**, a **3-2-1 tick** on the "Don't touch anything" timer while calibrating, and a short **fanfare** when calibration is done.
+- Buttons, switches and the side menu each have their **own short sound**, so they never sound alike.
+- Every sound is **made inside the app** (no music samples, nothing copyrighted).
+- Settings → **Sound effects** turns them all off.
+
+### Calibration finish
+
+<img src="docs/v1.3.1/calibration-done.png" width="700" alt="Calibration result with confetti bursting out of the ring">
+
+- When calibration is done the ring pops, **confetti** bursts out of it, and the controller gives three happy pulses of light and rumble.
+
+### Welcome screen
+
+<img src="docs/v1.3.1/welcome.png" width="420" alt="Welcome screen: WELCOME BACK TO AxisNex">
+
+- **"Welcome to AxisNex"** types itself in letter by letter (**"Welcome back to"** after the first time), in your language.
+
+### Notifications you can't miss
+
+<img src="docs/v1.3.1/notifications.png" width="460" alt="Success, info and warning notifications in green, blue and orange">
+
+- Each kind has its **own color on every theme**: green = done, blue = info, orange = check this, red = something went wrong.
+- Colored stripe, colored glow, a solid icon that pulses once and a small bounce when it appears.
+- Each kind also has **its own sound**.
+
+### Updates right on Home
+
+<img src="docs/v1.3.1/home-update.png" width="760" alt="Update banner on the Home screen with See what's new and Update now">
+
+- When a new version is out, a banner appears at the **top of Home** with **See what's new** and **Update now**. ✕ hides it until the next start (the small update button at the top stays).
+
+### Tidier Settings
+
+<img src="docs/v1.3.1/settings-feedback.png" width="560" alt="The new Vibration, lights and sound card in Settings">
+
+- Settings are now grouped: **Controller** · **Vibration, lights & sound** · **Look & language** · **Startup & tray** · **Updates**.
+
+### Small fixes
+
+- Notifications looked almost the same on gold themes. They now always use their own colors.
+
 ## V1.3.0 — 2026-10-08
 
 The biggest update so far: your own profiles, a page for your controller, live before/after previews, and AxisNex now keeps running in the background when you close the window.

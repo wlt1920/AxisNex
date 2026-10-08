@@ -25,6 +25,19 @@ Language: English | [Română](docs/README_RO.md)
   <a href="https://github.com/wlt1920/AxisNex/releases/latest"><b>⬇ Download the latest version</b></a> · <a href="CHANGELOG.md"><b>What's new in each update</b></a>
 </p>
 
+## What's new in V1.3.1
+
+<table>
+  <tr>
+    <td width="50%" valign="top"><img src="docs/v1.3.1/calibration-done.png" alt="Calibration finish with confetti"><br><b>Lights and sound.</b> The controller's lights play along (welcome show, every rumble, calibration finish) and follow your sticks live in See the difference. Soft sounds made in the app, with a 3-2-1 tick while calibrating.</td>
+    <td width="50%" valign="top"><img src="docs/v1.3.1/notifications.png" alt="Notifications in green, blue and orange"><br><b>Notifications you can't miss.</b> Own color and sound for done, info, warning and error, on every theme.</td>
+  </tr>
+  <tr>
+    <td width="50%" valign="top"><img src="docs/v1.3.1/home-update.png" alt="Update banner on Home"><br><b>Updates on Home.</b> A new version shows up at the top of Home with Update now.</td>
+    <td width="50%" valign="top"><img src="docs/v1.3.1/settings-feedback.png" alt="Vibration, lights and sound settings"><br><b>Tidier Settings.</b> Vibration, lights and sound each have their own switch.</td>
+  </tr>
+</table>
+
 ## What's new in V1.3
 
 <table>
