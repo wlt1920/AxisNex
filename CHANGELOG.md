@@ -74,6 +74,7 @@ The biggest update so far: your own profiles, a page for your controller, live b
 <img src="docs/v1.3/about.png" width="760" alt="The new About card">
 
 - All new texts are in all 11 languages.
+- License updated (version 1.2): it now also lists the two new things AxisNex changes in Windows — the corrected controller layout for Windows menus, and the controller name in Windows' game controller list (put back when AxisNex exits).
 
 ## V1.2.5 — 2026-10-05
 

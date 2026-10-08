@@ -1,5 +1,5 @@
 ﻿AXISNEX — ENDBENUTZER-LIZENZVERTRAG UND HAFTUNGSAUSSCHLUSS
-Version 1.1 — Oktober 2026
+Version 1.2 — Oktober 2026
 Autor: wLt — https://wltziff.nl
 
 *** WICHTIG: DU INSTALLIERST UND NUTZT DIESE SOFTWARE AUSSCHLIESSLICH AUF EIGENES RISIKO. ***
@@ -18,6 +18,7 @@ a) Sie installiert den HIDMaestro-User-Mode-Treiber, der einen virtuellen Contro
 b) Sie installiert HidHide (von Nefarius Software Solutions), einen Filtertreiber, der deinen echten Controller vor Spielen verbirgt, solange die Software läuft.
 c) Sie installiert den hidusbf-Treiber von SweetLow (von Microsoft signiert), der das USB-Abfrageintervall eines kabelgebundenen Controllers auf 1 ms (1000 Hz) setzt. Das lässt sich in der App abschalten und wird bei der Deinstallation vom Controller entfernt.
 d) Sie trägt sich in die Liste erlaubter Anwendungen von HidHide ein, erhöht während der Ausführung ihre Prozesspriorität und speichert Einstellungen und Profile in deinem Windows-Benutzerprofil (AppData) und in der Registry (aktueller Benutzer und, für den Installationsstatus, lokaler Computer).
+e) Sie korrigiert die Belegung von Tasten und Sticks, die Windows für dein Controller-Modell registriert, damit Windows-Menüs einen ruhenden Trigger nicht als voll gedrückten Stick behandeln. Wenn du deinem Controller einen Namen gibst, zeigt die Software ihn während der Ausführung in der Gamecontroller-Liste von Windows an und stellt beim Beenden oder Deinstallieren den Windows-eigenen Namen wieder her; der virtuelle Controller kann diesen Namen und die Kennung deines Controllers tragen, damit Spiele ihn als deinen Controller erkennen.
 Nach der ersten Installation muss Windows neu gestartet werden, bevor die Software benutzt wird, damit die Treiber geladen werden können.
 Die Deinstallation von AxisNex entfernt die Anwendung. HidHide, der HIDMaestro-Treiber und sein Zertifikat bleiben installiert und können separat über die Windows-Einstellungen / den Geräte-Manager / die Zertifikatverwaltung (certlm.msc) entfernt werden.
 

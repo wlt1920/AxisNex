@@ -1,5 +1,5 @@
 ﻿AXISNEX — END-USER LICENSE AGREEMENT AND DISCLAIMER
-Version 1.1 — October 2026
+Version 1.2 — October 2026
 Author: wLt — https://wltziff.nl
 
 *** IMPORTANT: YOU INSTALL AND USE THIS SOFTWARE ENTIRELY AT YOUR OWN RISK. ***
@@ -18,6 +18,7 @@ a) It installs the HIDMaestro user-mode driver, which creates a virtual controll
 b) It installs HidHide (by Nefarius Software Solutions), a filter driver that hides your physical controller from games while the Software is running.
 c) It installs the hidusbf driver by SweetLow (Microsoft-signed), which sets the USB polling interval of a wired controller to 1 ms (1000 Hz). This can be switched off in the app and is removed from the controller on uninstall.
 d) It registers itself in HidHide's list of allowed applications, raises its own process priority while running, and stores its settings and profiles in your Windows user profile (AppData) and in the registry (current user and, for installation state, the local machine).
+e) It corrects the game-controller layout that Windows registers for your controller model, so that Windows menus don't treat a trigger at rest as a fully pushed stick. If you give your controller a name, the Software shows it in Windows' list of game controllers while it is running and puts Windows' own name back when it exits or is uninstalled; the virtual controller can carry that name and your controller's identifier so that games see it as your controller.
 After the first installation, Windows must be restarted before the Software is used, so that the drivers can load.
 Uninstalling AxisNex removes the application. HidHide, the HIDMaestro driver and its certificate stay installed and can be removed separately from Windows Settings / Device Manager / Certificate Manager (certlm.msc).
 

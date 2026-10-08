@@ -44,7 +44,9 @@ Nothing changes until you press **Apply & save**. The result is saved into the a
 
 ## Profiles
 
-AxisNex has four built-in profiles. You can change any value in **Advanced tuning** and save it to the active profile, or use **Reset profile** to restore the original values.
+AxisNex has four built-in profiles, and you can add your own on the **Profiles** page: **New profile** saves the values you're using now under a new name, and every profile can be duplicated, renamed, exported to an `.axisnex` file and imported again (or shared with a friend). Built-in profiles can't be deleted, only restored to their original values. Calibration is never exported — it belongs to your controller.
+
+You can change any value in **Advanced tuning** and save it to the active profile. The **Live preview** card at the top shows your saved values (grey) next to the new ones (color) while you move the sticks, and every changed value has a **↺** button that puts just that value back. On Home, **See the difference** compares the active profile with its original values live.
 
 | Profile | Meant for | Main differences |
 |---|---|---|

@@ -13,8 +13,8 @@ body:
     id: version
     attributes:
       label: AxisNex version
-      description: Shown in Settings → About, e.g. V1.2.5.
-      placeholder: V1.2.5
+      description: Shown in Settings → About, e.g. V1.3.
+      placeholder: V1.3
     validations:
       required: true
   - type: input
@@ -40,6 +40,21 @@ body:
         - USB cable
         - Bluetooth
         - Both / not sure
+    validations:
+      required: true
+  - type: dropdown
+    id: area
+    attributes:
+      label: Where in AxisNex?
+      options:
+        - Home / START
+        - Calibration
+        - Profiles (create, export, import)
+        - Controller (name)
+        - Advanced tuning
+        - Tray icon / closing the window
+        - Updates
+        - Something else
     validations:
       required: true
   - type: input

@@ -1,5 +1,5 @@
 ﻿AXISNEX — CONTRACT DE LICENȚĂ PENTRU UTILIZATORUL FINAL ȘI DECLINAREA RĂSPUNDERII
-Versiunea 1.1 — octombrie 2026
+Versiunea 1.2 — octombrie 2026
 Autor: wLt — https://wltziff.nl
 
 *** IMPORTANT: INSTALEZI ȘI FOLOSEȘTI ACEST SOFTWARE EXCLUSIV PE PROPRIUL RISC. ***
@@ -18,6 +18,7 @@ a) Instalează driver-ul user-mode HIDMaestro, care creează un controller virtu
 b) Instalează HidHide (de la Nefarius Software Solutions), un driver-filtru care ascunde controller-ul fizic de jocuri cât timp Software-ul rulează.
 c) Instalează driver-ul hidusbf de la SweetLow (semnat de Microsoft), care setează intervalul de interogare USB al unui controller pe fir la 1 ms (1000 Hz). Poate fi oprit din aplicație și este scos de pe controller la dezinstalare.
 d) Se înregistrează în lista de aplicații permise a HidHide, își ridică prioritatea procesului cât rulează și salvează setările și profilurile în profilul tău de utilizator Windows (AppData) și în registry (utilizatorul curent și, pentru starea instalării, calculatorul local).
+e) Corectează așezarea butoanelor și stick-urilor pe care Windows o înregistrează pentru modelul controllerului tău, ca meniurile Windows să nu trateze un trigger în repaus drept un stick împins la maximum. Dacă îi dai un nume controllerului, Software-ul îl afișează în lista de controllere de joc din Windows cât rulează și pune înapoi numele original al Windows la închidere sau la dezinstalare; controllerul virtual poate purta acel nume și identificatorul controllerului tău, ca jocurile să-l vadă drept controllerul tău.
 După prima instalare, Windows trebuie repornit înainte de folosirea Software-ului, ca driverele să se poată încărca.
 Dezinstalarea AxisNex elimină aplicația. HidHide, driver-ul HIDMaestro și certificatul lui rămân instalate și pot fi eliminate separat din Setări Windows / Device Manager / Certificate Manager (certlm.msc).
 

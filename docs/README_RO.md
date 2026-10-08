@@ -22,7 +22,7 @@ Limbă: [English](../README.md) | Română
   <a href="https://github.com/wlt1920/AxisNex/releases/latest"><img src="https://img.shields.io/github/v/release/wlt1920/AxisNex?style=for-the-badge&label=%E2%AC%87%20%20DOWNLOAD&color=2f6bff&labelColor=1a3fbf" height="46" alt="Descarcă ultima versiune AxisNex"></a>
 </p>
 <p align="center">
-  <sub><b><!--downloads-->19<!--/downloads--></b> descărcări &nbsp;·&nbsp; Windows 10 / 11 (64-bit) &nbsp;·&nbsp; Gratuit</sub>
+  <sub><b><!--downloads-->22<!--/downloads--></b> descărcări &nbsp;·&nbsp; Windows 10 / 11 (64-bit) &nbsp;·&nbsp; Gratuit</sub>
 </p>
 
 ## Ce e nou în V1.3
