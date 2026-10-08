@@ -3,6 +3,78 @@
 Everything that changed in each version of AxisNex. Newest first.
 Download the latest version from [Releases](https://github.com/wlt1920/AxisNex/releases/latest).
 
+## V1.3.0 — 2026-10-08
+
+The biggest update so far: your own profiles, a page for your controller, live before/after previews, and AxisNex now keeps running in the background when you close the window.
+
+### Your own profiles, and sharing them
+
+<img src="docs/v1.3/profiles.png" width="760" alt="The new Profiles page with a card for every profile">
+
+- New **Profiles** page in the side menu. Every profile has its own card with a small picture of its deadzones and response curve, so you can see at a glance how they differ.
+- **New profile** saves the values you are using right now under a new name. You can also **duplicate**, **rename** and **delete** profiles. The four built-in ones can't be deleted, only restored to their original values.
+- **Export** saves a profile as an `.axisnex` file. Send it to a friend or keep it as a backup. **Import** reads it back, or just drag the file onto the page.
+- Imported files can't break anything: every value is kept within what the sliders allow, and nothing is ever overwritten (a name that's taken becomes "Pro (2)").
+- Your calibration is **not** exported. It belongs to your controller, not to the profile.
+
+### ✕ keeps AxisNex running
+
+<img src="docs/v1.3/tray-menu.png" width="300" alt="The AxisNex menu next to the Windows clock">
+
+- Closing the window with **✕** now hides AxisNex next to the clock. Your controller **stays tuned** while you play.
+- **Click** the icon to open AxisNex again. **Right-click** it to press START or Stop, switch profiles, or **Exit** to really close it.
+- Opening AxisNex again from the Start menu brings back the same window.
+- Don't want this? Settings → **Keep running in the tray when closed** → off.
+
+### Give your controller a name
+
+<img src="docs/v1.3/controller.png" width="760" alt="The new Controller page">
+
+- The first time you connect a controller, AxisNex asks for a name (for example *wLt Rocket*). After that it **recognizes that controller automatically** by its own ID, over USB or Bluetooth, and greets it by name.
+- New **Controller** page: change the name right on the page, see every controller AxisNex has seen, rename or forget them.
+- The name shows on the Connect step, in the tray icon, in Windows' game controller list and in games that read the controller name.
+
+<img src="docs/v1.3/controller-name-dialog.png" width="560" alt="Naming a new controller">
+
+### See the difference
+
+<img src="docs/v1.3/home-difference.png" width="760" alt="Home with See the difference turned on">
+
+- New **See the difference** button on the live sticks (Home).
+- The **colored dot** is where your stick ends up with your profile. The **white ring** is where it would end up with the original values. Move a stick and both move live.
+- Under each stick, in plain words: *"Game gets 79% · original would give 80%"*.
+- A list shows exactly **what changed and what it means**, for example *"L Inner deadzone 4.5% → 2.5% — reacts sooner"*.
+
+### Advanced tuning: live before and after
+
+<img src="docs/v1.3/tuning.png" width="760" alt="Advanced tuning with the live preview card">
+
+- A **Live preview** card stays at the top while you scroll: grey = your saved values, color = what you have now. Move the sticks or press the triggers and you see both in real time.
+- Every changed value gets a small **↺ button** that puts just that one value back, and a grey mark on the slider shows where it was.
+- **Undo all** puts every unsaved change back. The card counts your unsaved changes.
+- Don't want it? Turn it off with the switch on the card.
+
+### Clear message when the controller isn't connected
+
+<img src="docs/v1.3/start-error.png" width="300" alt="Red message under START: Controller not connected">
+
+- Pressing START without a controller now shows a **big red message right under START** with what to do and a **Try again** button, instead of a Windows pop-up. It disappears by itself as soon as the controller connects.
+
+### Fixed: Windows menus scrolling on their own
+
+- With the controller plugged in, menus like the Windows volume mixer could scroll down by themselves. The cause was a wrong Windows button and stick layout registered for this controller (the trigger at rest was read as "stick pushed all the way"). AxisNex now corrects it at startup and after START. The Cross button works as "confirm" in Windows menus again (it acted as "back").
+
+### Look and feel
+
+<img src="docs/v1.3/welcome.png" width="300" alt="The new welcome screen">
+
+- A short **welcome animation** (under 2 seconds) when AxisNex opens. A click skips it.
+- New **About** card at the top of Settings, with the version, what's new, licenses and website.
+
+<img src="docs/v1.3/about.png" width="760" alt="The new About card">
+
+- All new texts are in all 11 languages.
+
 ## V1.2.5 — 2026-10-05
 
 - **Restart after the first install:** the installer now ends with **Restart required** — *Restart now* or *Restart later* (later is preselected; Windows never restarts without your click). If you open AxisNex before restarting, it shows **Restart recommended** once per Windows session, with *Restart now* and *Continue anyway*. After a restart it never appears again.

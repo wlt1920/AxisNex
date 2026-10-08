@@ -18,6 +18,25 @@ Limbă: [English](../README.md) | Română
   <a href="https://github.com/wlt1920/AxisNex/releases/latest"><b>⬇ Descarcă ultima versiune</b></a> · <a href="../CHANGELOG.md"><b>Ce e nou în fiecare update</b></a> (în engleză)
 </p>
 
+<p align="center">
+  <a href="https://github.com/wlt1920/AxisNex/releases"><img src="https://img.shields.io/endpoint?url=https%3A%2F%2Fraw.githubusercontent.com%2Fwlt1920%2FAxisNex%2Fmain%2Fdocs%2Fdownloads.json&style=for-the-badge" alt="Descărcări"></a>
+</p>
+
+## Ce e nou în V1.3
+
+<table>
+  <tr>
+    <td width="50%" valign="top"><img src="v1.3/profiles.png" alt="Pagina Profiluri"><br><b>Profilurile tale.</b> Creezi, copiezi și redenumești profiluri și le exporți într-un fișier ca să le dai prietenilor sau să ai backup.</td>
+    <td width="50%" valign="top"><img src="v1.3/home-difference.png" alt="Vezi diferența"><br><b>Vezi diferența.</b> Cercul alb arată unde ar ajunge stick-ul cu valorile originale, live, plus o listă în cuvinte simple cu ce s-a schimbat.</td>
+  </tr>
+  <tr>
+    <td width="50%" valign="top"><img src="v1.3/tuning.png" alt="Previzualizare live"><br><b>Înainte și după, live.</b> Advanced tuning arată valorile salvate față de cele noi în timp real, cu reset pe fiecare valoare.</td>
+    <td width="50%" valign="top"><img src="v1.3/controller.png" alt="Pagina Controller"><br><b>Numele controllerului.</b> AxisNex îl recunoaște automat, pe USB sau Bluetooth, și îl salută pe nume.</td>
+  </tr>
+</table>
+
+Tot nou: **✕ lasă AxisNex pornit lângă ceas** (click dreapta → Ieșire ca să-l închizi), un mesaj roșu clar sub START când controllerul nu e conectat, o animație de bun venit și reparația pentru meniurile Windows care făceau scroll singure.
+
 
 <p align="center">
   <a href="AxisNex-promo.mp4"><img src="promo-poster.jpg" width="240" alt="AxisNex în 50 de secunde: vezi video-ul"></a><br>
@@ -40,7 +59,7 @@ AxisNex este gratuit. Nu modifică jocurile și nu rulează în interiorul lor.
 ## Funcții
 
 <p align="center">
-  <img src="screenshot.png" width="860" alt="Pagina Home din AxisNex V1.2.5">
+  <img src="screenshot.png" width="860" alt="Pagina Home din AxisNex V1.3">
 </p>
 
 - **Un singur controller în joc.** Controllerul fizic e ascuns de jocuri cu [HidHide](https://github.com/nefarius/HidHide), iar un controller virtual ([HIDMaestro](https://github.com/hifihedgehog/HIDMaestro)) primește inputul reglat de tine. Când oprești AxisNex, controllerul fizic devine din nou vizibil.

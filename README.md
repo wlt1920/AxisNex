@@ -13,9 +13,10 @@ Language: English | [Română](docs/README_RO.md)
 </p>
 
 <p align="center">
-  <a href="https://github.com/wlt1920/AxisNex/releases/latest"><img src="https://img.shields.io/github/v/release/wlt1920/AxisNex?label=latest&color=ff6a3d" alt="Latest release"></a>
-  <img src="https://img.shields.io/badge/Windows-10%20%7C%2011%20(64--bit)-0078D4" alt="Windows 10 | 11 (64-bit)">
-  <img src="https://img.shields.io/badge/price-free-2ea043" alt="Free">
+  <a href="https://github.com/wlt1920/AxisNex/releases/latest"><img src="https://img.shields.io/github/v/release/wlt1920/AxisNex?style=for-the-badge&label=latest&color=2f6bff" alt="Latest release"></a>
+  <a href="https://github.com/wlt1920/AxisNex/releases"><img src="https://img.shields.io/endpoint?url=https%3A%2F%2Fraw.githubusercontent.com%2Fwlt1920%2FAxisNex%2Fmain%2Fdocs%2Fdownloads.json&style=for-the-badge" alt="Installer downloads"></a>
+  <img src="https://img.shields.io/badge/Windows-10%20%7C%2011-0078D4?style=for-the-badge" alt="Windows 10 | 11 (64-bit)">
+  <img src="https://img.shields.io/badge/price-free-2ea043?style=for-the-badge" alt="Free">
 </p>
 
 > **AxisNex is an independent project and is not affiliated with, endorsed by, or sponsored by Sony Interactive Entertainment, Epic Games, Psyonix, or any controller or game manufacturer. All trademarks belong to their respective owners.**
@@ -23,6 +24,21 @@ Language: English | [Română](docs/README_RO.md)
 <p align="center">
   <a href="https://github.com/wlt1920/AxisNex/releases/latest"><b>⬇ Download the latest version</b></a> · <a href="CHANGELOG.md"><b>What's new in each update</b></a>
 </p>
+
+## What's new in V1.3
+
+<table>
+  <tr>
+    <td width="50%" valign="top"><img src="docs/v1.3/profiles.png" alt="Profiles page"><br><b>Your own profiles.</b> Create, copy and rename profiles, and export them to a file to share with friends or keep as a backup.</td>
+    <td width="50%" valign="top"><img src="docs/v1.3/home-difference.png" alt="See the difference"><br><b>See the difference.</b> The white ring shows where your stick would land with the original values, live, with a plain-words list of what changed.</td>
+  </tr>
+  <tr>
+    <td width="50%" valign="top"><img src="docs/v1.3/tuning.png" alt="Advanced tuning live preview"><br><b>Live before and after.</b> Advanced tuning shows saved vs new values in real time, with a reset button on every value.</td>
+    <td width="50%" valign="top"><img src="docs/v1.3/controller.png" alt="Controller page"><br><b>Name your controller.</b> AxisNex recognizes it automatically, over USB or Bluetooth, and greets it by name.</td>
+  </tr>
+</table>
+
+Also new: **✕ keeps AxisNex running next to the clock** (right-click → Exit to close), a clear red message under START when no controller is connected, a welcome animation, and a fix for Windows menus scrolling on their own. **[Full list with pictures →](CHANGELOG.md)**
 
 
 <p align="center">
@@ -48,13 +64,16 @@ AxisNex is free. It does not modify games and does not run inside them.
 ## Features
 
 <p align="center">
-  <img src="docs/screenshot.png" width="860" alt="AxisNex V1.2.5 Home page: connect, pick a profile, START and calibrate, with live stick view">
+  <img src="docs/screenshot.png" width="860" alt="AxisNex V1.3 Home page: connect, pick a profile, START and calibrate, with live stick view">
 </p>
 
 - **One controller in game.** The physical controller is hidden from games with [HidHide](https://github.com/nefarius/HidHide), and a virtual controller ([HIDMaestro](https://github.com/hifihedgehog/HIDMaestro)) receives your tuned input. Stopping AxisNex makes the physical controller visible again.
 - **Guided calibration (about 15 seconds).** Rest, roll both sticks around the edge, let go. AxisNex measures resting drift, the center of each stick, how far each stick reaches and both triggers, then proposes the smallest deadzone that covers the measured drift. You see the result before anything is saved.
 - **Manual tuning.** Deadzone shape (radial, axial, hybrid, square), inner and outer deadzone, anti-deadzone, response curve, sensitivity, smoothing, diagonal stability, square output, and trigger ranges and curves.
-- **4 built-in profiles:** Pro, Freestyle, Aerial and Worn Controller. Calibration and changes are saved into the active profile; any built-in profile can be reset to its original values.
+- **Profiles.** 4 built-in profiles (Pro, Freestyle, Aerial, Worn Controller) plus your own: create, duplicate, rename, delete, and **export / import** them as `.axisnex` files. Calibration and changes are saved into the active profile; built-in profiles can be reset to their original values.
+- **Live before / after.** *See the difference* on Home compares your profile with its original values while you move the sticks; Advanced tuning shows saved vs new values live, with a reset on every value.
+- **Your controller, by name.** AxisNex recognizes each controller by its own ID (USB or Bluetooth) and shows the name you gave it.
+- **Runs in the background.** Closing the window keeps AxisNex next to the clock so your controller stays tuned; right-click the icon to switch profiles or exit.
 - **1000 Hz USB polling.** Over a USB cable, AxisNex can set the controller's polling interval from 4 ms (250 Hz, the default) to 1 ms (1000 Hz) with the Microsoft-signed [hidusbf](https://github.com/LordOfMice/hidusbf) driver by SweetLow. It can be switched off, and it is removed from the controller when you uninstall. This changes how often Windows reads the controller; it is not possible over Bluetooth. The live input rate is shown on the Home page.
 - **Game settings page** with recommended in-game values, so the game's deadzone doesn't stack on top of AxisNex's.
 - **Game rules page** (optional) that watches the game publisher's fair-play terms for changes and lists official news and player threads about the anti-cheat.
@@ -99,7 +118,7 @@ Updates installed from inside the app keep your profiles, calibration and settin
 6. Launch the game **after** pressing START. If the game was already open, restart it.
 7. Optional: open **Game settings** to see which in-game settings to use so deadzones don't stack. If the game runs through Steam, keep Steam Input on.
 
-Press START again (or close AxisNex) to stop; the physical controller becomes visible to games again.
+Press START again to stop; the physical controller becomes visible to games again. Closing the window with ✕ keeps AxisNex running next to the clock — right-click its icon → **Exit** to close it completely.
 
 ## Calibration and profiles
 
@@ -153,6 +172,10 @@ Press STOP in AxisNex and play without it for a while. See the **Game rules** pa
 
 A stick moved during the Rest or Return step, or never came back to center. Put the controller down on a table, wait a second and press **Redo**. If a stick never settles, try the **Worn Controller** profile.
 
+### Windows menus scroll on their own while the controller is plugged in
+
+Fixed in V1.3: AxisNex corrects the controller layout Windows uses for its own menus, at startup and after START. Update to the latest version and open AxisNex once.
+
 ### Something else
 
 Open a [bug report](https://github.com/wlt1920/AxisNex/issues/new/choose). The status bar text at the bottom of AxisNex and a screenshot help a lot.
@@ -161,7 +184,6 @@ Open a [bug report](https://github.com/wlt1920/AxisNex/issues/new/choose). The s
 
 - Only the **DualSense Wireless Controller** is supported. DualSense Edge, DualShock 4, Xbox and other controllers are not detected.
 - One controller at a time.
-- The four built-in profiles can be edited and reset, but you can't create additional profiles yet.
 - **Advanced tuning** is not fully tested yet.
 - Calibration is per profile and should be repeated each session (see [Getting Started](#getting-started)).
 - The installer and app are not code-signed, so SmartScreen and some antivirus tools may warn.
@@ -183,6 +205,12 @@ No. It can't repair hardware. It measures the drift and sets a deadzone and cent
 
 **Why does it need administrator rights?**
 Hiding the physical controller, creating the virtual controller and changing the USB polling rate are administrator-only operations in Windows. See [Security](#security).
+
+**Does closing the window stop AxisNex?**
+No. ✕ hides it next to the clock and your controller stays tuned. Right-click the icon → **Exit** to close it. You can change this in Settings.
+
+**Can I share my profile?**
+Yes. On the **Profiles** page, use the export button on a profile card and send the `.axisnex` file; your friend imports it there. Your calibration is not included.
 
 **Is AxisNex open source?**
 No. It's free to use, but the source code is not public. See [License](#license).
