@@ -19,7 +19,12 @@ Limbă: [English](../README.md) | Română
 </p>
 
 <p align="center">
-  <a href="https://github.com/wlt1920/AxisNex/releases"><img src="https://img.shields.io/endpoint?url=https%3A%2F%2Fraw.githubusercontent.com%2Fwlt1920%2FAxisNex%2Fmain%2Fdocs%2Fdownloads.json&style=for-the-badge" alt="Descărcări"></a>
+  <a href="https://github.com/wlt1920/AxisNex/releases/latest"><img src="https://img.shields.io/github/v/release/wlt1920/AxisNex?style=for-the-badge&label=%E2%AC%87%20%20DOWNLOAD&color=2f6bff&labelColor=1a3fbf" height="46" alt="Descarcă ultima versiune AxisNex"></a>
+</p>
+<p align="center">
+  <img src="https://img.shields.io/endpoint?url=https%3A%2F%2Fraw.githubusercontent.com%2Fwlt1920%2FAxisNex%2Fmain%2Fdocs%2Fdownloads.json&label=desc%C4%83rc%C4%83ri&color=555&labelColor=333" alt="desc%C4%83rc%C4%83ri">
+  <img src="https://img.shields.io/badge/Windows-10%20%2F%2011%20%C2%B7%2064--bit-555?labelColor=333" alt="Windows 10 / 11, 64-bit">
+  <img src="https://img.shields.io/badge/pre%C8%9B-gratuit-555?labelColor=333" alt="Free">
 </p>
 
 ## Ce e nou în V1.3

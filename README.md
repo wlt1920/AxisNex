@@ -13,10 +13,12 @@ Language: English | [Română](docs/README_RO.md)
 </p>
 
 <p align="center">
-  <a href="https://github.com/wlt1920/AxisNex/releases/latest"><img src="https://img.shields.io/github/v/release/wlt1920/AxisNex?style=for-the-badge&label=latest&color=2f6bff" alt="Latest release"></a>
-  <a href="https://github.com/wlt1920/AxisNex/releases"><img src="https://img.shields.io/endpoint?url=https%3A%2F%2Fraw.githubusercontent.com%2Fwlt1920%2FAxisNex%2Fmain%2Fdocs%2Fdownloads.json&style=for-the-badge" alt="Installer downloads"></a>
-  <img src="https://img.shields.io/badge/Windows-10%20%7C%2011-0078D4?style=for-the-badge" alt="Windows 10 | 11 (64-bit)">
-  <img src="https://img.shields.io/badge/price-free-2ea043?style=for-the-badge" alt="Free">
+  <a href="https://github.com/wlt1920/AxisNex/releases/latest"><img src="https://img.shields.io/github/v/release/wlt1920/AxisNex?style=for-the-badge&label=%E2%AC%87%20%20DOWNLOAD&color=2f6bff&labelColor=1a3fbf" height="46" alt="Download the latest AxisNex"></a>
+</p>
+<p align="center">
+  <img src="https://img.shields.io/endpoint?url=https%3A%2F%2Fraw.githubusercontent.com%2Fwlt1920%2FAxisNex%2Fmain%2Fdocs%2Fdownloads.json&label=downloads&color=555&labelColor=333" alt="downloads">
+  <img src="https://img.shields.io/badge/Windows-10%20%2F%2011%20%C2%B7%2064--bit-555?labelColor=333" alt="Windows 10 / 11, 64-bit">
+  <img src="https://img.shields.io/badge/price-free-555?labelColor=333" alt="Free">
 </p>
 
 > **AxisNex is an independent project and is not affiliated with, endorsed by, or sponsored by Sony Interactive Entertainment, Epic Games, Psyonix, or any controller or game manufacturer. All trademarks belong to their respective owners.**
