@@ -77,7 +77,7 @@ AxisNex is free. It does not modify games and does not run inside them.
 ## Features
 
 <p align="center">
-  <img src="docs/screenshot.png" width="860" alt="AxisNex V1.3 Home page: connect, pick a profile, START and calibrate, with live stick view">
+  <img src="docs/screenshot.png" width="860" alt="AxisNex V1.3.1 Home page: connect, pick a profile, START and calibrate, with the live before/after view">
 </p>
 
 - **One controller in game.** The physical controller is hidden from games with [HidHide](https://github.com/nefarius/HidHide), and a virtual controller ([HIDMaestro](https://github.com/hifihedgehog/HIDMaestro)) receives your tuned input. Stopping AxisNex makes the physical controller visible again.

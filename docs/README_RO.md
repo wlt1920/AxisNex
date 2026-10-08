@@ -75,7 +75,7 @@ AxisNex este gratuit. Nu modifică jocurile și nu rulează în interiorul lor.
 ## Funcții
 
 <p align="center">
-  <img src="screenshot.png" width="860" alt="Pagina Home din AxisNex V1.3">
+  <img src="screenshot.png" width="860" alt="Pagina Home din AxisNex V1.3.1">
 </p>
 
 - **Un singur controller în joc.** Controllerul fizic e ascuns de jocuri cu [HidHide](https://github.com/nefarius/HidHide), iar un controller virtual ([HIDMaestro](https://github.com/hifihedgehog/HIDMaestro)) primește inputul reglat de tine. Când oprești AxisNex, controllerul fizic devine din nou vizibil.
