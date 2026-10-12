@@ -1,7 +1,7 @@
 Language: English | [Română](docs/README_RO.md)
 
 <p align="center">
-  <img src="docs/banner.jpg" alt="AxisNex — controller tuning and calibration for Windows">
+  <img src="docs/banner.jpg?v=1.3.2" alt="AxisNex — controller tuning and calibration for Windows">
 </p>
 
 <h1 align="center">AxisNex</h1>
@@ -13,7 +13,7 @@ Language: English | [Română](docs/README_RO.md)
 </p>
 
 <p align="center">
-  <a href="https://github.com/wlt1920/AxisNex/releases/latest"><img src="https://img.shields.io/github/v/release/wlt1920/AxisNex?style=for-the-badge&label=%E2%AC%87%20%20DOWNLOAD&color=2f6bff&labelColor=1a3fbf" height="46" alt="Download the latest AxisNex"></a>
+  <a href="https://github.com/wlt1920/AxisNex/releases/latest"><img src="https://img.shields.io/endpoint?url=https%3A%2F%2Fraw.githubusercontent.com%2Fwlt1920%2FAxisNex%2Fmain%2Fdocs%2Fdownload-button.json&style=for-the-badge" height="46" alt="Download the latest AxisNex"></a>
 </p>
 <p align="center">
   <sub><b><!--downloads-->30<!--/downloads--></b> downloads &nbsp;·&nbsp; Windows 10 / 11 (64-bit) &nbsp;·&nbsp; Free</sub>
@@ -92,7 +92,7 @@ AxisNex is free. It does not modify games and does not run inside them.
 ## Features
 
 <p align="center">
-  <img src="docs/screenshot.png" width="860" alt="AxisNex V1.3.2 Home page: connect, pick a profile, START and calibrate, with the live before/after view">
+  <img src="docs/screenshot.png?v=1.3.2" width="860" alt="AxisNex V1.3.2 Home page: connect, pick a profile, START and calibrate, with the live before/after view">
 </p>
 
 - **One controller in game.** The physical controller is hidden from games with [HidHide](https://github.com/nefarius/HidHide), and a virtual controller ([HIDMaestro](https://github.com/hifihedgehog/HIDMaestro)) receives your tuned input. Stopping AxisNex makes the physical controller visible again.

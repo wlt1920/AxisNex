@@ -1,7 +1,7 @@
 Limbă: [English](../README.md) | Română
 
 <p align="center">
-  <img src="banner.jpg" alt="AxisNex — reglare și calibrare controller pentru Windows">
+  <img src="banner.jpg?v=1.3.2" alt="AxisNex — reglare și calibrare controller pentru Windows">
 </p>
 
 <h1 align="center">AxisNex</h1>
@@ -19,7 +19,7 @@ Limbă: [English](../README.md) | Română
 </p>
 
 <p align="center">
-  <a href="https://github.com/wlt1920/AxisNex/releases/latest"><img src="https://img.shields.io/github/v/release/wlt1920/AxisNex?style=for-the-badge&label=%E2%AC%87%20%20DOWNLOAD&color=2f6bff&labelColor=1a3fbf" height="46" alt="Descarcă ultima versiune AxisNex"></a>
+  <a href="https://github.com/wlt1920/AxisNex/releases/latest"><img src="https://img.shields.io/endpoint?url=https%3A%2F%2Fraw.githubusercontent.com%2Fwlt1920%2FAxisNex%2Fmain%2Fdocs%2Fdownload-button.json&style=for-the-badge" height="46" alt="Descarcă ultima versiune AxisNex"></a>
 </p>
 <p align="center">
   <sub><b><!--downloads-->30<!--/downloads--></b> descărcări &nbsp;·&nbsp; Windows 10 / 11 (64-bit) &nbsp;·&nbsp; Gratuit</sub>
@@ -90,7 +90,7 @@ AxisNex este gratuit. Nu modifică jocurile și nu rulează în interiorul lor.
 ## Funcții
 
 <p align="center">
-  <img src="screenshot.png" width="860" alt="Pagina Home din AxisNex V1.3.2">
+  <img src="screenshot.png?v=1.3.2" width="860" alt="Pagina Home din AxisNex V1.3.2">
 </p>
 
 - **Un singur controller în joc.** Controllerul fizic e ascuns de jocuri cu [HidHide](https://github.com/nefarius/HidHide), iar un controller virtual ([HIDMaestro](https://github.com/hifihedgehog/HIDMaestro)) primește inputul reglat de tine. Când oprești AxisNex, controllerul fizic devine din nou vizibil.
