@@ -22,8 +22,23 @@ Limbă: [English](../README.md) | Română
   <a href="https://github.com/wlt1920/AxisNex/releases/latest"><img src="https://img.shields.io/github/v/release/wlt1920/AxisNex?style=for-the-badge&label=%E2%AC%87%20%20DOWNLOAD&color=2f6bff&labelColor=1a3fbf" height="46" alt="Descarcă ultima versiune AxisNex"></a>
 </p>
 <p align="center">
-  <sub><b><!--downloads-->22<!--/downloads--></b> descărcări &nbsp;·&nbsp; Windows 10 / 11 (64-bit) &nbsp;·&nbsp; Gratuit</sub>
+  <sub><b><!--downloads-->30<!--/downloads--></b> descărcări &nbsp;·&nbsp; Windows 10 / 11 (64-bit) &nbsp;·&nbsp; Gratuit</sub>
 </p>
+
+## Ce e nou în V1.3.2
+
+<table>
+  <tr>
+    <td width="50%" valign="top"><img src="v1.3.2/theme-change.png" alt="Trecerea la tema Synthwave"><br><b>Teme cu aspect propriu.</b> Fiecare temă are aranjamentul, fontul, cardurile, fundalul și sunetele ei. La schimbare apare o tranziție și AxisNex se redeschide în același loc.</td>
+    <td width="50%" valign="top"><img src="v1.3.2/calibration-guide.png" alt="Calibrarea cu degetul animat"><br><b>Calibrare mai bună.</b> Fiecare direcție a stick-ului e egalizată, deadzone-ul e mai mic, iar un deget animat îți arată ce ai de făcut la fiecare pas.</td>
+  </tr>
+  <tr>
+    <td width="50%" valign="top"><img src="v1.3.2/profile-light.png" alt="Card de profil cu culorile luminii"><br><b>Lumina controllerului pe profil.</b> Alege o culoare pentru fiecare profil sau stinge lumina. Trece lin la noua culoare.</td>
+    <td width="50%" valign="top"><img src="v1.3.2/settings-startup.png" alt="Setările de pornire"><br><b>Fără întrebarea Windows.</b> Îi dai voie o dată și AxisNex pornește direct. Animația de bun venit e nouă, mai lungă și se poate opri.</td>
+  </tr>
+</table>
+
+Mai multe controllere (DualSense Edge și DualShock 4), rate USB mai mari și un mod nou de citire a controllerului, care nu rămâne niciodată în urmă. Lista completă în [changelog](../CHANGELOG.md).
 
 ## Ce e nou în V1.3.1
 
@@ -75,7 +90,7 @@ AxisNex este gratuit. Nu modifică jocurile și nu rulează în interiorul lor.
 ## Funcții
 
 <p align="center">
-  <img src="screenshot.png" width="860" alt="Pagina Home din AxisNex V1.3.1">
+  <img src="screenshot.png" width="860" alt="Pagina Home din AxisNex V1.3.2">
 </p>
 
 - **Un singur controller în joc.** Controllerul fizic e ascuns de jocuri cu [HidHide](https://github.com/nefarius/HidHide), iar un controller virtual ([HIDMaestro](https://github.com/hifihedgehog/HIDMaestro)) primește inputul reglat de tine. Când oprești AxisNex, controllerul fizic devine din nou vizibil.
@@ -94,7 +109,7 @@ AxisNex este gratuit. Nu modifică jocurile și nu rulează în interiorul lor.
 
 - Windows 10 sau Windows 11, pe 64 de biți.
 - Drepturi de administrator (pentru instalare și drivere, vezi [Securitate](#securitate)).
-- Un controller compatibil: momentan **DualSense Wireless Controller**, conectat prin cablu USB sau Bluetooth. Alte controllere nu sunt încă suportate.
+- Un controller compatibil: **DualSense**, **DualSense Edge** sau **DualShock 4**, conectat prin cablu USB sau Bluetooth. Alte controllere nu sunt încă suportate.
 - Pentru 1000 Hz: un cablu USB **de date** (cablurile doar de încărcare nu merg).
 - Conexiune la internet doar pentru verificarea opțională a update-urilor și pagina Reguli joc.
 
@@ -128,7 +143,7 @@ Apasă din nou START (sau închide AxisNex) ca să oprești; controllerul fizic 
 
 ## Detectarea controllerului
 
-- AxisNex caută **DualSense Wireless Controller** după ID-ul USB de producător și de produs (`054C:0CE6`), pe USB și pe Bluetooth. Bara de stare arată numele dispozitivului și tipul conexiunii, așa cum le raportează Windows.
+- AxisNex caută controllerele compatibile după ID-urile USB de producător și de produs (DualSense `054C:0CE6`, DualSense Edge `054C:0DF2`, DualShock 4 `054C:05C4` / `054C:09CC`), pe USB și pe Bluetooth. Bara de stare arată numele dispozitivului și tipul conexiunii, așa cum le raportează Windows.
 - Dispozitivele virtuale sau create din software sunt ignorate, deci AxisNex nu își preia niciodată propriul controller virtual.
 - AxisNex caută controllerul cam la fiecare 1,5 secunde, așa că îl detectează automat când îl conectezi sau îl reconectezi.
 - Cât timp AxisNex rulează, controllerul fizic e ascuns de alte programe cu HidHide; doar AxisNex îl poate citi. Dacă AxisNex se închide neașteptat, controllerul devine din nou vizibil la următoarea pornire a AxisNex.
@@ -142,8 +157,8 @@ Ghid detaliat (în engleză): [calibration.md](calibration.md).
 
 ## Limitări cunoscute
 
-- E suportat doar **DualSense Wireless Controller**, câte unul o dată.
-- Cele patru profiluri incluse pot fi modificate și resetate, dar încă nu poți crea profiluri noi.
+- Sunt suportate **DualSense**, **DualSense Edge** și **DualShock 4**, câte unul o dată. Xbox și alte controllere nu sunt detectate.
+- Ratele USB mai mari (1000 Hz și peste) merg la DualSense și DualSense Edge prin USB.
 - Pagina **Reglaj avansat** nu e încă testată complet.
 - Installerul și aplicația nu sunt semnate digital.
 

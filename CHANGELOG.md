@@ -3,6 +3,62 @@
 Everything that changed in each version of AxisNex. Newest first.
 Download the latest version from [Releases](https://github.com/wlt1920/AxisNex/releases/latest).
 
+## V1.3.2 — 2026-10-12
+
+A big look-and-feel update: every theme is now its own design with its own sounds, calibration got smarter and shows you what to do, each profile can have its own controller light, and AxisNex can start without the Windows prompt. Under the hood, the controller is read in a new way and more controllers are supported.
+
+### Themes with their own look
+
+<img src="docs/v1.3.2/theme-change.png" width="760" alt="Changing to the Synthwave theme: the new theme spreads over the window with its name">
+
+- Every theme is now a **whole design**, not just other colors: its own **layout** (menu on the left or the right, wider or narrower), **font**, **card style** (solid, glass, outline, neon or flat), **corners**, **background pattern** and **glow**.
+- Every theme also has **its own set of sounds**: glassy bells with an echo, an 80s synth, warm horns, plucked strings, 8-bit, soft and muted, and more.
+- Changing the theme no longer asks you first. The new theme **spreads out from where you clicked**, with its name in its own font, and AxisNex reopens **in exactly the same spot** with the new look and its sound.
+
+### Better calibration
+
+<img src="docs/v1.3.2/calibration-guide.png" width="700" alt="Calibration step 2: the fingertip rolls round the edge, L2 and R2 show a press">
+
+- **Every direction is evened out.** Calibration now measures how far the stick reaches in 48 directions, so every direction gets full output at the same push, even on a worn or uneven stick. Before, the weakest side decided for all of them.
+- **Tighter deadzone.** The center is now placed in the middle of all the resting points, so the deadzone covers your drift with as little dead area as possible.
+- **Let go 4 times.** Step 3 now asks you to push the sticks out and let go **4 times, from different sides**, because a stick comes back to a slightly different spot each time. Every push counts right away.
+- **An animated fingertip shows what to do** in every step: hovering off the stick while it measures the rest, rolling round the edge (with the path to follow and L2 / R2 pressing down), and pushing out and letting go.
+
+### Controller light per profile
+
+<img src="docs/v1.3.2/profile-light.png" width="420" alt="Profile card with the controller light colors">
+
+- Every profile card has a **Controller light** row: the theme's color, 9 colors, or **off**.
+- The light **glides smoothly** to the new color with a soft flash, and switches along when you change profiles.
+
+### Start without the Windows prompt
+
+<img src="docs/v1.3.2/settings-startup.png" width="560" alt="Startup settings: start without the Windows prompt and the welcome animation">
+
+- Settings → Startup → **Start without the Windows prompt**: allow it once, and AxisNex opens with administrator rights straight away from then on. Turn it off to get the prompt back.
+- A one-time note at startup tells you this exists, with a button to turn it on (or ✕ to leave it).
+
+### New welcome animation
+
+- Longer and livelier: the logo spins in between two turning arcs, sparks orbit it, the name drops in letter by letter, and at the peak of the sound a double ripple and a burst of sparks fly out.
+- Don't want it? Settings → Startup → **Welcome animation** → off. AxisNex then shows up right away.
+
+### More controllers and faster USB
+
+- Now also supported: **DualSense Edge** and **DualShock 4**, over USB and Bluetooth. The virtual controller is the same kind as yours, so games show the right button icons.
+- **Faster USB rates**: 2000 and 4000 Hz on top of 1000 Hz (DualSense and DualSense Edge over USB).
+- **Deadzone in game** (Settings → Controller): set it to the deadzone you use in the game, and AxisNex undoes it, so the game's deadzone no longer adds to your profile's.
+- The app's sounds can also play from the **controller's own speaker** (over USB).
+
+### Under the hood
+
+- The controller is now read in a new way that **never falls behind**: all waiting reports are taken at once and only the newest one is used, even at 4000 Hz.
+- The controller's live light view now pauses while you play, so nothing extra is sent to the controller in game.
+
+### Fixed
+
+- Calibration step 3 sometimes didn't count a let-go when you pushed again quickly. Every push now counts.
+
 ## V1.3.1 — 2026-10-08
 
 A quick update with new things to see, hear and feel: your controller now lights up, AxisNex has sound, notifications are much easier to spot, and updates show up right on the Home screen.

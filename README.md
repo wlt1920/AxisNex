@@ -16,7 +16,7 @@ Language: English | [Română](docs/README_RO.md)
   <a href="https://github.com/wlt1920/AxisNex/releases/latest"><img src="https://img.shields.io/github/v/release/wlt1920/AxisNex?style=for-the-badge&label=%E2%AC%87%20%20DOWNLOAD&color=2f6bff&labelColor=1a3fbf" height="46" alt="Download the latest AxisNex"></a>
 </p>
 <p align="center">
-  <sub><b><!--downloads-->22<!--/downloads--></b> downloads &nbsp;·&nbsp; Windows 10 / 11 (64-bit) &nbsp;·&nbsp; Free</sub>
+  <sub><b><!--downloads-->30<!--/downloads--></b> downloads &nbsp;·&nbsp; Windows 10 / 11 (64-bit) &nbsp;·&nbsp; Free</sub>
 </p>
 
 > **AxisNex is an independent project and is not affiliated with, endorsed by, or sponsored by Sony Interactive Entertainment, Epic Games, Psyonix, or any controller or game manufacturer. All trademarks belong to their respective owners.**
@@ -24,6 +24,21 @@ Language: English | [Română](docs/README_RO.md)
 <p align="center">
   <a href="https://github.com/wlt1920/AxisNex/releases/latest"><b>⬇ Download the latest version</b></a> · <a href="CHANGELOG.md"><b>What's new in each update</b></a>
 </p>
+
+## What's new in V1.3.2
+
+<table>
+  <tr>
+    <td width="50%" valign="top"><img src="docs/v1.3.2/theme-change.png" alt="Changing to the Synthwave theme"><br><b>Themes with their own look.</b> Every theme has its own layout, font, cards, background and its own set of sounds. Changing it plays a transition and reopens AxisNex in the same spot.</td>
+    <td width="50%" valign="top"><img src="docs/v1.3.2/calibration-guide.png" alt="Calibration with the animated fingertip guide"><br><b>Better calibration.</b> Every direction of the stick is evened out, the deadzone is tighter, and an animated fingertip shows what to do in every step.</td>
+  </tr>
+  <tr>
+    <td width="50%" valign="top"><img src="docs/v1.3.2/profile-light.png" alt="Profile card with the controller light colors"><br><b>Controller light per profile.</b> Pick a color for each profile, or turn the light off. It glides smoothly to the new color.</td>
+    <td width="50%" valign="top"><img src="docs/v1.3.2/settings-startup.png" alt="Startup settings"><br><b>No more Windows prompt.</b> Allow it once and AxisNex starts straight away. The welcome animation is new, longer, and can be turned off.</td>
+  </tr>
+</table>
+
+More controllers (DualSense Edge and DualShock 4), faster USB rates and a new way of reading the controller that never falls behind. Full list in the [changelog](CHANGELOG.md).
 
 ## What's new in V1.3.1
 
@@ -77,7 +92,7 @@ AxisNex is free. It does not modify games and does not run inside them.
 ## Features
 
 <p align="center">
-  <img src="docs/screenshot.png" width="860" alt="AxisNex V1.3.1 Home page: connect, pick a profile, START and calibrate, with the live before/after view">
+  <img src="docs/screenshot.png" width="860" alt="AxisNex V1.3.2 Home page: connect, pick a profile, START and calibrate, with the live before/after view">
 </p>
 
 - **One controller in game.** The physical controller is hidden from games with [HidHide](https://github.com/nefarius/HidHide), and a virtual controller ([HIDMaestro](https://github.com/hifihedgehog/HIDMaestro)) receives your tuned input. Stopping AxisNex makes the physical controller visible again.
@@ -99,7 +114,7 @@ AxisNex is free. It does not modify games and does not run inside them.
 
 - Windows 10 or Windows 11, 64-bit.
 - Administrator rights (for the installation and the drivers, see [Security](#security)).
-- A supported controller: currently the **DualSense Wireless Controller**, connected by USB cable or Bluetooth. Other controllers are not supported yet.
+- A supported controller: **DualSense**, **DualSense Edge** or **DualShock 4**, connected by USB cable or Bluetooth. Other controllers are not supported yet.
 - For 1000 Hz polling: a USB **data** cable (charge-only cables don't work).
 - An internet connection only for the optional update check and Game rules page.
 
@@ -148,7 +163,7 @@ Step-by-step guide, what each result means and which profile to pick: **[docs/ca
 
 ## Controller Detection
 
-- AxisNex looks for the **DualSense Wireless Controller** by its USB vendor and product ID (`054C:0CE6`), over USB and Bluetooth. The status bar shows the device name and connection type that Windows reports.
+- AxisNex looks for the supported controllers by their USB vendor and product IDs (DualSense `054C:0CE6`, DualSense Edge `054C:0DF2`, DualShock 4 `054C:05C4` / `054C:09CC`), over USB and Bluetooth. The status bar shows the device name and connection type that Windows reports.
 - Virtual or software-created devices are ignored, so AxisNex never picks up its own virtual controller.
 - AxisNex checks for the controller about every 1.5 seconds, so plugging it in or reconnecting it is detected automatically.
 - While AxisNex is running, the physical controller is hidden from other programs with HidHide; only AxisNex can read it. If AxisNex closes unexpectedly, the controller is made visible again the next time AxisNex starts.
@@ -195,7 +210,8 @@ Open a [bug report](https://github.com/wlt1920/AxisNex/issues/new/choose). The s
 
 ## Known limitations
 
-- Only the **DualSense Wireless Controller** is supported. DualSense Edge, DualShock 4, Xbox and other controllers are not detected.
+- Supported: **DualSense**, **DualSense Edge** and **DualShock 4**. Xbox and other controllers are not detected.
+- The faster USB rates (1000 Hz and up) work for the DualSense and DualSense Edge over USB.
 - One controller at a time.
 - **Advanced tuning** is not fully tested yet.
 - Calibration is per profile and should be repeated each session (see [Getting Started](#getting-started)).
@@ -217,7 +233,7 @@ If the game runs through Steam, keep Steam Input on; some games only see the con
 No. It can't repair hardware. It measures the drift and sets a deadzone and center correction so the drift doesn't reach the game.
 
 **Why does it need administrator rights?**
-Hiding the physical controller, creating the virtual controller and changing the USB polling rate are administrator-only operations in Windows. See [Security](#security).
+Hiding the physical controller, creating the virtual controller and changing the USB polling rate are administrator-only operations in Windows. See [Security](#security). Don't want the Windows prompt every time? Settings → Startup → **Start without the Windows prompt** (allow it once).
 
 **Does closing the window stop AxisNex?**
 No. ✕ hides it next to the clock and your controller stays tuned. Right-click the icon → **Exit** to close it. You can change this in Settings.
@@ -242,7 +258,7 @@ This is based on the source code of AxisNex:
 
 ## Security
 
-- **Administrator rights.** The installer needs them to install into Program Files and to set up three drivers: HidHide (hides the physical controller), the HIDMaestro virtual-controller driver, and hidusbf (1000 Hz USB). AxisNex itself also runs as administrator, because hiding the controller, creating the virtual controller and changing the USB polling rate are administrator-only operations in Windows.
+- **Administrator rights.** The installer needs them to install into Program Files and to set up three drivers: HidHide (hides the physical controller), the HIDMaestro virtual-controller driver, and hidusbf (1000 Hz USB). AxisNex itself also runs as administrator, because hiding the controller, creating the virtual controller and changing the USB polling rate are administrator-only operations in Windows. If you turn on **Start without the Windows prompt**, AxisNex registers a Task Scheduler task named "AxisNex" that starts it with administrator rights; turning the switch off or uninstalling removes it.
 - **Driver certificate.** HIDMaestro installs its own self-signed driver certificate (`HIDMaestroTestCert`) into the computer's trusted certificate stores so its user-mode driver can load. It stays installed after uninstalling AxisNex and can be removed with `certlm.msc`.
 - **Updates** are only accepted from this repository's GitHub releases over HTTPS. The installer is downloaded into the AxisNex program folder (writable only by administrators), checked against the SHA-256 in the release manifest, and only then started.
 - **Bundled components** (HidHide installer, hidusbf driver, HIDMaestro library) are official releases whose SHA-256 hashes are checked when AxisNex is built.
