@@ -1,0 +1,45 @@
+name: Download counter
+
+# Keeps the download count on the README and on the Download button up to date: every 5 minutes
+# and right after a release is published.
+# Counts only the installer downloads (AxisNex-*-Setup.exe). version.json is fetched by every
+# app on its update check, so the repository total would count update checks as downloads.
+# Only the latest release is kept; BASELINE holds the installer downloads of removed releases
+# (V1.0 - V1.2.5: 19, plus 3 of the first V1.3 upload: 22, plus V1.3.1: 8 = 30). When an older release is deleted, add its installer count to BASELINE first.
+on:
+  schedule:
+    - cron: "*/5 * * * *"
+  release:
+    types: [published]
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+concurrency:
+  group: download-counter
+  cancel-in-progress: false
+
+jobs:
+  count:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - name: Count installer downloads
+        env:
+          GH_TOKEN: ${{ github.token }}
+          BASELINE: 30
+        run: |
+          total=$(gh api "repos/${{ github.repository }}/releases" --paginate \
+            --jq '.[].assets[] | select(.name | endswith("-Setup.exe")) | .download_count' | awk -v b="$BASELINE" '{s+=$1} END {print s+b}')
+          tag=$(gh api "repos/${{ github.repository }}/releases/latest" --jq '.tag_name' | sed 's/^v/V/')
+          printf '{"schemaVersion":1,"label":"downloads","message":"%s","color":"2ea043","cacheSeconds":300}' "$total" > docs/downloads.json
+          # The Download button: version and download count.
+          printf '{"schemaVersion":1,"label":"⬇  DOWNLOAD","message":"%s  ·  %s downloads","color":"2f6bff","labelColor":"1a3fbf","cacheSeconds":300}' "$tag" "$total" > docs/download-button.json
+          sed -i -E "s#<!--downloads-->[0-9]+<!--/downloads-->#<!--downloads-->$total<!--/downloads-->#" README.md docs/README_RO.md
+          if [ -z "$(git status --porcelain)" ]; then echo "No change ($total, $tag)"; exit 0; fi
+          git config user.name "github-actions[bot]"
+          git config user.email "41898283+github-actions[bot]@users.noreply.github.com"
+          git add docs/downloads.json docs/download-button.json README.md docs/README_RO.md
+          git commit -m "Download counter: $total"
+          git push
