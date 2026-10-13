@@ -1,7 +1,7 @@
 Language: English | [Română](docs/README_RO.md)
 
 <p align="center">
-  <img src="docs/banner.jpg?v=1.3.2" alt="AxisNex — controller tuning and calibration for Windows">
+  <img src="docs/banner.jpg?v=1.3.3" alt="AxisNex — controller tuning and calibration for Windows">
 </p>
 
 <h1 align="center">AxisNex</h1>
@@ -24,6 +24,21 @@ Language: English | [Română](docs/README_RO.md)
 <p align="center">
   <a href="https://github.com/wlt1920/AxisNex/releases/latest"><b>⬇ Download the latest version</b></a> · <a href="CHANGELOG.md"><b>What's new in each update</b></a>
 </p>
+
+## What's new in V1.3.3
+
+<table>
+  <tr>
+    <td width="50%" valign="top"><img src="docs/v1.3.3/profile-freestyle2.png" alt="The Freestyle 2 profile card"><br><b>New profile: Freestyle 2.</b> wLt's own freestyle setup, the quickest answer from the center. Free for anyone who wants to try it.</td>
+    <td width="50%" valign="top"><img src="docs/v1.3.3/profiles.png" alt="Profiles page"><br><b>Every profile retuned.</b> Full lock and full boost come earlier, and Freestyle, Aerial and Worn Controller answer quicker from the center. Your calibration stays.</td>
+  </tr>
+  <tr>
+    <td width="50%" valign="top"><img src="docs/v1.3.3/profile-light.png" alt="Profile card with the controller light colors"><br><b>The light shows the color you pick.</b> Red no longer comes out orange: the controller shows exactly the profile's color.</td>
+    <td width="50%" valign="top"><img src="docs/v1.3.3/settings-usb-locked.png" alt="USB rate locked while START is on"><br><b>The controller comes first.</b> While START is on, Windows no longer puts AxisNex into power saving, and the USB rate only changes while START is off.</td>
+  </tr>
+</table>
+
+Fixed: calibration no longer makes the stick weaker on the diagonals or pushes full lock and the triggers further out, and at 2000 / 4000 Hz the game no longer gets stick positions late. Full list in the [changelog](CHANGELOG.md).
 
 ## What's new in V1.3.2
 
@@ -92,7 +107,7 @@ AxisNex is free. It does not modify games and does not run inside them.
 ## Features
 
 <p align="center">
-  <img src="docs/screenshot.png?v=1.3.2" width="860" alt="AxisNex V1.3.2 Home page: connect, pick a profile, START and calibrate, with the live before/after view">
+  <img src="docs/screenshot.png?v=1.3.3" width="860" alt="AxisNex V1.3.3 Home page: connect, pick a profile, START and calibrate, with the live before/after view">
 </p>
 
 - **One controller in game.** The physical controller is hidden from games with [HidHide](https://github.com/nefarius/HidHide), and a virtual controller ([HIDMaestro](https://github.com/hifihedgehog/HIDMaestro)) receives your tuned input. Stopping AxisNex makes the physical controller visible again.

@@ -1,7 +1,7 @@
 Limbă: [English](../README.md) | Română
 
 <p align="center">
-  <img src="banner.jpg?v=1.3.2" alt="AxisNex — reglare și calibrare controller pentru Windows">
+  <img src="banner.jpg?v=1.3.3" alt="AxisNex — reglare și calibrare controller pentru Windows">
 </p>
 
 <h1 align="center">AxisNex</h1>
@@ -24,6 +24,21 @@ Limbă: [English](../README.md) | Română
 <p align="center">
   <sub><b><!--downloads-->34<!--/downloads--></b> descărcări &nbsp;·&nbsp; Windows 10 / 11 (64-bit) &nbsp;·&nbsp; Gratuit</sub>
 </p>
+
+## Ce e nou în V1.3.3
+
+<table>
+  <tr>
+    <td width="50%" valign="top"><img src="v1.3.3/profile-freestyle2.png" alt="Cardul profilului Freestyle 2"><br><b>Profil nou: Freestyle 2.</b> Setup-ul de freestyle al lui wLt, cel mai rapid răspuns din centru. Cine vrea să-l încerce, e liber.</td>
+    <td width="50%" valign="top"><img src="v1.3.3/profiles.png" alt="Pagina Profiluri"><br><b>Toate profilurile reglate din nou.</b> Full lock-ul și boost-ul complet vin mai devreme, iar Freestyle, Aerial și Worn Controller răspund mai repede din centru. Calibrarea ta rămâne.</td>
+  </tr>
+  <tr>
+    <td width="50%" valign="top"><img src="v1.3.3/profile-light.png" alt="Card de profil cu culorile luminii"><br><b>Lumina arată culoarea aleasă.</b> Roșul nu mai iese portocaliu: controllerul arată exact culoarea din profil.</td>
+    <td width="50%" valign="top"><img src="v1.3.3/settings-usb-locked.png" alt="Rata USB blocată cât START e pornit"><br><b>Controllerul are prioritate.</b> Cât START e pornit, Windows nu mai pune AxisNex în economie de energie, iar rata USB se schimbă doar cu START oprit.</td>
+  </tr>
+</table>
+
+Reparat: calibrarea nu mai face stick-ul mai slab pe diagonale și nu mai împinge full lock-ul și trăgaciurile mai departe, iar la 2000 / 4000 Hz jocul nu mai primește pozițiile cu întârziere. Lista completă în [changelog](../CHANGELOG.md).
 
 ## Ce e nou în V1.3.2
 
@@ -90,7 +105,7 @@ AxisNex este gratuit. Nu modifică jocurile și nu rulează în interiorul lor.
 ## Funcții
 
 <p align="center">
-  <img src="screenshot.png?v=1.3.2" width="860" alt="Pagina Home din AxisNex V1.3.2">
+  <img src="screenshot.png?v=1.3.3" width="860" alt="Pagina Home din AxisNex V1.3.3">
 </p>
 
 - **Un singur controller în joc.** Controllerul fizic e ascuns de jocuri cu [HidHide](https://github.com/nefarius/HidHide), iar un controller virtual ([HIDMaestro](https://github.com/hifihedgehog/HIDMaestro)) primește inputul reglat de tine. Când oprești AxisNex, controllerul fizic devine din nou vizibil.

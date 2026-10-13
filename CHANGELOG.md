@@ -3,6 +3,46 @@
 Everything that changed in each version of AxisNex. Newest first.
 Download the latest version from [Releases](https://github.com/wlt1920/AxisNex/releases/latest).
 
+## V1.3.3 — 2026-10-13
+
+A tuning update: every built-in profile was retuned so the car answers the stick sooner, there is a new **Freestyle 2** profile, and several things that made the stick feel slower after calibrating are fixed.
+
+### New profile: Freestyle 2
+
+<img src="docs/v1.3.3/profile-freestyle2.png" width="420" alt="The Freestyle 2 profile card">
+
+- **Freestyle 2** is wLt's own freestyle setup: the quickest answer from the center of the stick, full lock at 86%, full diagonals, and full throttle / boost at three quarters of the trigger.
+- It's there for anyone who wants to try it: pick it on the Profiles page, press START and play.
+
+### Every built-in profile retuned
+
+<img src="docs/v1.3.3/profiles.png" width="760" alt="Profiles page with the retuned built-in profiles">
+
+- **Full lock comes earlier** on every profile (84–90% of the push instead of 88–95%), so it's always reached without pressing the stick into the edge.
+- **Full throttle and boost come earlier** too: at 75–78% of the trigger instead of 82–85%.
+- **Freestyle, Aerial and Worn Controller answer quicker from the center** (a response curve below 1). **Pro stays linear**, the most predictable one.
+- **Freestyle** is now the smooth one, with slightly softer diagonals for fine air roll control; **Freestyle 2** is the fastest.
+- **Your calibration stays.** Saved profiles only take the new values where they still had the old built-in value, or a value calibration had pushed out. Anything you set yourself is left alone.
+
+### The light shows the color you pick
+
+<img src="docs/v1.3.3/profile-light.png" width="420" alt="Profile card with the controller light colors">
+
+- The controller light now shows **exactly the color on the swatch**. Before, a little green in a color showed a lot on the light, so red came out orange.
+
+### The controller comes first
+
+<img src="docs/v1.3.3/settings-usb-locked.png" width="560" alt="Controller settings with the USB rate locked while START is on">
+
+- While START is on, Windows no longer puts AxisNex into **power saving in the background** while you play: the controller is always handled first.
+- The **USB rate** (1000 / 2000 / 4000 Hz) can only be changed while START is off. Changing it restarts the controller, which mid-game could drop the virtual controller; now the switches are locked with a note until you press STOP.
+
+### Fixed
+
+- **Calibration made the stick weaker on the diagonals.** It evened every direction out by also scaling down the directions that reach past the edge, so a full push gave about 85% there. Now it only lifts the short directions and never takes anything away.
+- **Calibration pushed full lock and the triggers further out** (stick to 96%, triggers to 98%), so you needed a harder push for full lock, boost and throttle. Calibration now only ever brings them closer. Profiles it already changed are repaired by themselves when you open V1.3.3.
+- **At 2000 and 4000 Hz the game could get stick positions late.** AxisNex sent the virtual controller more positions than it takes per millisecond, and the extra ones waited in line. Now every new position goes straight out, without a queue.
+
 ## V1.3.2 — 2026-10-12
 
 A big look-and-feel update: every theme is now its own design with its own sounds, calibration got smarter and shows you what to do, each profile can have its own controller light, and AxisNex can start without the Windows prompt. Under the hood, the controller is read in a new way and more controllers are supported.

@@ -2,10 +2,10 @@ name: Download counter
 
 # Keeps the download count on the README and on the Download button up to date: every 5 minutes
 # and right after a release is published.
-# Counts only the installer downloads (AxisNex-*-Setup.exe). version.json is fetched by every
+# Counts only the installer downloads from the Download button (AxisNex-*-Setup.exe); the apps update from AxisNex-*-Update.exe, so updates are not counted. version.json is fetched by every
 # app on its update check, so the repository total would count update checks as downloads.
 # Only the latest release is kept; BASELINE holds the installer downloads of removed releases
-# (V1.0 - V1.2.5: 19, plus 3 of the first V1.3 upload: 22, plus V1.3.1: 8 = 30). When an older release is deleted, add its installer count to BASELINE first.
+# (V1.0 - V1.2.5: 19, plus 3 of the first V1.3 upload: 22, plus V1.3.1: 8, plus V1.3.2: 4 = 34). When an older release is deleted, add its installer count to BASELINE first.
 on:
   schedule:
     - cron: "*/5 * * * *"
@@ -28,7 +28,7 @@ jobs:
       - name: Count installer downloads
         env:
           GH_TOKEN: ${{ github.token }}
-          BASELINE: 30
+          BASELINE: 34
         run: |
           total=$(gh api "repos/${{ github.repository }}/releases" --paginate \
             --jq '.[].assets[] | select(.name | endswith("-Setup.exe")) | .download_count' | awk -v b="$BASELINE" '{s+=$1} END {print s+b}')
