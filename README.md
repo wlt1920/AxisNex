@@ -16,7 +16,7 @@ Language: English | [Română](docs/README_RO.md)
   <a href="https://github.com/wlt1920/AxisNex/releases/latest"><img src="https://img.shields.io/endpoint?url=https%3A%2F%2Fraw.githubusercontent.com%2Fwlt1920%2FAxisNex%2Fmain%2Fdocs%2Fdownload-button.json&style=for-the-badge" height="46" alt="Download the latest AxisNex"></a>
 </p>
 <p align="center">
-  <sub><b><!--downloads-->47<!--/downloads--></b> downloads &nbsp;·&nbsp; Windows 10 / 11 (64-bit) &nbsp;·&nbsp; Free</sub>
+  <sub><b><!--downloads-->49<!--/downloads--></b> downloads &nbsp;·&nbsp; Windows 10 / 11 (64-bit) &nbsp;·&nbsp; Free</sub>
 </p>
 
 > **AxisNex is an independent project and is not affiliated with, endorsed by, or sponsored by Sony Interactive Entertainment, Epic Games, Psyonix, or any controller or game manufacturer. All trademarks belong to their respective owners.**
